@@ -25,7 +25,7 @@ export default function Page() {
       <HowItWorks />
       {/* <WhyQ9 /> */}
       <RequestForm />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

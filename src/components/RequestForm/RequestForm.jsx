@@ -1,6 +1,5 @@
 "use client";
 import ReCAPTCHA from "react-google-recaptcha";
-
 import Heading from "../Heading/Heading";
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
@@ -24,7 +23,6 @@ const RequestForm = () => {
   const form = useRef(null);
   const [isSent, setIsSent] = useState(false);
   const [loading, setLoading] = useState(false);
-
   const [captchaToken, setCaptchaToken] = useState(null);
 
   const {
@@ -45,17 +43,13 @@ const RequestForm = () => {
 
     setLoading(true);
     try {
-      // console.log("data=>", data);
-
       await emailjs.sendForm(
-        "service_pyjk30a", // replace
-        "template_i15wcdq", // replace
+        "service_pyjk30a",
+        "template_i15wcdq",
         form.current,
-        "hynYyM-sZPo2nIIkH" // replace
+        "hynYyM-sZPo2nIIkH"
       );
-
       setIsSent(true);
-      console.log(form.current.data);
       reset();
       form.current.reset();
     } catch (err) {
@@ -65,11 +59,10 @@ const RequestForm = () => {
     }
   };
 
-  // Auto-hide success message after 2 seconds
   useEffect(() => {
     if (isSent) {
       const timer = setTimeout(() => setIsSent(false), 2000);
-      return () => clearTimeout(timer); // cleanup
+      return () => clearTimeout(timer);
     }
   }, [isSent]);
 
@@ -86,7 +79,7 @@ const RequestForm = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* Blur background layer */}
+        {/* Blur background */}
         <div
           className="absolute left-0 w-full h-[650px] z-0"
           style={{
@@ -95,177 +88,198 @@ const RequestForm = () => {
             filter: "blur(50px)",
           }}
         />
-
         {/* Heading */}
         <div className="flex justify-center mb-3 md:mb-6 z-10 relative">
           <Heading heading="Request A" highlight="Quote" />
         </div>
-
-        {/* Form */}
-        <form
-          ref={form}
-          onSubmit={handleSubmit(onSubmit)}
-          noValidate
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 text-white  relative"
-        >
-          {/* Full Name */}
-          <div className="w-full ">
-            <input
-              id="name"
-              type="text"
-              placeholder="Full Name"
-              autoComplete="name"
-              className="w-full rounded-md bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 placeholder:italic"
-              {...register("fullName")}
-              aria-invalid={!!errors.name}
-              aria-describedby={errors.name ? "name-error" : undefined}
-            />
-            {errors.fullName && (
-              <p id="fullName-error" className="mt-1 text-red-400 text-sm">
-                {errors.fullName.message}
-              </p>
-            )}
-          </div>
-
-          {/* Email */}
-          <div className="w-full">
-            <input
-              id="email"
-              type="email"
-              placeholder="Business Email"
-              autoComplete="email"
-              className="w-full rounded-md placeholder:italic bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 "
-              {...register("email")}
-              aria-invalid={!!errors.email}
-              aria-describedby={errors.email ? "email-error" : undefined}
-            />
-            {errors.email && (
-              <p id="email-error" className="mt-1 text-red-400 text-sm">
-                {errors.email.message}
-              </p>
-            )}
-          </div>
-
-          {/* Phone */}
-          <div className="w-full">
-            <input
-              id="phone"
-              type="text"
-              placeholder="Phone/Whatsapp"
-              autoComplete="tel"
-              className="w-full rounded-md placeholder:italic bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 "
-              {...register("phone")}
-              aria-invalid={!!errors.phone}
-              aria-describedby={errors.phone ? "phone-error" : undefined}
-            />
-            {errors.phone && (
-              <p id="phone-error" className="mt-1 text-red-400 text-sm">
-                {errors.phone.message}
-              </p>
-            )}
-          </div>
-
-          {/* City Dropdown */}
-          <div className="w-full">
-            <input
-              id="city"
-              type="text"
-              placeholder="City"
-              className="w-full rounded-md placeholder:italic bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 "
+        {/* Wrapper: image + form */}
+        <div className="flex flex-col md:flex-row gap-10 z-10 relative">
+          {/* Left side image only for desktop */}
+          <div className="hidden md:block md:w-1/2">
+            <img
+              src="/img/formimg.png"
+              alt="Request a Quote"
+              className="w-full h-full object-cover rounded-xl"
             />
           </div>
 
-          {/* Product Dropdown */}
-          <div className="relative md:col-span-2 w-full">
-            <select
-              id="product"
-              className="w-full appearance-none rounded-md bg-[#222] px-4 py-5 focus:outline-none 
-                         focus:ring-cyan-200 text-gray-400"
-              defaultValue=""
-              {...register("product")}
-              aria-invalid={!!errors.product}
-              aria-describedby={errors.product ? "product-error" : undefined}
-            >
-              <option value="">Which product are you interested in?</option>
-              <option value="AI Voice Agent">AI Voice Agent</option>
-              <option value="AI Recruiter">AI Recruiter</option>
-              <option value="AI Tutor">AI Tutor</option>
-              <option value="AI Shopping Assistant">
-                AI Shopping Assistant
-              </option>
-              <option value="Custom AI Agent">Custom AI Agent</option>
-              <option value="Other">Other</option>
-            </select>
-            {errors.product && (
-              <p id="product-error" className="mt-1 text-red-400 text-sm">
-                {errors.product.message}
-              </p>
-            )}
-
-            {/* Custom arrow icon */}
-            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-gray-400 placeholder:italic">
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+          {/* Right side: Form */}
+          <form
+            ref={form}
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+            className="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 text-white relative"
+          >
+            {/* Full Name */}
+            <div className="w-full">
+              <input
+                id="name"
+                type="text"
+                placeholder="Full Name"
+                autoComplete="name"
+                className="w-full rounded-md bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 placeholder:italic"
+                {...register("name")}
+                aria-invalid={!!errors.name}
+              />
+              {errors.name && (
+                <p className="mt-1 text-red-400 text-sm">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
-          </div>
 
-          {/* Message */}
-          <div className="md:col-span-3 w-full">
-            <textarea
-              id="message"
-              placeholder="What Challenge are you trying to solve?"
-              className="w-full rounded-md bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 placeholder:italic"
-              rows={6}
-              {...register("message")}
-              aria-invalid={!!errors.message}
-              aria-describedby={errors.message ? "message-error" : undefined}
-            />
-          </div>
+            {/* Email */}
+            <div className="w-full">
+              <input
+                id="email"
+                type="email"
+                placeholder="Business Email"
+                autoComplete="email"
+                className="w-full rounded-md placeholder:italic bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400"
+                {...register("email")}
+                aria-invalid={!!errors.email}
+              />
+              {errors.email && (
+                <p className="mt-1 text-red-400 text-sm">
+                  {errors.email.message}
+                </p>
+              )}
+            </div>
 
-          <div className="md:col-span-3 w-full flex justify-center">
-            <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-              onChange={(token) => setCaptchaToken(token)}
-              onExpired={() => setCaptchaToken(null)}
-            />
-          </div>
+            {/* Phone */}
+            <div className="w-full">
+              <input
+                id="phone"
+                type="text"
+                placeholder="Phone/Whatsapp"
+                autoComplete="tel"
+                className="w-full rounded-md placeholder:italic bg-[#222] px-6 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400"
+                {...register("phone")}
+                aria-invalid={!!errors.phone}
+              />
+              {errors.phone && (
+                <p className="mt-1 text-red-400 text-sm">
+                  {errors.phone.message}
+                </p>
+              )}
+            </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="md:col-span-3 w-full bg-cyan-400 text-black font-semibold py-4 rounded-md text-lg
-                     hover:bg-cyan-500 transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
-          >
-            {loading ? "Sending..." : "SUBMIT"}
-          </button>
-        </form>
+            {/* City */}
+            <div className="w-full">
+              <input
+                id="city"
+                type="text"
+                placeholder="City"
+                className="w-full rounded-md placeholder:italic bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400"
+                {...register("city")}
+              />
+              {errors.city && (
+                <p className="mt-1 text-red-400 text-sm">
+                  {errors.city.message}
+                </p>
+              )}
+            </div>
 
-        {/* Success Message */}
-        {isSent && (
-          <div
-            className="mt-6 flex justify-center animate-fade-in"
-            role="status"
-            aria-live="polite"
-          >
-            <p className="bg-green-500/10 text-green-300 border border-green-500/40 px-6 py-4 rounded-md shadow-md text-center text-sm sm:text-base font-medium transition-all duration-300">
-              ✅ Your message has been sent successfully!
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
+            {/* Product Dropdown */}
+            <div className="relative md:col-span-2 w-full">
+              <select
+                id="product"
+                className="w-full appearance-none rounded-md bg-[#222] px-4 py-5 focus:outline-none 
+                           focus:ring-cyan-200 text-gray-400"
+                defaultValue=""
+                {...register("product")}
+                aria-invalid={!!errors.product}
+              >
+                <option value="" disabled>Which product are you interested in?</option>
+                <option value="AI Voice Agent">AI Voice Agent</option>
+                <option value="AI Recruiter">AI Recruiter</option>
+                <option value="AI Tutor">AI Tutor</option>
+                <option value="AI Shopping Assistant">
+                  AI Shopping Assistant
+                </option>
+                <option value="Custom AI Agent">Custom AI Agent</option>
+                <option value="Other">Other</option>
+              </select>
+              {errors.product && (
+                <p className="mt-1 text-red-400 text-sm">
+                  {errors.product.message}
+                </p>
+              )}
+
+              {/* Dropdown Icon */}
+              <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-gray-400">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            {/* Message */}
+            <div className="md:col-span-3 w-full">
+              <textarea
+                id="message"
+                placeholder="What challenge are you trying to solve?"
+                className="w-full rounded-md bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 placeholder:italic"
+                rows={6}
+                {...register("message")}
+                aria-invalid={!!errors.message}
+              />
+              {errors.message && (
+                <p className="mt-1 text-red-400 text-sm">
+                  {errors.message.message}
+                </p>
+              )}
+            </div>
+
+            {/* Recaptcha */}
+            <div className="md:col-span-3 w-full flex justify-center">
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={(token) => setCaptchaToken(token)}
+                onExpired={() => setCaptchaToken(null)}
+              />
+            </div>
+
+            {/* Submit Button */}
+            <div className="md:col-span-3 w-full">
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-cyan-400 text-black font-semibold py-4 rounded-md text-lg
+                          hover:bg-cyan-500 transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+              >
+                {loading ? "Sending..." : "SUBMIT"}
+              </button>
+            </div>
+          </form>
+
+          {/* ✅ Success Message */}
+          {isSent && (
+            <div
+              className="mt-6 flex justify-center animate-fade-in"
+              role="status"
+              aria-live="polite"
+            >
+              <p className="bg-green-500/10 text-green-300 border border-green-500/40 px-6 py-4 rounded-md shadow-md text-center text-sm sm:text-base font-medium transition-all duration-300">
+                ✅ Your message has been sent successfully!
+              </p>
+            </div>
+          )}
+        </div>{" "}
+        {/* image + form wrapper */}
+      </div>{" "}
+      {/* background styled container */}
+    </div> /* outermost wrapper */
   );
 };
 
