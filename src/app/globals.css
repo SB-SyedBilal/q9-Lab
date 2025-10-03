@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost/Jost-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost/Jost-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost/Jost-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost/Jost-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost/Jost-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost/Jost-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AmpleSoftPro';
+  src: url('/fonts/Ample/AmpleSoftPro.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-SemiBold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.font-AmpleSoftPro {
+  font-family: 'AmpleSoftPro', sans-serif !important;
+}
+
+.Rubik {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+/* Default apply globally */
+body {
+  font-family: 'Jost';
+  
+}
+
+/* body{
+  border: 1px solid red;
+} */
+
+
+/* Add this to your global styles or in a CSS module */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+
