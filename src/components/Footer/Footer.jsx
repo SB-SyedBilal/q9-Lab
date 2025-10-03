@@ -20,10 +20,26 @@ export default function Footer() {
               priority
             />
           </div>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-[300px] md:max-w-md ">
+          <p className="text-gray-400 mb-6 text-sm md:text-base leading-relaxed max-w-[300px] md:max-w-md ">
             Q9labs is a subsidiary of CollabEZ, proudly based in the UAE and
             committed to making artificial intelligence work for businesses
             worldwide.
+          </p>
+
+          <p className="flex items-center gap-2">
+            <span className="text-xl">Powered By</span>
+            <a
+              href="https://collabez.ae/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/img/collab.png"
+                alt="CollabEZ"
+                width={110}
+                height={50}
+              />
+            </a>
           </p>
         </div>
 
@@ -129,9 +145,9 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="border-t border-gray-500 mt-10 sm:mt-12 max-w-[1400px] mx-auto">
-        <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between items-center text-sm md:text-base text-gray-300">
+        <div className=" mx-auto  py-5 flex justify-center items-center text-sm md:text-base text-gray-300">
           <p>© 2025 Q9 Labs. All rights reserved.</p>
-          <p className="flex items-center gap-2">
+          {/* <p className="flex items-center gap-2">
             <span>Powered By</span>
             <a
               href="https://collabez.ae/"
@@ -145,7 +161,7 @@ export default function Footer() {
                 height={30}
               />
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

@@ -30,14 +30,14 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className="max-w-[1400px] mx-auto relative z-50 w-full px-4 py-4 pt-6 sm:pt-8 md:pt-11 md:px-8">
+    <nav className="max-w-[1400px] mx-auto relative z-50 w-full px-8 py-4 pt-8 sm:pt-8 md:pt-11 md:px-8">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
             src="/img/q9logo.png"
             alt="Q9 Labs Logo"
-            className="w-[70px] sm:w-[90px] md:w-[140px] h-auto"
+            className="w-[90px] sm:w-[90px] md:w-[140px] h-auto"
           />
         </div>
 
@@ -137,7 +137,7 @@ export default function Navbar() {
             aria-label="Toggle mobile menu"
           >
             <svg
-              className="w-6 h-6 transition-transform duration-300"
+              className="w-8 h-8 transition-transform duration-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

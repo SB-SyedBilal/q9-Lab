@@ -25,12 +25,12 @@ export default function Hero() {
   return (
     <div
     id="home"
-      className="relative min-h-[45vh]  sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[40vh] xl:min-h-[80vh] 2xl:min-h-[100vh]  overflow-hidden "
+      className="relative min-h-[45vh]  sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[40vh] xl:min-h-[80vh] 2xl:min-h-[80vh]  overflow-hidden "
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Curved Overlay Image */}
-      <div className=" absolute top-63  md:top-60 lg:top-65 xl:top-85 2xl:top-95 left-0 w-full h-full z-0 opacity-100">
+      <div className=" absolute top-63  md:top-60 lg:top-65 xl:top-85 2xl:top-78 left-0 w-full h-full z-0 opacity-100">
         <img
           src="/img/heroimg3.png"
           alt="Curved design overlay"

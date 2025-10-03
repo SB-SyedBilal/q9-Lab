@@ -51,7 +51,7 @@ export default function IndustriesSection() {
   };
 
   return (
-    <div className="pb-10 bg-[#0e0e0ec1]">
+    <div className="pb-6 bg-[#0e0e0ec1]">
       <section
         id="industries-section"
         className=" text-white py-10 px-6  z-0 "
