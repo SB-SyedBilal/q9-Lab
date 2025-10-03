@@ -13,7 +13,7 @@ export default function Navbar() {
 
   const timeoutRef = useRef(null);
 
-  
+
 
   // Inside your component
   useEffect(() => {
@@ -68,9 +68,8 @@ export default function Navbar() {
             <button className="text-white hover:text-cyan-300 flex items-center">
               Our Products
               <svg
-                className={`ml-1 w-4 h-4 transition-transform duration-300 ${
-                  isDropdownOpen ? "rotate-180" : "rotate-0"
-                }`}
+                className={`ml-1 w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : "rotate-0"
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -86,13 +85,17 @@ export default function Navbar() {
 
             {isDropdownOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-[#080808] backdrop-blur-sm rounded-md shadow-lg z-50 border border-white/10">
-                {["AVA", "ATOR", "HIRM"].map((item) => (
+                {[
+                  { label: "AVA", href: "/ava" },
+                  { label: "ATOR", href: "/ator" },
+                  { label: "HIRM", href: "/hirm" },
+                ].map((item) => (
                   <a
-                    key={item}
-                    href="#"
+                    key={item.label}
+                    href={item.href}
                     className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:text-cyan-300 transition-colors"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 ))}
               </div>
@@ -172,9 +175,8 @@ export default function Navbar() {
       )}
       {/* Mobile Navigation - Right Drawer Style */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black/90 backdrop-blur-lg border-l border-white/10 p-6 z-60 transform transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`lg:hidden fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black/90 backdrop-blur-lg border-l border-white/10 p-6 z-60 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         {/* Close Button */}
         <button
@@ -215,9 +217,8 @@ export default function Navbar() {
             >
               Our Products
               <svg
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  isProductMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 transition-transform duration-300 ${isProductMenuOpen ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -231,16 +232,19 @@ export default function Navbar() {
               </svg>
             </button>
 
-            {isProductMenuOpen && (
-              <div className="pl-3 mt-3 space-y-2 text-sm text-gray-300 ">
-                {["AVA", "ATOR", "HIRM"].map((item) => (
+            {isDropdownOpen && (
+              <div className="absolute left-0 mt-2 w-48 bg-[#080808] backdrop-blur-sm rounded-md shadow-lg z-50 border border-white/10">
+                {[
+                  { label: "AVA", href: "/ava.js" },
+                  { label: "ATOR", href: "/ator.js" },
+                  { label: "HIRM", href: "/hirm.js" },
+                ].map((item) => (
                   <a
-                    key={item}
-                    href="#"
-                    onClick={closeMobileMenu}
-                    className="block hover:text-cyan-300  "
+                    key={item.label}
+                    href={item.href}
+                    className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:text-cyan-300 transition-colors"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 ))}
               </div>

@@ -1,19 +1,23 @@
 # Disable PHP execution for security
-
 <FilesMatch "\.php$">
-
- <IfModule mod_authz_core.c>
-
-Require all denied
-
- </IfModule>
-
-<IfModule !mod_authz_core.c>
-
-Order allow,deny
-
-Deny from all
-
- </IfModule>
-
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
 </FilesMatch>
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Allow direct access to files and directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Route everything else to index.html (for SPA/Next.js client-side routing)
+  RewriteRule ^ index.html [L]
+</IfModule>

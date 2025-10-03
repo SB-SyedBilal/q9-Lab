@@ -3,7 +3,8 @@ import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import WhatsappWidget from "@/components/WhatsappWidget/WhatsappWidget";
 import Navbar from "@/components/NavBar/Navbar";
- 
+import Footer from "@/components/Footer/Footer";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,13 +26,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body 
-      
+      <body
+
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
 
         <Navbar />
-        
+
+
         {children}
         <ScrollToTop />
         <WhatsappWidget />
