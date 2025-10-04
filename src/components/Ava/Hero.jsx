@@ -26,16 +26,15 @@ export default function Hero() {
     return (
         <div
             id="home"
-            className="relative min-h-[45vh]  sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[40vh] xl:min-h-[80vh] 2xl:min-h-[80vh]  overflow-hidden "
+            className="overflow-hidden "
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
             {/* Curved Overlay Image */}
-            <div className=" absolute top-63  md:top-60 lg:top-65 xl:top-85 2xl:top-78 left-0 w-full h-full z-0 opacity-100">
+            <div className="w-full h-[896.88px] z-0 opacity-100 flex justify-center">
                 <img
-                    src="/img/heroimg3.png"
+                    src="/img/Ava/hero.png"
                     alt="Curved design overlay"
-                    className="w-full h-full object-cover"
                 />
             </div>
 
@@ -48,10 +47,11 @@ export default function Hero() {
 
 
             {/* Main Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 mt-8 md:mt-15 lg:mt-18 xl:mt-24 gap-22">
-                <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl mx-auto">
-                    <h1 className="font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug">
-                        The Future of Customer{" "}
+            <div className="flex justify-center">
+            <div className="absolute top-[10rem] items-center justify-center text-center">
+                <div className="m-auto">
+                    <h1 className="font-AmpleSoftPro text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug">
+                        The Future of Customer{"  "}
                         <span className="text-cyan-300">Engagement</span>
                     </h1>
 
@@ -82,6 +82,7 @@ export default function Hero() {
                         />
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );

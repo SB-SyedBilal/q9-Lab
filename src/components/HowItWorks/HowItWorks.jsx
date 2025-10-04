@@ -90,17 +90,17 @@ export default function HowWorks() {
 
       className="text-white py-6 relative overflow-hidden px-4 sm:px-6 md:px-8"
 
-      style={{
+      // style={{
 
-        backgroundImage: "url('/img/lines.png')",
+      //   backgroundImage: "url('/img/lines.png')",
 
-        backgroundRepeat: "no-repeat",
+      //   backgroundRepeat: "no-repeat",
 
-        backgroundPosition: "right",
+      //   backgroundPosition: "right",
 
-        backgroundSize: "auto 100%",
+      //   backgroundSize: "auto 100%",
 
-      }}
+      // }}
 
     >
 

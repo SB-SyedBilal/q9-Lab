@@ -3,7 +3,8 @@ import BlueBgButton from "../BlueBgButton/BlueBgButton";
 
 export default function CaseStudiesSection() {
     return (
-        <section className="relative bg-black py-20 px-4 overflow-hidden">
+        <section className="relative bg-[#080808]  px-4 overflow-hidden h-[990.93px]">
+            <img src="/img/Ava/CaseStudies.png" alt="" className="absolute" />
             <div className="absolute inset-0">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
                 <div className="absolute top-20 right-1/4 w-80 h-80 bg-cyan-400/5 rounded-full blur-3xl" />
@@ -19,15 +20,18 @@ export default function CaseStudiesSection() {
             </div>
 
             <div className="relative m-auto">
-                <h2 className="text-5xl font-bold text-center mb-16">
-                    <span className="text-white">Real-World </span>
-                    <span className="text-cyan-400">Case Studies</span>
-                </h2>
+                <div className="py-20">
+                    <h2 className="text-5xl font-bold text-center ">
+                        <span className="text-white">Real-World </span>
+                        <span className="text-cyan-400">Case Studies</span>
+                    </h2>
+                </div>
 
-                <div className="grid md:grid-cols-2 gap-62 mb-16 max-w-6xl m-auto">
+                <div className="flex justify-center gap-16 mb-16">
                     {/* Card 1: Real Estate Lead Qualification */}
-                    <div className="relative flex bg-gradient-to-br from-gray-900/40 via-gray-900/30 to-gray-800/20 border border-gray-700/30 rounded-3xl p-8 backdrop-blur-sm">
-                        <div className="space-y-6">
+                    <div className="relative flex justify-between   rounded-3xl p-8 backdrop-blur-sm w-[1032px] animated-border shadow-lg bg-[#0C0C0C] 
+  [background-image:radial-gradient(circle_at_bottom_right,_rgba(6,203,222,0.7)_0%,_rgba(6,203,222,0.3)_5%,_transparent_50%)]">
+                        <div className="space-y-6 flex flex-col justify-center">
                             <h3 className="text-2xl font-semibold text-white">
                                 Real Estate Lead
                                 <br />
@@ -58,16 +62,19 @@ export default function CaseStudiesSection() {
                                 </svg>
                             </button>
                         </div>
-                        <Image
-                            src="/img/Ava/mockup.png"
-                            width={1000}
-                            height={600}
-                        />
+                        <div className=" translate-y-7">
+                            <Image
+                                src="/img/Ava/mockup.png"
+                                width={400}
+                                height={600}
+                            />
+                        </div>
                     </div>
 
                     {/* Card 2: Retail & Travel Support */}
-                    <div className="relative bg-gradient-to-br from-gray-900/40 via-gray-900/30 to-gray-800/20 border border-gray-700/30 rounded-3xl p-8 backdrop-blur-sm">
-                        <div className="space-y-6 flex flex-col h-full">
+                    <div className="bg-gradient-to-br flex items-center  border border-gray-700/30 rounded-3xl p-8 backdrop-blur-sm w-[643px] animated-border h-[568px] bg-[#0C0C0C] 
+  [background-image:radial-gradient(circle_at_bottom_right,_rgba(6,203,222,0.7)_0%,_rgba(6,203,222,0.3)_5%,_transparent_50%)]">
+                        <div className="space-y-6 flex flex-col ">
                             <h3 className="text-2xl font-semibold text-white">
                                 Retail & Travel
                                 <br />

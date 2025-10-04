@@ -10,7 +10,8 @@ export default function HirmBanner() {
 
         <section className="relative w-full px-4 py-12 md:py-20 overflow-hidden">
 
-            <div className=" relative mx-auto max-w-7xl rounded-2xl border border-white/20 bg-gradient-to-br from-black to-[#020617] p-8 md:p-20 text-center shadow-[0_0_150px_-40px_rgba(255,255,255,0.2)] transition-all duration-300 overflow-hidden">
+            <div className=" relative mx-auto max-w-7xl rounded-2xl border border-white/20 bg-gradient-to-br p-8 md:p-20 text-center bg-[#0C0C0C] 
+  [background-image:radial-gradient(circle_at_bottom_right,_rgba(6,203,222,0.7)_0%,_rgba(6,203,222,0.3)_5%,_transparent_50%)] transition-all duration-300 overflow-hidden">
 
                 {/* White gradient glow in bottom-right */}
 
