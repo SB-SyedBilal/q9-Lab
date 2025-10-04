@@ -51,7 +51,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="text-white py-6 relative overflow-hidden px-4 sm:px-6 md:px-8"
+      className="text-white py-6  relative overflow-hidden px-4 sm:px-6 md:px-8"
       style={{
         backgroundImage: "url('/img/lines.png')",
         backgroundRepeat: "no-repeat",
@@ -59,7 +59,7 @@ export default function HowItWorks() {
         backgroundSize: "auto 100%",
       }}
     >
-      <div className="max-w-8xl mx-auto text-center mb-14">
+      <div className="max-w-8xl mx-auto text-center mb-14 2xl:mb-20">
         <Heading heading="How It" highlight="Works" />
 
         {/* Mobile Carousel */}
@@ -110,14 +110,14 @@ export default function HowItWorks() {
               key={index}
               className="flex flex-col items-center text-center md:w-1/3 group relative z-10"
             >
-              <div className="relative w-25 h-25 rounded-full border border-cyan-400 flex items-center justify-center text-3xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
+              <div className="relative w-25 h-25 2xl:w-32 2xl:h-32 rounded-full border border-cyan-400 flex items-center justify-center text-3xl 2xl:text-4xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
                 <span className="z-10">{step.number}</span>
                 <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
               </div>
-              <h3 className="text-cyan-400 font-semibold text-2xl mt-6 mb-3">
+              <h3 className="text-cyan-400 font-semibold text-2xl 2xl:text-3xl mt-6 mb-3">
                 {step.title}
               </h3>
-              <p className="text-white text-[14px] max-w-xs">
+              <p className="text-white text-[14px] 2xl:text-[18px] max-w-xs">
                 {step.description}
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <BlueBgButton text="See It in Action" />
         </div>
       </div>

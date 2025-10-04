@@ -64,33 +64,33 @@ const slides = [
   {
     id: 1,
     badge: "CHALLENGE",
-    title: "Hiring Bottlenecks That Drain Time",
+    title: "The Gap in Learning Support",
     description:
-      "Recruitment teams waste hundreds of hours screening CVs and repeating first-round interviews, slowing down the hiring cycle.",
-    image: "/img/hirmslider1.png",
+      "Many students struggle because they can’t afford quality one-on-one tutoring. The lack of personalized guidance limits their learning potential.",
+    image: "/img/atorslider1.png",
   },
   {
     id: 2,
     badge: "SOLUTION",
-    title: "Automation That Handles the Heavy Lifting",
+    title: "Ator: Personalized Learning for Every Student",
     description:
-      "Hirm automates JDs, screens CVs, runs interviews, and delivers structured shortlists.",
-    image: "/img/hirmslider2.png",
+      "Ator solves this by offering interactive lessons, visual diagrams, and practice exercises. Each learning path is personalized to the student’s needs.",
+    image: "/img/atorslider2.png",
   },
   {
     id: 3,
-    badge: "Smarter Hiring with Less Effort",
+    badge: "KEY BENIFITS",
     title: "Simple, Adaptive, and Global Learning Experience",
     description:
-      "Cut ~60% of recruiter workload, reduce hiring costs, ensure unbiased shortlisting, and achieve faster time-to-hire.",
-    image: "/img/hirmslider3.png",
+      "It explains concepts in simple terms, generates clear diagrams, and adjusts to the learner’s pace. Ator supports multiple subjects and languages seamlessly.",
+    image: "/img/atorslider3.png",
   },
 ];
 
 /* ------------------------------------------------------------------ */
 /* Carousel Component */
 /* ------------------------------------------------------------------ */
-export default function HirmCarouselPage() {
+export default function CarouselPage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1); // 1 = forward, -1 = backward
   const [isAutoPlay, setIsAutoPlay] = useState(true);

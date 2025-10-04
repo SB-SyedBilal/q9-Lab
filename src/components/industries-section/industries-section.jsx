@@ -60,11 +60,11 @@ export default function IndustriesSection() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1150px] 2xl:max-w-[1400px] mx-auto">
+        <div className="md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1150px] 2xl:max-w-[1700px] mx-auto">
           {/* Header */}
           <div className="mb-12 text-center md:text-left">
             <Heading heading="Industries" highlight="We Serve " />
-            <p className="text-gray-400 max-w-md">
+            <p className="text-gray-400 max-w-md 2xl:max-w-xl 2xl:text-xl">
               From sales-heavy organizations to education and recruitment, Q9
               Labs builds AI agents designed for industries where efficiency and
               scale matter most.
@@ -140,7 +140,8 @@ export default function IndustriesSection() {
               >
                 <div className="relative z-10 rounded-xl overflow-hidden h-full">
                   {/* Hover shape from top-right */}
-                  <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-35 group-focus-within:scale-35 group-active:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
+                  <div className="z-50 absolute top-0 right-0 w-1/2  h-1/2 2xl:h-[65%] bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
+
 
                   {/* Card content */}
                   <div className="relative z-20 bg-black rounded-xl p-7 h-full flex flex-col items-center text-center border border-gray-800 min-h-[460px] lg:min-h-[420px] xl:min-h-[450px] 2xl:min-h-[400px]">
@@ -149,23 +150,23 @@ export default function IndustriesSection() {
                       <img
                         src={industry.icon || "/placeholder.svg"}
                         alt={industry.title}
-                        className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] object-contain"
+                        className="w-[50px] h-[50px] md:w-[70px] 2xl:w-[80px] 2xl:h-[80px] md:h-[70px] object-contain"
                       />
                     </div>
 
                     {/* Title */}
-                    <h3 className="relative md:text-2xl font-semibold mb-4 md:mb-7 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
+                    <h3 className="relative md:text-2xl 2xl:md:text-3xl font-semibold mb-4 md:mb-7 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
                       {industry.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-sm md:text-2sm leading-relaxed mb-10">
+                    <p className="text-gray-400 text-sm md:text-2sm 2xl:text-lg leading-relaxed mb-10">
                       {industry.description}
                     </p>
 
                     {/* Learn More Button (desktop only) */}
                     <button
-                      className="text-white text-2sm font-medium hover:text-cyan-300 transition-colors duration-200 flex items-center gap-2 border-b"
+                      className="text-white text-2sm 2xl:text-xl font-medium hover:text-cyan-300 transition-colors duration-200 flex items-center gap-2 border-b 2xl:mb-4"
                       aria-label={`Learn more about ${industry.title}`}
                     >
                       Learn More

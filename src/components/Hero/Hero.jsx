@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 // import Navbar from "../NavBar/Navbar";
 import BlueBgButton from "@/components/BlueBgButton/BlueBgButton";
+import TransButton from "../TransButton/TransButton";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -24,13 +27,13 @@ export default function Hero() {
 
   return (
     <div
-    id="home"
-      className="relative min-h-[45vh]  sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[40vh] xl:min-h-[80vh] 2xl:min-h-[80vh]  overflow-hidden "
+      id="home"
+      className="relative min-h-[45vh]  sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[40vh] xl:min-h-[80vh] 2xl:min-h-[75vh]  overflow-hidden "
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Curved Overlay Image */}
-      <div className=" absolute top-63  md:top-60 lg:top-65 xl:top-85 2xl:top-78 left-0 w-full h-full z-0 opacity-100">
+      <div className=" absolute top-63  md:top-60 lg:top-65 xl:top-85 2xl:top-90 left-0 w-full h-full z-0 opacity-100">
         <img
           src="/img/heroimg3.png"
           alt="Curved design overlay"
@@ -68,22 +71,50 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 mt-8 md:mt-15 lg:mt-18 xl:mt-24">
-        <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl mx-auto">
-          <h1 className="font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug">
+        <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-5xl mx-auto">
+          <h1 className="font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-snug">
             Building AI Agents That Solve{" "}
             <span className="text-cyan-300">Real Business Problems</span>
           </h1>
 
-          <p className="text-[14px] sm:text-base md:text-sm lg:text-md xl:text-lg text-gray-200 mb-6 sm:mb-8 leading-relaxed">
+          <p className="text-[14px] sm:text-base md:text-sm lg:text-md xl:text-lg 2xl:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
             Q9 Labs builds SaaS-based AI applications that replace inefficiency
             with automation, cutting costs, boosting productivity, and scaling
             operations.
           </p>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-8 lg:flex-row flex-col">
             <div className="w-full sm:w-auto">
-              <BlueBgButton text="Explore Our Products" />
+              <BlueBgButton text="Explore Our Products" id="#products" />
             </div>
+
+            {/* <TransButton text='Book A Demo' link='#form' /> */}
+            <Link
+              href="#form"
+              className="group flex items-center justify-center md:gap-6 md:pl-8 md:pr-2 pt-2 pb-2 
+                 border-1 border-white rounded-full text-white 2xl:text-lg
+                 hover:bg-white/10 transition-all duration-500 ease-out cursor-pointer 
+                 relative overflow-hidden"
+            >
+              {/* Ripple / Shine effect */}
+              <span
+                className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-transparent to-cyan-400/20 
+                   -translate-x-full group-hover:translate-x-full transition-transform 
+                   duration-700 ease-in-out"
+              ></span>
+
+              <span className="text-xs sm:text-[16px] 2xl:text-[22px] relative z-10 border-b md:border-none">
+                Book A Demo
+              </span>
+
+              <span
+                className="flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 rounded-full md:bg-white 
+                   relative z-10 group-hover:scale-100 group-hover:rotate-45 
+                   transition-transform duration-500 ease-out"
+              >
+                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7 md:text-cyan-400" />
+              </span>
+            </Link>
           </div>
         </div>
       </div>

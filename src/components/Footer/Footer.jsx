@@ -3,31 +3,34 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#080808] text-white pt-12 md:pt-16">
+    <footer className=" text-white pt-12 md:pt-16">
       <div
-        className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 xl:gap-24
+        className="max-w-[1400px] 2xl:max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 xl:gap-24
   items-center sm:items-center md:items-start"
       >
         {/* Logo and Description */}
         <div className="mb-8  lg:mb-0 flex flex-col justify-center text-center items-center md:text-left md:justify-start md:items-start">
           <div className="mb-6 flex justify-center md:justify-start ">
             {/* Replace with your logo */}
-            <Image
-              src="/img/q9logo.png"
-              alt="Q9 Labs Logo"
-              width={150}
-              height={40}
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/img/q9logo.png"
+                alt="Q9 Labs Logo"
+                width={150}
+                height={40}
+                priority
+                className="2xl:w-[180px]"
+              />
+            </Link>
           </div>
-          <p className="text-gray-400 mb-6 text-sm md:text-base leading-relaxed max-w-[300px] md:max-w-md ">
+          <p className="text-gray-400 mb-6 text-sm md:text-base 2xl:text-lg leading-relaxed max-w-[300px] md:max-w-md ">
             Q9labs is a subsidiary of CollabEZ, proudly based in the UAE and
             committed to making artificial intelligence work for businesses
             worldwide.
           </p>
 
           <p className="flex items-center gap-2">
-            <span className="text-xl">Powered By</span>
+            <span className="text-xl 2xl:text-2xl">Powered By</span>
             <a
               href="https://collabez.ae/"
               target="_blank"
@@ -38,6 +41,7 @@ export default function Footer() {
                 alt="CollabEZ"
                 width={110}
                 height={50}
+                className="2xl:w-[120px]"
               />
             </a>
           </p>
@@ -45,10 +49,10 @@ export default function Footer() {
 
         {/* Quick Links */}
         <nav aria-label="Footer" className="mb-8 lg:mb-0 2xl:ml-28">
-          <h4 className="text-white text-2xl md:text-[28px] font-semibold mb-4 md:mb-6">
+          <h4 className="text-white text-2xl md:text-[28px] 2xl:text-[30px] font-semibold mb-4 md:mb-6">
             Quick Links
           </h4>
-          <ul className="space-y-3 md:space-y-4 text-gray-300 text-sm md:text-base">
+          <ul className="space-y-3 md:space-y-4 text-gray-300 text-sm md:text-base 2xl:text-lg">
             <li>
               <Link href="#home" className="hover:text-white transition-colors">
                 Home
@@ -88,10 +92,10 @@ export default function Footer() {
 
         {/* Contact Us */}
         <address className="not-italic">
-          <h4 className="text-white text-2xl md:text-[28px] font-semibold mb-4 md:mb-6">
+          <h4 className="text-white text-2xl md:text-[28px] 2xl:text-[30px] font-semibold mb-4 md:mb-6">
             Contact Us
           </h4>
-          <ul className="space-y-4 text-gray-300 text-sm md:text-base">
+          <ul className="space-y-4 text-gray-300 text-sm md:text-base 2xl:text-lg">
             <li className="flex items-center gap-3">
               <span className="bg-white/10 p-2 rounded-full inline-flex items-center justify-center">
                 <Image
@@ -127,7 +131,7 @@ export default function Footer() {
               </div>
 
               {/* Map below the address */}
-              <div className="mt-4  overflow-hidden">
+              <div className="mt-4  overflow-hidden 2xl:max-w-md">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1804.709630411843!2d55.27834784539159!3d25.222799969380635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f42ed8748e289%3A0x7d86ed2d819cf802!2sLatifa%20Tower%20-%20Trade%20Center%20First%20-%20Trade%20Centre%201%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1759398874222!5m2!1sen!2s"
                   width="100%"
@@ -144,8 +148,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t border-gray-500 mt-10 sm:mt-12 max-w-[1400px] mx-auto">
-        <div className=" mx-auto  py-5 flex justify-center items-center text-sm md:text-base text-gray-300">
+      <div className="border-t border-gray-500 mt-10 sm:mt-12 max-w-[1400px] 2xl:max-w-[1700px] mx-auto">
+        <div className=" mx-auto  py-5 flex justify-center items-center text-sm md:text-base 2xl:text-lg text-gray-300">
           <p>© 2025 Q9 Labs. All rights reserved.</p>
           {/* <p className="flex items-center gap-2">
             <span>Powered By</span>

@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function Banner() {
   return (
     <section className="py-6 px-6 ">
-      <div className="md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1150px] 2xl:max-w-[1400px] mx-auto">
+      <div className="md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1150px] 2xl:max-w-[1700px] mx-auto">
         <div className="bg-gradient-to-r from-[#03020A] via-[#030306] to-[#04060A] rounded-2xl h-auto border border-gray-700 md:p-7 lg:p-0 overflow-hidden">
           <div className="flex flex-col md:flex-row items-center justify-between px-8  gap-8 ">
             {/* Left Content */}
@@ -18,8 +18,8 @@ export default function Banner() {
 
               {/* Button */}
               <div className="flex justify-center md:justify-start mb-6 md:mb-0">
-                <button
-                  className=" group flex items-center justify-between gap-6 pl-8 pr-2 pt-2 pb-2 
+                <a href='#form'
+                  className=" group flex items-center justify-between gap-6 2xl:gap-8 pl-8 pr-2 2xl:pr-3 pt-2 2xl:pt-2 pb-2 2xl:pb-2
              border-1 border-white rounded-full text-white
              hover:bg-white/10 transition-all duration-500 ease-out cursor-pointer 
              relative overflow-hidden"
@@ -31,18 +31,18 @@ export default function Banner() {
                duration-700 ease-in-out"
                   ></span>
 
-                  <span className=" text-xs sm:text-[16px] relative z-10 ">
-                    Lern More
+                  <span className=" text-xs sm:text-[16px] 2xl:text-[24px] relative z-10 ">
+                    Let's Talk
                   </span>
 
                   <span
-                    className="flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white 
+                    className="flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 2xl:w-11 2xl:h-11 rounded-full bg-white 
                relative z-10 group-hover:scale-100 group-hover:rotate-45 
                transition-transform duration-500 ease-out"
                   >
-                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
+                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7 text-cyan-400" />
                   </span>
-                </button>
+                </a>
               </div>
             </div>
 

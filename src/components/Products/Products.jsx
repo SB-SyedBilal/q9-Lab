@@ -14,6 +14,7 @@ const items = [
     bedge: "AVA",
     title: "AI Voice Agent",
     desc: "Your 24/7 sales & support caller. Ava handles lead qualification and customer support at just $1 per call, reducing call centre costs by up to 80%.",
+    link: '/ava'
   },
   {
     id: 1,
@@ -23,6 +24,7 @@ const items = [
     bedge: "ATOR",
     title: "AI Tutor",
     desc: "Your personalized learning companion. Ator delivers interactive lessons that adapt to each student’s pace, making quality education scalable and affordable.",
+    link: '/ator'
   },
   {
     id: 2,
@@ -32,6 +34,7 @@ const items = [
     bedge: "HIRM",
     title: "AI Recruiter",
     desc: "Your always-on recruiter. From CV screening to AI-driven interviews, Hirm cuts 60% of HR workload—freeing teams to focus on top talent.",
+    link: '/hirm'
   },
 ];
 
@@ -41,7 +44,7 @@ export default function Products() {
   return (
     <section id='products' className="w-full">
       
-      <div className="mx-auto max-w-[350px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1400px] px-4 py-10 md:py-14 lg:py-16 ">
+      <div className="mx-auto max-w-[350px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1700px] px-4 py-10 md:py-14 lg:py-16 ">
         <div className="flex justify-center md:mb-10">
           <Heading heading="Our Revolutionary" highlight="Products" />
         </div>
@@ -68,8 +71,8 @@ export default function Products() {
                   "transition-all duration-500 ease-in-out ",
                   // heights: stacked on mobile, same height on md+
                   isOpen
-                    ? "h-[20rem] md:h-[28rem] lg:h-[30rem]"
-                    : "h-30 md:h-[28rem] lg:h-[30rem]",
+                    ? "h-[20rem] md:h-[28rem] lg:h-[30rem] 2xl:h-[40rem]"
+                    : "h-30 md:h-[28rem] lg:h-[30rem] 2xl:h-[40rem]",
                   // width behavior on md+: image-accordion
                   "md:flex-1",
                   isOpen ? "md:flex-[4]" : "md:flex-[1.2]",
@@ -115,7 +118,7 @@ export default function Products() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="max-w-sm">
                     <h2 className="text-white text-xl font-semibold leading-tight text-primary md:text-2xl lg:text-3xl">
                       {item.title}
                     </h2>
@@ -124,8 +127,8 @@ export default function Products() {
                       {item.desc}
                     </p>
 
-                    <div className="md:mt-8 ">
-                      <TransButton text="Learn More" />
+                    <div className="md:mt-8 max-w-[220px]">
+                      <TransButton text="Learn More" link={item.link} />
                     </div>
                   </div>
                 </div>

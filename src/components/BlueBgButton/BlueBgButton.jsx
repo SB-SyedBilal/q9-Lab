@@ -2,21 +2,22 @@ import React from "react";
 
 const BlueBgButton = (props) => {
   return (
-    <button
-      className="cursor-pointer  mx-auto md:mx-0 flex items-center pl-5 pr-2    pt-2 pb-2 
-             rounded-full bg-[#06CBDE] text-white  text-sm lg:text-lg
+    <a 
+      href={props.id}
+      className="cursor-pointer  mx-auto md:mx-0 flex items-center justify-center pl-5 pr-2      pt-2 pb-2 2xl:pt-3 2xl:pb-3
+             rounded-full bg-[#06CBDE] text-white  text-sm lg:text-lg 2xl:text-[22px]
              shadow-lg transition-all duration-700 ease-out relative overflow-hidden group"
     >
       <span className="relative z-10 text-black">{props.text}</span>
 
       {/* Icon container */}
       <span
-        className="ml-2 w-6 h-6 md:ml-4 md:w-7 md:h-7 xl:ml-7 xl:w-9 xl:h-9 rounded-full bg-black flex items-center justify-center 
+        className="ml-2 w-6 h-6 md:ml-4 md:w-7 md:h-7 xl:ml-7 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 rounded-full bg-black flex items-center justify-center 
                relative z-10 transition-transform duration-500 ease-out
                group-hover:scale-100 group-hover:rotate-12 "
       >
         <svg
-          className="w-4 h-4 md:w-5 md:h-5 text-blue transition-transform duration-500 ease-out 
+          className="w-4 h-4 md:w-5 md:h-5 2xl:w-6 2xl:h-6 text-blue transition-transform duration-500 ease-out 
                  group-hover:rotate-32"
           fill="none"
           stroke="currentColor"
@@ -51,7 +52,7 @@ const BlueBgButton = (props) => {
       }
     `}
       </style>
-    </button>
+    </a>
   );
 };
 

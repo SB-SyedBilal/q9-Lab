@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const Heading = ({ heading, highlight }) => {
   return (
     <motion.h2
-      className="text-2xl sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] font-semibold text-white mb-6"
+      className="text-2xl sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] 2xl:text-[50px] font-semibold text-white mb-6"
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

@@ -21,7 +21,7 @@ const schema = z.object({
   message: z.string().min(5, "Please describe your challenge"),
 });
 
-const HirmForm = () => {
+const AtorForm = () => {
   const form = useRef(null);
   const [isSent, setIsSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -281,4 +281,4 @@ const HirmForm = () => {
   );
 };
 
-export default HirmForm;
+export default AtorForm;

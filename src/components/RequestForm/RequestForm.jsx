@@ -8,15 +8,15 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const schema = z.object({
-  name: z.string().min(4, "Name is required"),
-  email: z.string().email("Enter a valid email address"),
-  phone: z
+  full_name: z.string().min(4, "Name is required"),
+  business_email: z.string().email("Enter a valid email address"),
+  phone_whatsapp: z
     .string()
     .min(7, "Enter a valid phone/WhatsApp number")
     .regex(/^[+0-9()\-\s]{7,}$/, "Use numbers and + ( ) - only"),
-  product: z.string().min(1, "Please select a product"),
+  product_interest: z.string().min(1, "Please select a product"),
   city: z.string().min(1, "Please select a city"),
-  message: z.string().min(5, "Please describe your challenge"),
+  challenge: z.string().min(5, "Please describe your challenge"),
 });
 
 const RequestForm = () => {
@@ -69,10 +69,10 @@ const RequestForm = () => {
   return (
     <div
       id="form"
-      className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-16 max-w-[1600px] mx-auto"
+      className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-16 max-w-[1600px] 2xl:max-w-[1700px] mx-auto"
     >
       <div
-        className="relative w-full max-w-[1370px] rounded-2xl shadow-lg p-5 md:p-10 border border-cyan-500/30 overflow-hidden"
+        className="relative w-full max-w-[1370px] 2xl:max-w-[1670px] rounded-2xl shadow-lg pt-8 md:pr-15 pb-15 border border-cyan-500/30 overflow-hidden"
         style={{
           backgroundImage: `url('/img/formbg.png')`,
           backgroundSize: "cover",
@@ -90,16 +90,16 @@ const RequestForm = () => {
         />
         {/* Heading */}
         <div className="flex justify-center mb-3 md:mb-6 z-10 relative">
-          <Heading heading="Request A" highlight="Quote" />
+          <Heading heading="Let’s Build Your " highlight="AI Solution" />
         </div>
         {/* Wrapper: image + form */}
-        <div className="flex flex-col md:flex-row gap-10 z-10 relative">
+        <div className="flex flex-col md:flex-row md:justify-between gap-10 z-10 relative">
           {/* Left side image only for desktop */}
-          <div className="hidden md:block md:w-1/2">
+          <div className="hidden md:block ">
             <img
-              src="/img/formimg.png"
+              src="/img/reqformimg.png"
               alt="Request a Quote"
-              className="w-full h-full object-cover rounded-xl"
+              className=" object-cover rounded-xl"
             />
           </div>
 
@@ -108,69 +108,94 @@ const RequestForm = () => {
             ref={form}
             onSubmit={handleSubmit(onSubmit)}
             noValidate
-            className="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 text-white relative"
+            className="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-white relative"
           >
             {/* Full Name */}
             <div className="w-full">
+              <label
+                htmlFor="full_name"
+                className="block mb-2 text-md font-medium text-white"
+              >
+                Full Name
+              </label>
               <input
-                id="name"
+                id="full_name"
                 type="text"
-                placeholder="Full Name"
+                placeholder="John Smith"
                 autoComplete="name"
-                className="w-full rounded-md bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 placeholder:italic"
-                {...register("name")}
-                aria-invalid={!!errors.name}
+                className="w-full rounded-md bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA] "
+                {...register("full_name")}
+                aria-invalid={!!errors.full_name}
               />
-              {errors.name && (
+              {errors.full_name && (
                 <p className="mt-1 text-red-400 text-sm">
-                  {errors.name.message}
+                  {errors.full_name.message}
                 </p>
               )}
             </div>
 
             {/* Email */}
             <div className="w-full">
+              <label
+                htmlFor="business_email"
+                className="block mb-2 text-md font-medium text-white"
+              >
+                Business Email
+              </label>
               <input
-                id="email"
+                id="business_email"
                 type="email"
-                placeholder="Business Email"
+                placeholder="john@company.com"
                 autoComplete="email"
-                className="w-full rounded-md placeholder:italic bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400"
-                {...register("email")}
-                aria-invalid={!!errors.email}
+                className="w-full rounded-md  bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                {...register("business_email")}
+                aria-invalid={!!errors.business_email}
               />
-              {errors.email && (
+              {errors.business_email && (
                 <p className="mt-1 text-red-400 text-sm">
-                  {errors.email.message}
+                  {errors.business_email.message}
                 </p>
               )}
             </div>
 
             {/* Phone */}
             <div className="w-full">
+              <label
+                htmlFor="phone"
+                className="block mb-2 text-md font-medium text-white"
+              >
+                Phone / WhatsApp
+              </label>
               <input
-                id="phone"
+                id="phone_whatsapp"
                 type="text"
-                placeholder="Phone/Whatsapp"
+                placeholder="+971 50 123 4567"
+
                 autoComplete="tel"
-                className="w-full rounded-md placeholder:italic bg-[#222] px-6 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400"
-                {...register("phone")}
-                aria-invalid={!!errors.phone}
+                className="w-full rounded-md  bg-[#222] px-6 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                {...register("phone_whatsapp")}
+                aria-invalid={!!errors.phone_whatsapp}
               />
-              {errors.phone && (
+              {errors.phone_whatsapp && (
                 <p className="mt-1 text-red-400 text-sm">
-                  {errors.phone.message}
+                  {errors.phone_whatsapp.message}
                 </p>
               )}
             </div>
 
             {/* City */}
             <div className="w-full">
+              <label
+                htmlFor="city"
+                className="block mb-2 text-md font-medium text-white"
+              >
+                City
+              </label>
               <input
                 id="city"
                 type="text"
                 placeholder="City"
-                className="w-full rounded-md placeholder:italic bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400"
+                className="w-full rounded-md  bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
                 {...register("city")}
               />
               {errors.city && (
@@ -182,32 +207,52 @@ const RequestForm = () => {
 
             {/* Product Dropdown */}
             <div className="relative md:col-span-2 w-full">
-              <select
-                id="product"
-                className="w-full appearance-none rounded-md bg-[#222] px-4 py-5 focus:outline-none 
-                           focus:ring-cyan-200 text-gray-400"
-                defaultValue=""
-                {...register("product")}
-                aria-invalid={!!errors.product}
+              <label
+                htmlFor="product_interest"
+                className="block mb-2 text-md font-medium text-white"
               >
-                <option value="" disabled>Which product are you interested in?</option>
-                <option value="AI Voice Agent">AI Voice Agent</option>
-                <option value="AI Recruiter">AI Recruiter</option>
-                <option value="AI Tutor">AI Tutor</option>
-                <option value="AI Shopping Assistant">
+                Which product are you interested in?
+              </label>
+              <select
+                id="product_interest"
+                className="w-full appearance-none rounded-md bg-[#222] px-4 py-5 focus:outline-none 
+               focus:ring-cyan-200 text-white"
+                defaultValue=""
+                {...register("product_interest")}
+                aria-invalid={!!errors.product_interest}
+
+              >
+                <option value="" disabled >
+                  Select a product
+                </option>
+                <option className="text-white" value="AI Voice Agent">
+                  AI Voice Agent
+                </option>
+                <option className="text-white" value="AI Recruiter">
+                  AI Recruiter
+                </option>
+                <option className="text-white" value="AI Tutor">
+                  AI Tutor
+                </option>
+                <option className="text-white" value="AI Shopping Assistant">
                   AI Shopping Assistant
                 </option>
-                <option value="Custom AI Agent">Custom AI Agent</option>
-                <option value="Other">Other</option>
+                <option className="text-white" value="Custom AI Agent">
+                  Custom AI Agent
+                </option>
+                <option className="text-white" value="Other">
+                  Other
+                </option>
               </select>
-              {errors.product && (
+
+              {errors.product_interest && (
                 <p className="mt-1 text-red-400 text-sm">
-                  {errors.product.message}
+                  {errors.product_interest.message}
                 </p>
               )}
 
               {/* Dropdown Icon */}
-              <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-gray-400">
+              <div className="pointer-events-none absolute hidden xl:top-[58px] right-4 xl:flex items-center text-[#FFFFFF]">
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -226,17 +271,23 @@ const RequestForm = () => {
 
             {/* Message */}
             <div className="md:col-span-3 w-full">
+              <label
+                htmlFor="challenge"
+                className="block mb-2 text-md font-medium text-white"
+              >
+                What challenge are you trying to solve?
+              </label>
               <textarea
-                id="message"
-                placeholder="What challenge are you trying to solve?"
-                className="w-full rounded-md bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-gray-400 placeholder:italic"
+                id="challenge"
+                placeholder="Tell us briefly what challenge you're trying to solve..."
+                className="w-full rounded-md bg-[#222] px-8 py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA] "
                 rows={6}
-                {...register("message")}
-                aria-invalid={!!errors.message}
+                {...register("challenge")}
+                aria-invalid={!!errors.challenge}
               />
-              {errors.message && (
+              {errors.challenge && (
                 <p className="mt-1 text-red-400 text-sm">
-                  {errors.message.message}
+                  {errors.challenge.message}
                 </p>
               )}
             </div>
@@ -246,35 +297,34 @@ const RequestForm = () => {
               <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 onChange={(token) => setCaptchaToken(token)}
-                onExpired={() => setCaptchaToken(null)}
               />
             </div>
 
             {/* Submit Button */}
-            <div className="md:col-span-3 w-full">
+            <div className="md:col-span-3 w-full flex flex-col items-center gap-4">
               <button
                 type="submit"
                 disabled={loading}
                 className="w-full bg-cyan-400 text-black font-semibold py-4 rounded-md text-lg
-                          hover:bg-cyan-500 transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+      hover:bg-cyan-500 transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
               >
                 {loading ? "Sending..." : "SUBMIT"}
               </button>
+
+              {/* ✅ Success Message */}
+              {isSent && (
+                <div
+                  className="w-full animate-fade-in"
+                  role="status"
+                  aria-live="polite"
+                >
+                  <p className="bg-green-500/10 text-green-300 border border-green-500/40 px-6 py-4 rounded-md shadow-md text-center text-sm sm:text-base font-medium transition-all duration-300">
+                    ✅ Your message has been sent successfully!
+                  </p>
+                </div>
+              )}
             </div>
           </form>
-
-          {/* ✅ Success Message */}
-          {isSent && (
-            <div
-              className="mt-6 flex justify-center animate-fade-in"
-              role="status"
-              aria-live="polite"
-            >
-              <p className="bg-green-500/10 text-green-300 border border-green-500/40 px-6 py-4 rounded-md shadow-md text-center text-sm sm:text-base font-medium transition-all duration-300">
-                ✅ Your message has been sent successfully!
-              </p>
-            </div>
-          )}
         </div>{" "}
         {/* image + form wrapper */}
       </div>{" "}

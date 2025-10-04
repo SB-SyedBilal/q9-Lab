@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 export default function Navbar() {
@@ -12,8 +13,6 @@ export default function Navbar() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const timeoutRef = useRef(null);
-
-  
 
   // Inside your component
   useEffect(() => {
@@ -30,19 +29,21 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className="max-w-[1400px] mx-auto relative z-50 w-full px-8 py-4 pt-8 sm:pt-8 md:pt-11 md:px-8">
+    <nav className="max-w-[1400px] 2xl:max-w-[1800px] mx-auto relative z-50 w-full px-8 py-4 pt-8 sm:pt-8 md:pt-11 md:px-8 ">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
-            src="/img/q9logo.png"
-            alt="Q9 Labs Logo"
-            className="w-[90px] sm:w-[90px] md:w-[140px] h-auto"
-          />
+          <Link href="/">
+            <img
+              src="/img/q9logo.png"
+              alt="Q9 Labs Logo"
+              className="w-[90px] sm:w-[90px] md:w-[140px] 2xl:w-[170px] h-auto"
+            />
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center text-sm xl:text-lg space-x-6 xl:space-x-14">
+        <div className="hidden lg:flex items-center text-sm xl:text-lg 2xl:text-2xl space-x-6 xl:space-x-14 2xl:space-x-16">
           <a
             href="#"
             className="text-white hover:text-cyan-300 transition-colors"
@@ -68,7 +69,7 @@ export default function Navbar() {
             <button className="text-white hover:text-cyan-300 flex items-center">
               Our Products
               <svg
-                className={`ml-1 w-4 h-4 transition-transform duration-300 ${
+                className={`ml-3 w-6 h-6 transition-transform duration-300 ${
                   isDropdownOpen ? "rotate-180" : "rotate-0"
                 }`}
                 fill="none"
@@ -86,13 +87,17 @@ export default function Navbar() {
 
             {isDropdownOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-[#080808] backdrop-blur-sm rounded-md shadow-lg z-50 border border-white/10">
-                {["AVA", "ATOR", "HIRM"].map((item) => (
+                {[
+                  { label: "AVA", href: "/" },
+                  { label: "ATOR", href: "/ator" },
+                  { label: "HIRM", href: "/hirm" },
+                ].map((item) => (
                   <a
-                    key={item}
-                    href="#"
+                    key={item.label}
+                    href={item.href}
                     className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:text-cyan-300 transition-colors"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 ))}
               </div>
@@ -120,12 +125,12 @@ export default function Navbar() {
         </div>
 
         {/* CTA - Desktop */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex lg:gap-4">
           <a
-            className="bg-white/10 border border-white text-white px-4 xl:px-8 py-2 xl:py-3 rounded-full hover:bg-white hover:text-black transition-colors text-sm xl:text-base"
+            className="bg-white/10 border border-white text-white px-4 xl:px-8 py-2 xl:py-3 rounded-full hover:bg-white hover:text-black transition-colors text-sm xl:text-base 2xl:text-xl"
             href="#form"
           >
-            Get A Free Demo
+            Request A Demo
           </a>
         </div>
 
@@ -232,15 +237,19 @@ export default function Navbar() {
             </button>
 
             {isProductMenuOpen && (
-              <div className="pl-3 mt-3 space-y-2 text-sm text-gray-300 ">
-                {["AVA", "ATOR", "HIRM"].map((item) => (
+              <div className="pl-3 mt-3 space-y-3 text-sm text-gray-300">
+                {[
+                  { label: "Ava", href: "/" },
+                  { label: "Ator", href: "/ator" },
+                  { label: "Hirm", href: "/hirm" },
+                ].map((item) => (
                   <a
-                    key={item}
-                    href="#"
+                    key={item.label}
+                    href={item.href}
                     onClick={closeMobileMenu}
-                    className="block hover:text-cyan-300  "
+                    className="block hover:text-cyan-300"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 ))}
               </div>
@@ -278,7 +287,7 @@ export default function Navbar() {
               onClick={closeMobileMenu}
               className="block text-center bg-white text-black font-medium py-3 rounded-full hover:bg-cyan-400 transition"
             >
-              Get A Free Demo
+              Request A Demo
             </a>
           </div>
         </div>

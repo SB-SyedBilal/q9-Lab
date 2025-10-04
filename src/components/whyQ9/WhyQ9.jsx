@@ -5,13 +5,13 @@ import { ArrowUpRight } from "lucide-react";
 
 const WhyQ9 = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 gap-10">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-[1500px] 2xl:max-w-[1700px]  mx-auto px-4 sm:px-6 md:px-8 gap-10 2xl:gap-36 bg-[#080808] 2xl:py-8">
       {/* Left: Image */}
       <div className="w-full lg:w-1/2 flex justify-center items-center">
         <img
           src="/img/whyq9.png"
           alt="Rotating Globe"
-          className="w-full max-w-[380px] sm:max-w-[450px] md:max-w-[520px] lg:max-w-[590px] h-auto object-contain"
+          className="w-full max-w-[380px] sm:max-w-[450px] md:max-w-[520px] lg:max-w-[590px] 2xl:max-w-[650px] h-auto object-contain"
         />
       </div>
 
@@ -21,7 +21,7 @@ const WhyQ9 = () => {
           Why <span className="text-[#14cff0]">Q9 Labs</span>
         </h2>
 
-        <p className="text-sm sm:text-base leading-relaxed mb-6 text-white/70">
+        <p className="text-sm sm:text-base 2xl:text-lg 2xl:max-w-xl leading-relaxed mb-6 text-white/70">
           Q9 Labs is a UAE-based AI research and product company backed by
           CollabEZ. We design SaaS-based AI applications that replace
           inefficiency with automation, saving time, cutting costs, and scaling
@@ -44,7 +44,7 @@ const WhyQ9 = () => {
                duration-700 ease-in-out"
             ></span>
 
-            <span className=" text-xs sm:text-[16px] relative z-10 ">
+            <span className=" text-xs sm:text-[16px] 2xl:text-[20px] relative z-10 ">
               Lern More
             </span>
 

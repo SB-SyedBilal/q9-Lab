@@ -5,16 +5,20 @@ import HowWorks from "../../components/HirmPage/HowWorks";
 import HirmBanner from "../../components/HirmPage/HirmBanner";
 import CaseStudies from "../../components/HirmPage/CaseStudies";
 import HirmForm from "../../components/HirmPage/HirmForm";
+import HirmCarouselPage from "../../components/HirmPage/DualsSlider";
+import RequestForm from "../../components/RequestForm/RequestForm";
 
 const page = () => {
   return (
     <>
       <Hero />
-      <DualSlider />
+      {/* <DualSlider /> */}
+      <HirmCarouselPage />
       <HowWorks />
       <HirmBanner />
-      <CaseStudies /> 
-      <HirmForm />
+      <CaseStudies />
+      {/* <HirmForm /> */}
+      <RequestForm />
     </>
   );
 };

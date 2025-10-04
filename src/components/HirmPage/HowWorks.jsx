@@ -59,7 +59,7 @@ export default function HowWorks() {
       }}
     >
       <div className="max-w-8xl mx-auto   ">
-        <div className="pl-25">
+        <div className="text-center md:text-left md:pl-10 xl:pl-25 lg:pl-18">
           <Heading heading="How It" highlight="Works" />
         </div>
 
@@ -72,13 +72,13 @@ export default function HowWorks() {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="min-w-full flex-shrink-0 snap-center flex flex-col items-center text-center group px-4"
+                className=" flex-shrink-0 snap-center flex flex-col items-center text-center group px-4"
               >
-                <div className="relative w-24 h-24 rounded-full border border-cyan-400 flex items-center justify-center text-3xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
+                <div className="relative w-17 h-17 md:w-24 md:h-24 rounded-full border border-cyan-400 flex items-center justify-center text-2xl md:text-3xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
                   <span className="z-10">{step.number}</span>
                   <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
                 </div>
-                <h3 className="text-cyan-400 font-semibold text-xl mt-6 mb-3">
+                <h3 className="text-cyan-400 font-semibold md:text-xl mt-6 mb-3 max-w-[152px]">
                   {step.title}
                 </h3>
                 <p className="text-white text-sm max-w-xs">
@@ -105,23 +105,20 @@ export default function HowWorks() {
         </div>
 
         {/* Desktop Steps */}
-        <div className="hidden md:flex relative flex-row justify-between items-start gap-6 mt-12">
+        <div className="hidden md:flex relative flex-row justify-between items-start gap-6 mt-12 lg:mt-8">
           {steps.map((step, index) => (
             <div
               key={index}
               className="flex flex-col items-center text-center md:w-1/3 group relative z-10"
             >
-              <div className="relative w-25 h-25 rounded-full border border-cyan-400 flex items-center justify-center text-3xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
+              <div className="relative w-25 h-25 2xl:w-32 2xl:h-32 rounded-full border border-cyan-400 flex items-center justify-center text-3xl 2xl:text-4xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
                 <span className="z-10">{step.number}</span>
                 <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
               </div>
-              <div className="relative group-hover:after:scale-100 after:transition-transform after:duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-14 after:bg-cyan-400 after:scale-0">
-                <h3 className="text-cyan-400 font-semibold text-lg  lg:text-2xl mt-6 mb-4">
-                  {step.title}
-                </h3>
-              </div>
-
-              <p className="text-white text-[14px] lg:max-w-[275px] xl:max-w-xs mt-2">
+              <h3 className="text-cyan-400 font-semibold text-2xl 2xl:text-3xl mt-6 mb-3">
+                {step.title}
+              </h3>
+              <p className="text-white text-[14px] 2xl:text-[18px] max-w-xs">
                 {step.description}
               </p>
             </div>
