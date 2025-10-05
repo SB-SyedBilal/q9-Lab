@@ -26,12 +26,12 @@ export default function Hero() {
     return (
         <div
             id="home"
-            className="overflow-hidden "
+            className="overflow-hidden"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
             {/* Curved Overlay Image */}
-            <div className="w-full h-[896.88px] z-0 opacity-100 flex justify-center">
+            <div className="w-screen h-[896.88px] flex justify-center ">
                 <img
                     src="/img/Ava/hero.png"
                     alt="Curved design overlay"
