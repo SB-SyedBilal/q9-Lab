@@ -104,7 +104,7 @@ export default function HowWorks() {
 
     >
 
-      <div className="max-w-8xl mx-auto   ">
+      <div className="max-w-8xl mx-auto   overflow-hidden">
 
         <div className="pl-25">
 
