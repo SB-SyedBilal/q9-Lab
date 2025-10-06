@@ -5,7 +5,6 @@ import AtorBanner from '../../components/AtorPage/AtorBanner'
 import AtorCase from '../../components/AtorPage/AtorCase'
 import AtorHowWorks from '../../components/AtorPage/AtorHowWorks'
 import AtorForm from '../../components/AtorPage/AtorForm'
-import Atornew from '../../components/AtorPage/Atornew'
 import RequestForm from "../../components/RequestForm/RequestForm"
 
 const page = () => {
@@ -13,12 +12,13 @@ const page = () => {
     <div>
       <AtorHero />
       {/* <AtorSlider /> */}
-      <Atornew />
+
       <AtorHowWorks />
       <AtorBanner />
       <AtorCase />
       {/* <AtorForm /> */}
       <RequestForm />
+      
 
     </div>
   )

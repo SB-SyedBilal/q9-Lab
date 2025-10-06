@@ -51,7 +51,7 @@ export default function IndustriesSection() {
   };
 
   return (
-    <div className="pb-6 bg-[#0e0e0ec1]">
+    <div className="pb-6 bg-[#080808]">
       <section
         id="industries-section"
         className=" text-white py-10 px-6  z-0 "
@@ -144,7 +144,7 @@ export default function IndustriesSection() {
 
 
                   {/* Card content */}
-                  <div className="relative z-20 bg-black rounded-xl p-7 h-full flex flex-col items-center text-center border border-gray-800 min-h-[460px] lg:min-h-[420px] xl:min-h-[450px] 2xl:min-h-[400px]">
+                  <div className="relative z-20 bg-black rounded-xl p-7 h-full flex flex-col items-center text-center animated-border  min-h-[460px] lg:min-h-[420px] xl:min-h-[450px] 2xl:min-h-[400px]">
                     {/* Icon */}
                     <div className="mb-4 md:mb-7">
                       <img
@@ -166,7 +166,7 @@ export default function IndustriesSection() {
 
                     {/* Learn More Button (desktop only) */}
                     <button
-                      className="text-white text-2sm 2xl:text-xl font-medium hover:text-cyan-300 transition-colors duration-200 flex items-center gap-2 border-b 2xl:mb-4"
+                      className="cursor-pointer text-white text-2sm 2xl:text-xl font-medium hover:text-cyan-300 transition-colors duration-200 flex items-center gap-2 border-b 2xl:mb-4"
                       aria-label={`Learn more about ${industry.title}`}
                     >
                       Learn More

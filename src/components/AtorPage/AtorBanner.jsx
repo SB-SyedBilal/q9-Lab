@@ -15,9 +15,9 @@ export default function AtorBanner() {
         ></div>
 
         <h2 className="text-2xl mb-6 font-bold text-white sm:text-3xl md:text-4xl xl:text-5xl leading-snug">
-          Ready To Bring Personalized <span className="text-cyan-400">Learning To Every Student?</span>
+          Ready To Bring Personalized 
           <br />
-          <span className="text-cyan-400">Smarter, And Fairer?</span>
+          <span className="text-cyan-400">Learning To Every Student?</span>
         </h2>
 
         <div className="flex justify-center">

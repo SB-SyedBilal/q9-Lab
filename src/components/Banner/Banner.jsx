@@ -47,11 +47,11 @@ export default function Banner() {
             </div>
 
             {/* Right Image */}
-            <div className="hidden md:w-1/2 md:flex justify-right ">
+            <div className="hidden  md:flex justify-right ">
               <img
                 src="/img/banner.png" // Replace this with your image path
                 alt="AI Illustration"
-                className="w-full md:ml-15 lg:ml-30 h-full "
+                className="md:w-[200px] lg:w-[300px] xl:w-[350px] 2xl:w-[450px] md:ml-15 lg:ml-30 h-auto "
               />
             </div>
           </div>

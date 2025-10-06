@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className="max-w-[1400px] 2xl:max-w-[1800px] mx-auto relative z-50 w-full px-8 py-4 pt-8 sm:pt-8 md:pt-11 md:px-8 ">
+    <nav className="max-w-[1400px] 2xl:max-w-[1800px] mx-auto relative z-50 w-full px-4 py-4 sm:py-8 md:px-8 ">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -44,12 +44,12 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center text-sm xl:text-lg 2xl:text-2xl space-x-6 xl:space-x-14 2xl:space-x-16">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="text-white hover:text-cyan-300 transition-colors"
           >
             Home
-          </a>
+          </Link>
 
           {/* Dropdown */}
           <div
@@ -88,50 +88,50 @@ export default function Navbar() {
             {isDropdownOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-[#080808] backdrop-blur-sm rounded-md shadow-lg z-50 border border-white/10">
                 {[
-                  { label: "AVA", href: "/" },
+                  { label: "AVA", href: "/ava" },
                   { label: "ATOR", href: "/ator" },
                   { label: "HIRM", href: "/hirm" },
                 ].map((item) => (
-                  <a
+                  <Link
                     key={item.label}
                     href={item.href}
                     className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:text-cyan-300 transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </div>
 
-          <a
-            href="#industries-section"
+          <Link
+            href="/about-us"
             className="text-white hover:text-cyan-300 transition-colors"
           >
             About Us
-          </a>
-          <a
-            href="#how-it-works"
+          </Link>
+          <Link
+            href="/about-us"
             className="text-white hover:text-cyan-300 transition-colors"
           >
             Blogs
-          </a>
-          <a
+          </Link>
+          <Link
             href="#form"
             className="text-white hover:text-cyan-300 transition-colors"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
 
         {/* CTA - Desktop */}
         <div className="hidden lg:flex lg:gap-4">
-          <a
+          <Link
             className="bg-white/10 border border-white text-white px-4 xl:px-8 py-2 xl:py-3 rounded-full hover:bg-white hover:text-black transition-colors text-sm xl:text-base 2xl:text-xl"
             href="#form"
           >
             Request A Demo
-          </a>
+          </Link>
         </div>
 
         {/* Hamburger for Mobile */}
@@ -177,9 +177,8 @@ export default function Navbar() {
       )}
       {/* Mobile Navigation - Right Drawer Style */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black/90 backdrop-blur-lg border-l border-white/10 p-6 z-60 transform transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`lg:hidden fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black/90 backdrop-blur-lg border-l border-white/10 p-6 z-60 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         {/* Close Button */}
         <button
@@ -204,13 +203,13 @@ export default function Navbar() {
 
         {/* Mobile Menu Links */}
         <div className="mt-12 space-y-4 text-white text-base">
-          <a
-            href="#"
+          <Link
+            href="/"
             onClick={closeMobileMenu}
             className="block hover:text-cyan-300 border-b border-white/30 pb-3"
           >
             Home
-          </a>
+          </Link>
 
           {/* Products Dropdown */}
           <div className="border-b border-white/30 pb-3">
@@ -220,9 +219,8 @@ export default function Navbar() {
             >
               Our Products
               <svg
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  isProductMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 transition-transform duration-300 ${isProductMenuOpen ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -239,56 +237,56 @@ export default function Navbar() {
             {isProductMenuOpen && (
               <div className="pl-3 mt-3 space-y-3 text-sm text-gray-300">
                 {[
-                  { label: "Ava", href: "/" },
+                  { label: "Ava", href: "/ava" },
                   { label: "Ator", href: "/ator" },
                   { label: "Hirm", href: "/hirm" },
                 ].map((item) => (
-                  <a
+                  <Link
                     key={item.label}
                     href={item.href}
                     onClick={closeMobileMenu}
                     className="block hover:text-cyan-300"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </div>
 
-          <a
-            href="#industries-section"
+          <Link
+            href="/about-us"
             onClick={closeMobileMenu}
             className="block hover:text-cyan-300 border-b border-white/30 pb-3"
           >
             About Us
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="#how-it-works"
             onClick={closeMobileMenu}
             className="block hover:text-cyan-300 border-b border-white/30 pb-3"
           >
             Blogs
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="#form"
             onClick={closeMobileMenu}
             className="block hover:text-cyan-300 border-b border-white/30 pb-3"
           >
             Contact Us
-          </a>
+          </Link>
 
           {/* CTA Button */}
           <div className="pt-4">
-            <a
+            <Link
               href="#form"
               onClick={closeMobileMenu}
               className="block text-center bg-white text-black font-medium py-3 rounded-full hover:bg-cyan-400 transition"
             >
               Request A Demo
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -11,13 +11,13 @@ export default function HirmBanner() {
         <div
           className="pointer-events-none absolute -bottom-8 -right-6 h-40 w-40 md:h-52 md:w-70  2xl:h-84 2xl:w-120 xl:h-54 xl:w-80
                 bg-[radial-gradient(circle_at_bottom_right,_#06CBDE,_white,_transparent)] 
-                opacity-15 lg:opacity-15 xl:opacity-12 blur-3xl"
+                opacity-15 lg:opacity-15 xl:opacity-8 blur-3xl"
         ></div>
 
         <h2 className="text-2xl mb-6 font-bold text-white sm:text-3xl md:text-4xl xl:text-5xl leading-snug">
           Ready To Make <span className="text-cyan-400">Hiring Faster,</span>
           <br />
-          <span className="text-cyan-400">Smarter, And Fairer?</span>
+          <span className="text-cyan-400">Smarter, <span className="text-white">And</span> Fairer?</span>
         </h2>
 
         <div className="flex justify-center">

@@ -13,7 +13,7 @@ const page = () => {
     <>
       <Hero />
       {/* <DualSlider /> */}
-      <HirmCarouselPage />
+      {/* <HirmCarouselPage /> */}
       <HowWorks />
       <HirmBanner />
       <CaseStudies />

@@ -12,7 +12,7 @@ const BlueBgButton = (props) => {
 
       {/* Icon container */}
       <span
-        className="ml-2 w-6 h-6 md:ml-4 md:w-7 md:h-7 xl:ml-7 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 rounded-full bg-black flex items-center justify-center 
+        className="ml-2 w-6 h-6 md:ml-4 md:w-7 md:h-7 xl:ml-7 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 rounded-full hidden bg-black lg:flex items-center justify-center 
                relative z-10 transition-transform duration-500 ease-out
                group-hover:scale-100 group-hover:rotate-12 "
       >
