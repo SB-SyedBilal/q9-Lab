@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className="max-w-[1400px] 2xl:max-w-[1800px] mx-auto relative z-50 w-full px-4 py-4 sm:py-8 md:px-8 ">
+    <nav className="max-w-[1700px] mx-auto relative z-50 w-full py-6 px-6 lg:px-8">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -55,22 +55,22 @@ export default function Navbar() {
           <div
             className="relative"
             onMouseEnter={() => {
-              if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-              }
+              if (timeoutRef.current) clearTimeout(timeoutRef.current);
               setIsDropdownOpen(true);
             }}
             onMouseLeave={() => {
-              timeoutRef.current = setTimeout(() => {
-                setIsDropdownOpen(false);
-              }, 200); // 200ms delay before closing
+              timeoutRef.current = setTimeout(
+                () => setIsDropdownOpen(false),
+                200
+              );
             }}
           >
-            <button className="text-white hover:text-cyan-300 flex items-center">
+            {/* Button */}
+            <button className="text-white hover:text-cyan-300 flex items-center  tracking-wide transition-all duration-300">
               Our Products
               <svg
-                className={`ml-3 w-6 h-6 transition-transform duration-300 ${
-                  isDropdownOpen ? "rotate-180" : "rotate-0"
+                className={`ml-2 w-5 h-5 transition-transform duration-300 ${
+                  isDropdownOpen ? "rotate-180 text-cyan-300" : "rotate-0"
                 }`}
                 fill="none"
                 stroke="currentColor"
@@ -85,18 +85,26 @@ export default function Navbar() {
               </svg>
             </button>
 
+            {/* Dropdown Menu */}
             {isDropdownOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-[#080808] backdrop-blur-sm rounded-md shadow-lg z-50 border border-white/10">
+              <div
+                className="absolute left-0 mt-3 w-56 bg-gradient-to-br from-[#0a0a0a] to-[#0d1b1e] 
+                 border border-cyan-500/20 backdrop-blur-md rounded-xl shadow-[0_8px_30px_rgba(6,203,222,0.15)] 
+                 overflow-hidden animate-fadeIn z-50"
+              >
                 {[
                   { label: "AVA", href: "/ava" },
                   { label: "ATOR", href: "/ator" },
                   { label: "HIRM", href: "/hirm" },
-                ].map((item) => (
+                ].map((item, i) => (
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:text-cyan-300 transition-colors"
+                    className="block px-5 py-3 text-sm text-white/90 hover:text-white 
+                     hover:bg-cyan-500/20 transition-all duration-300 
+                     border-b border-white/5 last:border-none flex items-center gap-2"
                   >
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
                     {item.label}
                   </Link>
                 ))}
@@ -177,8 +185,9 @@ export default function Navbar() {
       )}
       {/* Mobile Navigation - Right Drawer Style */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black/90 backdrop-blur-lg border-l border-white/10 p-6 z-60 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`lg:hidden fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black/90 backdrop-blur-lg border-l border-white/10 p-6 z-60 transform transition-transform duration-300 ease-in-out ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         {/* Close Button */}
         <button
@@ -219,8 +228,9 @@ export default function Navbar() {
             >
               Our Products
               <svg
-                className={`w-4 h-4 transition-transform duration-300 ${isProductMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`w-4 h-4 transition-transform duration-300 ${
+                  isProductMenuOpen ? "rotate-180" : ""
+                }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

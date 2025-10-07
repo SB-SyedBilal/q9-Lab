@@ -3,10 +3,8 @@ import Banner from "@/components/Banner/Banner";
 import Heading from "@/components/Heading/Heading";
 import MobileAutoSlider from "@/components/mobile-auto-slider/mobile-auto-slider";
 import { useState } from "react";
-import Button from "../TransButton/TransButton";
 import BlueBgButton from "../BlueBgButton/BlueBgButton";
-
-export default function CaseStudies() {
+const HirmCases = () => {
   const industries = [
     {
       icon: "/img/caseicon1.png",
@@ -33,21 +31,20 @@ export default function CaseStudies() {
   const toggleDescription = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
-
   return (
-    <div className="pb-6 bg-[#0e0e0ec1]">
+    <div className=" mb-18">
       <section
         id="industries-section"
-        className=" text-white lg:py-10 px-6  z-0 "
+        className=" text-white bg-[#080808] z-0 "
         style={{
-          backgroundImage: "url('/img/lines2.png')",
+          backgroundImage: "url('/img/grabii.png')",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1150px] 2xl:max-w-[1700px] mx-auto">
+        <div className="max-w-[1700px] mx-auto px-6 py-19 lg:px-8">
           {/* Header */}
-          <div className="md:mb-12 text-center ">
-            <Heading heading="Real-World" highlight="Studies" />
+          <div className="mb-12 text-center">
+            <Heading heading="Real-World" highlight="Case Studies" />
           </div>
 
           {/* Mobile: horizontal slider with auto-advance */}
@@ -110,60 +107,71 @@ export default function CaseStudies() {
           </div>
 
           {/* Tablet/Desktop: original grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 2xl:gap-18 ">
             {industries.map((industry, index) => (
-              <div key={index} className="relative group h-full" tabIndex={0}>
-                <div className="relative z-10 rounded-xl overflow-hidden h-full">
-                  {/* Hover shape from top-right */}
-                  <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-35 group-focus-within:scale-35 group-active:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
+              <div
+                key={index}
+                className="relative z-20 rounded-2xl p-18 h-full flex flex-col justify-between
+            bg-[#0C0C0C] animated-border min-h-[420px] overflow-hidden group
+            transition-all duration-500 "
+              >
+                {/* Hover shape from top-right */}
+                <div className="z-50 absolute top-0 right-0 w-[60%]  h-1/2 2xl:h-[60%] bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
+                
+                <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-cyan-500/30 blur-[100px] rounded-full pointer-events-none"></div>
 
-                  {/* Card content */}
-                  <div className="overflow-hidden relative z-20 bg-black rounded-xl p-7 h-full flex flex-col border border-gray-800 min-h-[460px] lg:min-h-[420px] xl:min-h-[450px] 2xl:min-h-[400px]">
-                    {/* White gradient glow in bottom-right */}
-                    <div
-                      className="pointer-events-none absolute -bottom-8 -right-6  lg:h-34 md:w-60 xl:h-44 xl:w-60 
-                bg-[radial-gradient(circle_at_bottom_right,_#b9f3fa,_white,_transparent)] 
-                opacity-14 blur-3xl"
-                    ></div>
-                    {/* Icon with rounded background */}
-                    <div className="mb-4 md:mb-7">
-                      <div className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] 2xl:w-[70px] 2xl:h-[70px] flex items-center justify-center rounded-full bg-[#06CBDE21]">
-                        <img
-                          src={industry.icon || "/placeholder.svg"}
-                          alt={industry.title}
-                          className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] 2xl:w-[36px] 2xl:h-[36px] object-cover"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Title with underline on hover */}
-                    <h3 className="relative text-lg md:text-2xl 2xl:text-3xl  mb-4 md:mb-7 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300 w-fit">
-                      {industry.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-gray-400 text-sm md:text-[15px] 2xl:text-[18px] leading-relaxed  mb-8">
-                      {industry.description}
-                    </p>
-
-                    {/* Let's Connect Button */}
-                    <button
-                      className="text-white text-sm xl:text-lg 2xl:text-xl font-medium hover:text-cyan-300 transition-colors duration-200 flex items-center gap-2 border-b border-white w-fit"
-                      aria-label={`Learn more about ${industry.title}`}
-                    >
-                      Let's Connect
-                    </button>
+                <div className="flex flex-col gap-4 xl:gap-10">
+                  {/* Icon */}
+                  <div className="bg-[#06CBDE21] rounded-full p-4 w-fit">
+                    <img
+                      src={industry.icon}
+                      alt={industry.title}
+                      className="xl:w-[48px] xl:h-[50px] object-contain"
+                    />
                   </div>
+
+                  {/* Title */}
+                  <h3 className="text-white text-xl xl:text-3xl ">
+                    {industry.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className=" text-sm xl:text-lg leading-relaxed">
+                    {industry.description}
+                  </p>
                 </div>
+
+                {/* Button */}
+                <button
+                  className="mt-8 flex items-center gap-2 text-white font-semibold underline underline-offset-2
+              hover:text-cyan-400 transition-colors duration-300 w-fit"
+                >
+                  Let’s Connect
+                  <svg
+                    className="w-5 h-5 animate-pulse"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
               </div>
             ))}
           </div>
+          <div className="flex justify-center pt-12 ">
+            <BlueBgButton text="See It in Action" />
+          </div>
         </div>
       </section>
-
-      <div className="mt-4 flex justify-center">
-        <BlueBgButton text="See It in Action" />
-      </div>
     </div>
   );
-}
+};
+
+export default HirmCases;

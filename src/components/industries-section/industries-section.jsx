@@ -51,16 +51,16 @@ export default function IndustriesSection() {
   };
 
   return (
-    <div className="pb-6 bg-[#080808]">
+    <div className="pb-12">
       <section
         id="industries-section"
-        className=" text-white py-10 px-6  z-0 "
+        className=" text-white py-16 xl:mb-12 z-0 bg-[#080808]"
         style={{
           backgroundImage: "url('/img/lines2.png')",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1150px] 2xl:max-w-[1700px] mx-auto">
+        <div className="max-w-[1700px] mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="mb-12 text-center md:text-left">
             <Heading heading="Industries" highlight="We Serve " />

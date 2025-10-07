@@ -3,29 +3,28 @@ import TransButton from "../TransButton/TransButton";
 
 const OurMission = () => {
   return (
-    <div className="flex flex-col-reverse bg-[#080808] lg:flex-row items-center justify-between max-w-[1500px] xl:max-w-full mt-22 lg:mt-10 2xl:mt-6  px-4 sm:px-6 md:px-8 gap-10 2xl:gap-36 md:py-12  xl:py-18 ">
-      {/* left Content */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start mx-auto text-center lg:text-left  lg:pl-6 2xl:pl-20">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-snug text-white">
-          Our <span className="text-[#14cff0]">Story</span>
-        </h2>
+    <div className="bg-[#080808] w-full">
+      <div className="flex flex-col lg:flex-row  justify-between  max-w-[1700px] px-6 lg:px-8 py-12 mx-auto">
+        {/* left Content */}
+        <div className="w-full lg:w-1/2 flex flex-col mx-auto justify-center items-center lg:items-start text-center lg:text-left">
+          <h2 className="text-4xl xl:text-6xl font-bold mb-6 leading-snug text-white">
+            Our <span className="text-[#14cff0]">Mission</span>
+          </h2>
 
-        <p className="text-sm sm:text-base 2xl:text-lg max-w-[320px] md:max-w-lg lg:xl:max-w-xl leading-relaxed mb-6 text-white/70">
-          Q9 Labs was born out of a simple observation: businesses lose millions
-          each year to repetitive tasks. We started Q9 Labs to create applied AI
-          agents that solve one big inefficiency. Today, we’re proud to have
-          pilots live in the UAE, with a roadmap to expand globally from Dubai
-          and Chicago.
-        </p>
-      </div>
+          <p className="2xl:text-2xl max-w-[320px] md:max-w-lg lg:xl:max-w-xl  leading-relaxed mb-6 text-white/70">
+            To build profitable SaaS applications that integrate AI into
+            workflows cutting costs, boosting efficiency, and driving outcomes.
+          </p>
+        </div>
 
-      {/* right Image */}
-      <div className="w-full lg:w-1/2 flex justify-center items-center 2xl:pr-28">
-        <img
-          src="/img/ourmission.png"
-          alt="Rotating Globe"
-          className="w-full max-w-[270px] sm:max-w-[360px] md:max-w-[450px] lg:max-w-[400px] xl:max-w-[500px] 2xl:max-w-[620px] h-auto object-contain"
-        />
+        {/* right Image */}
+        <div className="w-full flex lg:flex lg:justify-end items-center  justify-center">
+          <img
+            src="/img/mission.png"
+            alt="Rotating Globe"
+            className="w-sm xl:w-lg 2xl:w-2xl h-auto object-contain"
+          />
+        </div>
       </div>
     </div>
   );

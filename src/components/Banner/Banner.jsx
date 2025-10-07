@@ -5,9 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Banner() {
   return (
-    <section className="py-6 px-6 ">
-      <div className="md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1150px] 2xl:max-w-[1700px] mx-auto">
-        <div className="bg-gradient-to-r from-[#03020A] via-[#030306] to-[#04060A] rounded-2xl h-auto border border-gray-700 md:p-7 lg:p-0 overflow-hidden">
+    <section className="max-w-[1700px] px-6 lg:px-8 mx-auto">
+      <div className="">
+        <div className=" rounded-2xl h-auto  animated-border md:p-7 lg:p-0 overflow-hidden">
           <div className="flex flex-col md:flex-row items-center justify-between px-8  gap-8 ">
             {/* Left Content */}
             <div className=" text-center pt-5 sm:pt-0  md:text-left lg:ml-12 ">
@@ -49,7 +49,7 @@ export default function Banner() {
             {/* Right Image */}
             <div className="hidden  md:flex justify-right ">
               <img
-                src="/img/banner.png" // Replace this with your image path
+                src="/img/banner-cta.png" // Replace this with your image path
                 alt="AI Illustration"
                 className="md:w-[200px] lg:w-[300px] xl:w-[350px] 2xl:w-[450px] md:ml-15 lg:ml-30 h-auto "
               />

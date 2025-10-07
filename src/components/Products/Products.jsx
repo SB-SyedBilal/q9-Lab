@@ -29,7 +29,7 @@ const items = [
   {
     id: 2,
     // using the built-in placeholder generator for the third closed card
-    src: "/img/ai3.png",
+    src: "/img/hirmrobot.png",
     alt: "Business robot portrait in a suit",
     bedge: "HIRM",
     title: "AI Recruiter",
@@ -44,7 +44,7 @@ export default function Products() {
   return (
     <section id='products' className="w-full">
       
-      <div className="mx-auto max-w-[350px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1700px] px-4 py-10 md:py-14 lg:py-16 ">
+      <div className="mx-auto max-w-[1700px] mb-18 px-6 lg:px-8 ">
         <div className="flex justify-center md:mb-10">
           <Heading heading="Our Revolutionary" highlight="Products" />
         </div>
@@ -71,8 +71,8 @@ export default function Products() {
                   "transition-all duration-500 ease-in-out ",
                   // heights: stacked on mobile, same height on md+
                   isOpen
-                    ? "h-[20rem] md:h-[28rem] lg:h-[30rem] 2xl:h-[40rem]"
-                    : "h-30 md:h-[28rem] lg:h-[30rem] 2xl:h-[40rem]",
+                    ? "h-[20rem] md:h-[28rem] lg:h-[25rem] xl:h-[30rem] 2xl:h-[40rem]"
+                    : "h-30 md:h-[28rem] lg:h-[25rem] xl:h-[30rem] 2xl:h-[40rem]",
                   // width behavior on md+: image-accordion
                   "md:flex-1",
                   isOpen ? "md:flex-[4]" : "md:flex-[1.2]",

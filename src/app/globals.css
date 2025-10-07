@@ -41,7 +41,7 @@
     position: absolute;
     inset: 0;
     border: 1px solid transparent;
-    border-image: linear-gradient(90deg, #16d1ef, transparent) 1;
+    border-image: linear-gradient(90deg, #16d2ef20, transparent) 1;
     animation: moveBorder 6s linear infinite;
     pointer-events: none;
     z-index: -1;

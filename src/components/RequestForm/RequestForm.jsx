@@ -77,10 +77,10 @@ const RequestForm = () => {
   return (
     <div
       id="form"
-      className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-10 sm:py-14 lg:py-16 max-w-[1600px] 2xl:max-w-[1700px] mx-auto"
+      className="flex items-center justify-center  max-w-[1700px] px-6 lg:px-8 mx-auto mb-14 "
     >
       <div
-        className="relative w-full max-w-[95%] sm:max-w-[95%] md:max-w-[90%] lg:max-w-[1200px] xl:max-w-[1350px] 2xl:max-w-[1670px] rounded-2xl shadow-lg pt-6 sm:pt-8 lg:pt-10 px-4 pb-10 sm:pb-14 lg:pb-16 p-4 sm:p-6 lg:p-10 sm:px-8  border border-cyan-500/30 overflow-hidden"
+        className="relative w-full  rounded-xl shadow-lg px-12 py-12  animated-border overflow-hidden"
         style={{
           backgroundImage: `url('/img/formbg.png')`,
           backgroundSize: "cover",
@@ -103,21 +103,21 @@ const RequestForm = () => {
         </div>
 
         {/* Wrapper: image + form */}
-        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-12 z-10 relative">
+        <div className="flex items-center flex-col lg:flex-row lg:justify-between gap-10 lg:gap-12 z-10 relative ">
           {/* Left side image (hidden on small screens) */}
-          <div className="hidden lg:block w-full lg:w-1/2 xl:w-2/5">
+          <div className="hidden lg:flex w-full lg:w-1/2 xl:w-[38%] ">
             <img
-              src="/img/reqformimg.png"
+              src="/img/reqrobo.png"
               alt="Request a Quote"
-              className="object-cover w-full h-auto animate-bounce-slow"
+              className="object-cover w-full h-auto "
             />
           </div>
 
           {/* Right side: Form */}
           <form
             ref={form}
-            onSubmit={handleSubmit(onSubmit, (formErrors) => {
-              console.log("Validation errors:", formErrors);
+            onSubmit={handleSubmit((onSubmit) => {
+              // console.log("Validation errors:", formErrors);
               // optionally show user-friendly message:
               // alert("Fix the highlighted fields before submitting.");
             })}

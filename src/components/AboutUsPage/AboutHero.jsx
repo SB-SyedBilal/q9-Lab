@@ -43,7 +43,7 @@ export default function AboutUsHero() {
       )} */}
 
       {/* Main Content Wrapper */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between pl-7 xl:pl-10 2xl:pl-18   mt-5 lg:mt-17 xl:mt-20 max-w-[1400px] 2xl:max-w-[2000px] mx-auto ">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between pl-7 xl:pl-10 2xl:pl-26   mt-5 lg:mt-17 xl:mt-20 max-w-[1400px] 2xl:max-w-[2000px] mx-auto ">
         {/* Left: Text Content */}
         <div className="text-center max-w-[450px] lg:text-left lg:max-w-[480px] xl:max-w-[550px] 2xl:max-w-[650px] pr-6 md:pr-0 ">
           <h1 className="font-AmpleSoftPro text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-4 sm:mb-6 ">

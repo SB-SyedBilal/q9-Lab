@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className=" text-white pt-12 md:pt-16">
+    <footer className="max-w-[1700px] px-6 lg:px-8 mx-auto ">
       <div
-        className="max-w-[1400px] 2xl:max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 xl:gap-24
-  items-center sm:items-center md:items-start"
+        className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 xl:gap-24
+  items-center sm:items-center md:items-start py-16"
       >
         {/* Logo and Description */}
         <div className="mb-8  lg:mb-0 flex flex-col justify-center text-center items-center md:text-left md:justify-start md:items-start">
@@ -30,7 +30,7 @@ export default function Footer() {
           </p>
 
           <p className="flex items-center gap-2">
-            <span className="text-xl 2xl:text-2xl">Powered By</span>
+            <span className="text-xl text-white 2xl:text-2xl">Powered By</span>
             <a
               href="https://collabez.ae/"
               target="_blank"

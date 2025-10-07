@@ -4,7 +4,7 @@ import OurStory from '../../components/AboutUsPage/OurStory'
 import OurMission from '../../components/AboutUsPage/OurMission'
 import FeatureSection from '../../components/AboutUsPage/FeatureSection'
 import RAProtocolSection from '../../components/AboutUsPage/RAProtocolSection'
-import AboutBanner from '../../components/AboutUsPage/AboutBanner'
+import AbouBanner from '../../components/AboutUsPage/AbouBanner'
 
 const page = () => {
   return (
@@ -14,7 +14,7 @@ const page = () => {
       <OurMission />
       {/* <FeatureSection /> */}
       <RAProtocolSection />
-      <AboutBanner />
+      <AbouBanner />
     </div>
   )
 }

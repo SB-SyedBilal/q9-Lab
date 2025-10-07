@@ -50,21 +50,21 @@ export default function Hero() {
       </div> */}
 
       {/* Mouse-following gradient (only on desktop) */}
-      {isHovering && (
+      {/* {isHovering && (
         <div
           className="fixed hidden md:block pointer-events-none z-0 transition-opacity duration-300"
-          // style={{
-          //   left: mousePosition.x - 500,
-          //   top: mousePosition.y - 500,
-          //   width: "1000px",
-          //   height: "1000px",
-          //   background:
-          //     "radial-gradient(circle, rgba(62,130,246,0.3) 20%, rgba(62,130,246,0.15) 40%, transparent 60%)",
-          //   borderRadius: "50%",
-          //   filter: "blur(70px)",
-          // }}
-        />
-      )}
+          style={{
+            left: mousePosition.x - 500,
+            top: mousePosition.y - 500,
+            width: "1000px",
+            height: "1000px",
+            background:
+              "radial-gradient(circle, rgba(62,130,246,0.3) 20%, rgba(62,130,246,0.15) 40%, transparent 60%)",
+            borderRadius: "50%",
+            filter: "blur(70px)",
+          }} */}
+        {/* />
+      )} */}
 
       {/* Navbar */}
       {/* <Navbar /> */}

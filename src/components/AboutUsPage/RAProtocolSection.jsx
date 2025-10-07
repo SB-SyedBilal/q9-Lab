@@ -57,7 +57,7 @@ export default function RAProtocolSection() {
     <div>
       <section
         aria-labelledby="ra-protocol-heading"
-        className="relative mx-auto w-full max-w-[300px] md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1200px] 2xl:max-w-[1700px] px-4 py-12 sm:py-14 md:py-20 lg:py-24"
+        className="relative mx-auto w-full max-w-[1700px] px-6 lg:px-8 py-12 sm:py-14 "
       >
         {/* Badge */}
         <div className="mb-4 text-center sm:text-left">
@@ -69,7 +69,7 @@ export default function RAProtocolSection() {
         {/* Heading */}
         <h2
           id="ra-protocol-heading"
-          className="text-balance text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold leading-tight text-white text-center sm:text-left"
+          className="text-balance text-4xl xl:text-6xl font-bold leading-tight text-white text-center sm:text-left mb-6"
         >
           The RA Protocol{" "}
           <span className="text-cyan-400">
@@ -78,7 +78,7 @@ export default function RAProtocolSection() {
         </h2>
 
         {/* Paragraph */}
-        <p className="mt-3 max-w-2xl text-xs sm:text-sm md:text-base text-gray-300 text-center sm:text-left">
+        <p className="mt-3 max-w-2xl text-xs sm:text-sm md:text-xl text-gray-300 text-center sm:text-left">
           Research new possibilities. Apply them instantly into SaaS products
           with ROI.
         </p>
@@ -118,13 +118,13 @@ export default function RAProtocolSection() {
           </div>
         ) : (
           // Desktop: Grid Layout
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4 md:gap-6">
             {FEATURES.map((feature, index) => (
               <div
                 key={index}
                 className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-4 border animated-border rounded-lg p-4 sm:p-5 hover:border-cyan-400 transition-all duration-300"
               >
-                <span className="flex h-16 w-16 lg:h-20 lg:w-20 items-center justify-center rounded-lg bg-white/10 text-cyan-400 flex-shrink-0">
+                <span className="flex h-16 w-16 lg:h-24 lg:w-24 items-center justify-center rounded-lg bg-white/10 text-cyan-400 flex-shrink-0">
                   <img
                     src={feature.icon}
                     className="w-9 lg:w-12 h-auto"
@@ -132,10 +132,10 @@ export default function RAProtocolSection() {
                   />
                 </span>
                 <div className="text-center sm:text-left max-w-md">
-                  <h3 className="text-base sm:text-lg mb-1 sm:mb-2 text-white">
+                  <h3 className="text-base text-xl 2xl:text-2xl mb-1 sm:mb-2 text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm xl:text-lg text-gray-400 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

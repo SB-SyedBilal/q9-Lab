@@ -43,7 +43,7 @@ export default function AtorHero() {
       )}
 
       {/* Main Content Wrapper */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 mt-5 lg:mt-10 xl:mt-20 max-w-[1400px] 2xl:max-w-[1700px] mx-auto ">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between mt-5 lg:mt-10 xl:mt-20 max-w-[1700px] mx-auto px-6 lg:px-8">
         {/* Left: Text Content */}
         <div className="text-center max-w-[450px] lg:text-left lg:max-w-[400px] xl:max-w-[500px] mb-10 lg:mb-0">
           <h1 className="font-AmpleSoftPro text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-snug">

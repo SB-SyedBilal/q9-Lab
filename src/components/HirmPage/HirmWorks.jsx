@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -6,33 +7,33 @@ import BlueBgButton from "../BlueBgButton/BlueBgButton";
 import WhyQ9 from "../whyQ9/WhyQ9";
 import Heading from "../Heading/Heading";
 
-export default function HowWorks() {
+const HirmWorks = () => {
   const steps = [
     {
       number: "01",
 
-      title: "Spot the Bottleneck",
+      title: "Auto-generate JD",
 
       description:
-        "Identify your business inefficiency in sales, hiring, learning, or shopping.",
+        "Save hours with AI-crafted job descriptions tailored to role, skills, and company culture.",
     },
 
     {
       number: "02",
 
-      title: "Activate Your AI Agent",
+      title: "Screen & interview candidates",
 
       description:
-        "Deploy a ready-made AI agent or customize one for your workflow.",
+        "Automated CV parsing and AI-led first-round interviews ensure unbiased, consistent evaluations.",
     },
 
     {
       number: "03",
 
-      title: "Scale with Confidence",
+      title: "Generate shortlist with transcripts & summaries",
 
       description:
-        "Scale faster with automation—while we handle infrastructure, updates, and compliance.",
+        "Get structured candidate shortlists, complete with interview transcripts, insights, and key highlights.",
     },
   ];
 
@@ -59,20 +60,14 @@ export default function HowWorks() {
       });
     }
   }, [activeIndex]);
-
   return (
     <div>
       <section
         id="how-it-works"
-        className="text-white 2xl:py-8 relative overflow-hidden  max-w-[1700px] px-6 lg:px-8  mx-auto    mb-6"
-        style={{
-          backgroundImage: "url('/img/lines.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "right",
-          backgroundSize: "auto 100%",
-        }}
+        className="text-white 2xl:py-8 relative overflow-hidden  max-w-[1700px] px-6 lg:px-8 mx-auto mt-12 xl:mt-8 "
+        
       >
-        <div className=" text-center ">
+        <div className="text-center md:text-left ">
           <Heading heading="How It" highlight="Works" />
 
           {/* Mobile Carousel */}
@@ -90,7 +85,7 @@ export default function HowWorks() {
                     <span className="z-10">{step.number}</span>
                     <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
                   </div>
-                  <h3 className="text-cyan-400 font-semibold text-xl mt-6 mb-3 ">
+                  <h3 className="text-cyan-400 font-semibold text-xl mt-6 mb-3 max-w-[300px]">
                     {step.title}
                   </h3>
                   <p className="text-white text-sm max-w-xs">
@@ -117,7 +112,7 @@ export default function HowWorks() {
           </div>
 
           {/* Desktop Steps */}
-          <div className="hidden md:flex relative flex-row justify-between items-start gap-6 mb-6 mt-16">
+          <div className="hidden md:flex relative flex-row justify-between items-start gap-6 mt-12">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -132,7 +127,7 @@ export default function HowWorks() {
                   className="relative text-cyan-400 font-semibold text-2xl 2xl:text-3xl mt-6 mb-3 
   after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 
   after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300
-  group-hover:after:w-1/2"
+  group-hover:after:w-1/2 max-w-[370px]"
                 >
                   {step.title}
                 </h3>
@@ -149,13 +144,15 @@ export default function HowWorks() {
             </div>
           </div>
 
-          <div className=" flex justify-center mt-6">
+          {/* <div className=" flex justify-center mt-6">
             <BlueBgButton text="See It in Action" id="#form" />
-          </div>
+          </div> */}
         </div>
       </section>
 
-      <WhyQ9 />
+      {/* <WhyQ9 /> */}
     </div>
   );
-}
+};
+
+export default HirmWorks;
