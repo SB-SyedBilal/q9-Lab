@@ -24,12 +24,12 @@ export default function AboutUsHero() {
   return (
     <div
       id="home"
-      className="relative min-h-[45vh] sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[40vh] xl:min-h-[65vh] 2xl:min-h-[80vh] overflow-hidden "
+      className="relative min-h-[45vh] sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[40vh] xl:min-h-[75vh] 2xl:min-h-[90vh] overflow-hidden "
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Background Image */}
-      <div className="absolute top-26 md:top-40 lg:top-45  xl:top-70 2xl:top-90 left-0 w-full h-full z-0 opacity-100">
+      <div className="absolute top-26 md:top-40 lg:top-45  xl:top-65 2xl:top-80 left-0 w-full h-full z-0 opacity-100">
         <img
           src="/img/heroimg3.png"
           alt="Curved design overlay"
@@ -51,7 +51,7 @@ export default function AboutUsHero() {
             <span className="text-[#06CBDE]">Us</span>
           </h1>
 
-          <p className="text-[10px] sm:text-base lg:text-md xl:text-lg 2xl:text-xl text-[#FFFFFF] mb-6 sm:mb-8 leading-10">
+          <p className="text-[15px] sm:text-[18px] lg:text-md xl:text-lg 2xl:text-2xl text-[#FFFFFF] mb-6 sm:mb-8 leading-6 xl:leading-8 2xl:leading-10">
              Q9 Labs is a UAE  and US-based AI research and product company building SaaS applications that solve real business problems. Backed by CollabEZ, we merge cutting-edge research with rapid execution to deliver AI agents that cut costs, boost productivity, and scale operations.
           </p>
 
