@@ -80,7 +80,7 @@ const RequestForm = () => {
       className="flex items-center justify-center  max-w-[1700px] px-6 lg:px-8 mx-auto mb-14 "
     >
       <div
-        className="relative w-full  rounded-xl shadow-lg px-6 md:px-12 py-12  animated-border overflow-hidden"
+        className="relative w-full  rounded-xl shadow-lg px-4 md:px-6 xl:px-12 xl:py-12 py-6  animated-border overflow-hidden"
         style={{
           backgroundImage: `url('/img/formbg.png')`,
           backgroundSize: "cover",
@@ -103,11 +103,11 @@ const RequestForm = () => {
         </div>
 
         {/* Wrapper: image + form */}
-        <div className="flex items-center flex-col lg:flex-row lg:justify-between gap-10 lg:gap-12 z-10 relative ">
+        <div className="flex items-center flex-col lg:flex-row lg:justify-between gap-6 xl:gap-12 z-10 relative ">
           {/* Left side image (hidden on small screens) */}
           <div className="hidden lg:flex w-full lg:w-1/2 xl:w-[38%] ">
             <img
-              src="/img/reqrobo.png"
+              src="/img/contact-img.png"
               alt="Request a Quote"
               className="object-cover w-full h-auto "
             />
@@ -129,7 +129,7 @@ const RequestForm = () => {
               <div className="w-full">
                 <label
                   htmlFor="full_name"
-                  className="block mb-2 text-sm sm:text-base font-medium text-white"
+                  className="block mb-2 text-base font-medium text-white"
                 >
                   Full Name
                 </label>
@@ -138,7 +138,7 @@ const RequestForm = () => {
                   type="text"
                   placeholder="John Smith"
                   autoComplete="full_name"
-                  className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
                   {...register("full_name")}
                   aria-invalid={!!errors.full_name}
                 />
@@ -153,7 +153,7 @@ const RequestForm = () => {
               <div className="w-full">
                 <label
                   htmlFor="business_email"
-                  className="block mb-2 text-sm sm:text-base font-medium text-white"
+                  className="block mb-2 text-base font-medium text-white"
                 >
                   Business Email
                 </label>
@@ -162,7 +162,7 @@ const RequestForm = () => {
                   type="email"
                   placeholder="john@company.com"
                   autoComplete="email"
-                  className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
                   {...register("business_email")}
                   aria-invalid={!!errors.business_email}
                 />
@@ -179,7 +179,7 @@ const RequestForm = () => {
               <div className="w-full">
                 <label
                   htmlFor="phone_whatsapp"
-                  className="block mb-2 text-sm sm:text-base font-medium text-white"
+                  className="block mb-2 text-base font-medium text-white"
                 >
                   Phone / WhatsApp
                 </label>
@@ -188,7 +188,7 @@ const RequestForm = () => {
                   type="text"
                   placeholder="+971 50 123 4567"
                   autoComplete="tel"
-                  className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
                   {...register("phone_whatsapp")}
                   aria-invalid={!!errors.phone_whatsapp}
                 />
@@ -203,7 +203,7 @@ const RequestForm = () => {
               <div className="w-full">
                 <label
                   htmlFor="city"
-                  className="block mb-2 text-sm sm:text-base font-medium text-white"
+                  className="block mb-2 text-base font-medium text-white"
                 >
                   City
                 </label>
@@ -211,7 +211,7 @@ const RequestForm = () => {
                   id="city"
                   type="text"
                   placeholder="City"
-                  className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
                   {...register("city")}
                 />
                 {errors.city && (

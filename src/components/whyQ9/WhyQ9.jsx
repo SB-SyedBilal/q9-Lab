@@ -1,20 +1,22 @@
 import React from "react";
 import TransButton from "../TransButton/TransButton";
 import { ArrowUpRight } from "lucide-react";
+import Heading from "../Heading/Heading";
 
 const WhyQ9 = () => {
   return (
-    <div className=" border  w-full mx-auto   gap-10 2xl:gap-36 bg-[#080808] py-12 mb-16">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-[1700px] px-6 lg:px-8 mx-auto ">
+    <div className=" border  w-full mx-auto  bg-[#080808] py-12 xl:mb-8">
+      <div className="flex flex-col lg:flex-row gap-6 items-center justify-between max-w-[1700px] px-6 lg:px-8 mx-auto ">
         
 
         {/* Right: Content */}
-        <div className="w-full lg:w-4xl flex flex-col items-center lg:items-start justify-center text-center lg:text-left mt-6 lg:mt-0">
-          <h2 className="text-2xl sm:text-3xl md:text-3xl xl:text-5xl font-bold mb-6 leading-snug text-white">
+        <div className="w-full lg:w-4xl flex flex-col items-center lg:items-start justify-center text-center lg:text-left ">
+          {/* <h2 className="text-2xl sm:text-3xl md:text-3xl xl:text-5xl font-bold mb-6 leading-snug text-white">
             Why <span className="text-[#14cff0]">Q9 Labs</span>
-          </h2>
+          </h2> */}
+          <Heading heading="Why" highlight="Q9 Labs" />
 
-          <p className="text-sm  sm:text-sm xl:text-lg max-w-md xl:max-w-xl 2xl:max-w-2xl leading-relaxed mb-6 text-white/70">
+          <p className="text-sm md:text-base xl:text-lg max-w-md xl:max-w-xl 2xl:max-w-2xl leading-8 xl:mb-8 mb-6 text-[#ffffffdc]">
             Q9 Labs is a UAE-based AI research and product company backed by
             CollabEZ. We design SaaS-based AI applications that replace
             inefficiency with automation, saving time, cutting costs, and
@@ -38,7 +40,7 @@ const WhyQ9 = () => {
       duration-700 ease-in-out"
               ></span>
 
-              <span className="text-xs sm:text-[16px] 2xl:text-[20px] relative z-10">
+              <span className="text-base xl:text-lg 2xl:text-[24px] relative z-10">
                 Let's Talk
               </span>
 
@@ -58,7 +60,7 @@ const WhyQ9 = () => {
           <img
             src="/img/whyq9.png"
             alt="Rotating Globe"
-            className="w-full max-w-[380px] sm:max-w-[450px] md:max-w-[520px] lg:max-w-[590px] 2xl:max-w-[750px] h-auto object-cover"
+            className="w-[600px] h-auto "
           />
         </div>
       </div>

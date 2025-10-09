@@ -7,19 +7,19 @@ import BlueBgButton from "../BlueBgButton/BlueBgButton";
 const AtoCase = () => {
   const industries = [
     {
-      icon: "/img/atorcase1.png",
+      icon: "/img/ator-case-1.png",
       title: "Schools",
       description:
         "Schools used AI-driven lessons to deliver personalized learning at scale. Teachers saved time while students received interactive, adaptive content that matched their individual pace.",
     },
     {
-      icon: "/img/atorcase2.png",
+      icon: "/img/ator-case-2.png",
       title: "EdTech Platforms",
       description:
         "EdTech platforms integrated AI to create tailored courses and exercises. Learners experienced more engaging content, leading to higher completion rates and better outcomes.",
     },
     {
-      icon: "/img/atorcase3.png",
+      icon: "/img/ator-case-3.png",
       title: "Corporate Training",
       description:
         "Companies adopted AI-based modules for workforce training. Teams across different regions gained customized learning paths, improving efficiency and reducing training costs.",
@@ -32,7 +32,7 @@ const AtoCase = () => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
   return (
-    <div className=" mb-18">
+    <div className=" mb-4">
       <section
         id="industries-section"
         className=" text-white bg-[#080808] z-0 "
@@ -41,7 +41,7 @@ const AtoCase = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="max-w-[1700px] mx-auto px-6 py-8 md:py-19 lg:px-8">
+        <div className="max-w-[1700px] mx-auto px-6 py-8 md:py-16 lg:px-8">
           {/* Header */}
           <div className="mb-12 text-center">
             <Heading heading="Real-World" highlight="Case Studies" />
@@ -70,8 +70,8 @@ const AtoCase = () => {
                     <div className="relative group">
                       <div className="relative z-10 rounded-xl overflow-hidden">
                         <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
-                        <div className="relative z-20 bg-black rounded-xl p-10 h-full flex flex-col items-center text-center border border-gray-800">
-                          <div className="mb-4">
+                        <div className="relative z-20 bg-black rounded-xl p-6 h-full flex flex-col items-center text-center border border-gray-800">
+                          <div className="mb-4 bg-[#06CBDE13] rounded-full p-4 w-fit">
                             <img
                               src={
                                 industry.icon ||
@@ -81,10 +81,10 @@ const AtoCase = () => {
                               className="w-[50px] h-[50px] object-contain"
                             />
                           </div>
-                          <h3 className="relative text-lg font-semibold mb-4 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
+                          <h3 className="relative text-lg font-semibold mb-4 text-white after:block after:h-[2px] after:bg-[#06CBDE] after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
                             {industry.title}
                           </h3>
-                          <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+                          <p className="text-[#ffffffdc] text-base leading-relaxed mb-4 flex-grow">
                             {isExpanded ? industry.description : shortText}
                           </p>
 
@@ -92,7 +92,7 @@ const AtoCase = () => {
                           {industry.description.length > 100 && (
                             <button
                               onClick={() => toggleDescription(index)}
-                              className="text-cyan-400 text-sm font-medium hover:underline"
+                              className="text-[#06CBDE] text-sm font-medium hover:underline"
                             >
                               {isExpanded ? "Read Less" : "Read More"}
                             </button>
@@ -111,8 +111,8 @@ const AtoCase = () => {
             {industries.map((industry, index) => (
               <div
                 key={index}
-                className="relative z-20 rounded-2xl p-18 h-full flex flex-col justify-between
-            bg-[#0C0C0C] animated-border min-h-[420px] overflow-hidden group
+                className="relative z-20 rounded-2xl xl:p-8 p-6 h-full flex flex-col justify-between
+            bg-[#0C0C0C] animated-border overflow-hidden group
             transition-all duration-500 "
               >
                 {/* Hover shape from top-right */}
@@ -120,23 +120,23 @@ const AtoCase = () => {
                 
                 <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-cyan-500/30 blur-[100px] rounded-full pointer-events-none"></div>
 
-                <div className="flex flex-col gap-4 xl:gap-10">
+                <div className="flex flex-col gap-4 xl:gap-6">
                   {/* Icon */}
-                  <div className="bg-[#06CBDE21] rounded-full p-4 w-fit">
+                  <div className="bg-[#06CBDE13] rounded-full p-4 w-fit">
                     <img
                       src={industry.icon}
                       alt={industry.title}
-                      className="xl:w-[48px] xl:h-[50px] object-contain"
+                      className="xl:w-16 w-14 object-contain"
                     />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-white text-xl xl:text-3xl ">
+                  <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug text-white ">
                     {industry.title}
                   </h3>
 
                   {/* Description */}
-                  <p className=" text-sm xl:text-lg leading-relaxed">
+                  <p className="text-[#ffffff] text-base xl:text-lg leading-relaxed">
                     {industry.description}
                   </p>
                 </div>
@@ -165,7 +165,7 @@ const AtoCase = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center pt-12 ">
+          <div className="flex justify-center pt-6 ">
             <BlueBgButton text="See It in Action" id='#form' />
           </div>
         </div>

@@ -7,37 +7,37 @@ import { useState } from "react";
 export default function IndustriesSection() {
   const industries = [
     {
-      icon: "/img/serve1.png",
+      icon: "/img/industry-1.png",
       title: "Real Estate",
       description:
         "Close deals faster with Ava, our AI Voice Agent. From booking property viewings to qualifying leads, Q9 Labs empowers real estate firms to automate outreach, engage clients instantly, and reduce sales cycle time while boosting conversions.",
     },
     {
-      icon: "/img/serve2.png",
+      icon: "/img/industry-2.png",
       title: "Finance & Banking",
       description:
         "Deliver compliant, reliable customer interactions. From loan inquiries to KYC follow-ups, our AI agents streamline banking operations, provide instant responses, and scale client engagement while maintaining accuracy, efficiency, and security.",
     },
     {
-      icon: "/img/serve3.png",
+      icon: "/img/industry-3.png",
       title: "Retail & E-commerce",
       description:
         "Engage customers at scale with personalized AI-driven conversations. From product discovery to post-purchase support, our AI Shopping Assistant transforms the online retail experience, driving higher sales, increasing loyalty, and reducing costs.",
     },
     {
-      icon: "/img/serve4.png",
+      icon: "/img/industry-4.png",
       title: "Recruitment & HR",
       description:
         "Eliminate repetitive hiring tasks with Hirm, our AI Recruiter. It automates resume screening, conducts structured interviews, and generates unbiased shortlists, saving HR teams hundreds of hours and ensuring top talent never slips away.",
     },
     {
-      icon: "/img/serve5.png",
+      icon: "/img/industry-5.png",
       title: "Education & Training",
       description:
         "Personalized learning at scale with Ator, our AI Tutor. It adapts to each learner’s pace, explains concepts in simple terms, and generates practice material, empowering schools, universities, and training providers to improve outcomes.",
     },
     {
-      icon: "/img/serve6.png",
+      icon: "/img/industry-6.png",
       title: "Healthcare",
       description:
         "Boost efficiency without compromising care. Our AI agents manage scheduling, patient inquiries, and routine follow-ups, freeing healthcare staff to focus on treatment, reducing waiting times, and improving the overall patient experience.",
@@ -54,7 +54,7 @@ export default function IndustriesSection() {
     <div className="mb-12">
       <section
         id="industries-section"
-        className=" text-white py-8 md:py-16 mb-8 xl:mb-12 z-0 bg-[#080808] "
+        className=" text-white py-8 md:py-16 mb-4 xl:mb-8 z-0 bg-[#080808] "
         style={{
           backgroundImage: "url('/img/lines2.png')",
           backgroundRepeat: "no-repeat",
@@ -65,7 +65,7 @@ export default function IndustriesSection() {
           {/* Header */}
           <div className="mb-12 text-center md:text-left">
             <Heading heading="Industries" highlight="We Serve " />
-            <p className="text-gray-400 max-w-md 2xl:max-w-xl 2xl:text-xl">
+            <p className="text-[#ffffffdc] max-w-lg 2xl:max-w-xl text-base md:text-lg 2xl:text-xl lg:text-start text-center   mx-auto lg:mx-0">
               From sales-heavy organizations to education and recruitment, Q9
               Labs builds AI agents designed for industries where efficiency and
               scale matter most.
@@ -94,8 +94,8 @@ export default function IndustriesSection() {
                   >
                     <div className="relative group">
                       <div className="relative z-10 rounded-xl overflow-hidden">
-                        <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
-                        <div className="relative z-20 bg-black rounded-xl p-10 h-full flex flex-col items-center text-center border border-gray-800">
+                        <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-[#06CBDE] rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
+                        <div className="relative z-20 bg-black rounded-xl p-4 h-full flex flex-col items-center text-center border border-gray-800">
                           <div className="mb-4">
                             <img
                               src={
@@ -106,10 +106,10 @@ export default function IndustriesSection() {
                               className="w-[50px] h-[50px] object-contain"
                             />
                           </div>
-                          <h3 className="relative text-lg font-semibold mb-4 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
+                          <h3 className="relative text-lg font-semibold mb-4 text-white after:block after:h-[2px] after:bg-[#06CBDE] after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
                             {industry.title}
                           </h3>
-                          <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+                          <p className="text-[#ffffffdc] text-sm leading-relaxed mb-4 flex-grow">
                             {isExpanded ? industry.description : shortText}
                           </p>
 
@@ -132,7 +132,7 @@ export default function IndustriesSection() {
           </div>
 
           {/* Tablet/Desktop: original grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:gap-8 xl:gap-6 gap-4">
             {industries.map((industry, index) => (
               <div
                 key={index}
@@ -141,13 +141,13 @@ export default function IndustriesSection() {
               >
                 <div className="relative z-10 rounded-xl overflow-hidden h-full">
                   {/* Hover shape from top-right */}
-                  <div className="z-50 absolute top-0 right-0 w-1/2  h-1/2 2xl:h-[65%] bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
+                  <div className="z-50 absolute top-0 right-0 w-1/2  h-1/2 2xl:h-[65%] bg-[#06b7c7] rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
 
 
                   {/* Card content */}
-                  <div className="relative z-20 bg-black rounded-sm p-7 h-full flex flex-col items-center text-center animated-border  min-h-[460px] lg:min-h-[420px] xl:min-h-[450px] 2xl:min-h-[400px]">
+                  <div className="relative z-20 bg-black rounded-sm xl:p-7 p-5 h-full flex flex-col gap-6 items-center text-center animated-border">
                     {/* Icon */}
-                    <div className="mb-4 md:mb-7 ">
+                    <div className="">
                       <img
                         src={industry.icon || "/placeholder.svg"}
                         alt={industry.title}
@@ -156,12 +156,12 @@ export default function IndustriesSection() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="relative md:text-2xl 2xl:md:text-3xl font-semibold mb-4 md:mb-7 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
+                    <h3 className="relative md:text-2xl 2xl:md:text-3xl font-semibold  text-white after:block after:h-[2px] after:bg-[#06CBDE] after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
                       {industry.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-sm md:text-2sm 2xl:text-lg leading-relaxed mb-10">
+                    <p className="text-[#ffffffdc] text-sm md:text-base 2xl:text-lg leading-relaxed ">
                       {industry.description}
                     </p>
 

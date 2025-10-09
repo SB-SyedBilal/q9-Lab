@@ -71,17 +71,17 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className="relative z-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 mt-8 md:mt-15 lg:mt-18 xl:mt-24 gap-8 md:gap-16">
-        <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-3xl mx-auto ">
-          <h1 className="font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-snug">
+        <div className="flex flex-col gap-4 xl:gap-8">
+          <h1 className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-5xl  mx-auto  font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white xl:leading-20 md:leading-12 leading-10">
           The Future of Customer{"  "}
             <span className="text-[#06CBDE]">Engagement</span>
           </h1>
 
-          <p className="text-[14px] sm:text-base md:text-sm lg:text-md xl:text-lg 2xl:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
+          <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-[#ffffffdc] xl:leading-10 leading-6 max-w-[320px] md:max-w-[500px] lg:max-w-[700px] xl:max-w-3xl 2xl:max-w-5xl  mx-auto xl:mb-0 mb-2">
             Ava replaces costly call centers with a scalable AI voice agent that delivers smarter, faster, and more affordable customer conversations.
           </p>
 
-          <div className="flex justify-center gap-8 lg:flex-row flex-col">
+          <div className="flex justify-center gap-8 lg:flex-row flex-col lg:w-auto md:w-fit w-fit mx-auto">
             <div className="w-full sm:w-auto">
               <BlueBgButton text="Try AVA Now" id='#form' />
             </div>
@@ -90,7 +90,7 @@ export default function Hero() {
         <div className=" lg:block overflow-hidden">
           {/* <img src="/img/hirmherocurve.png" className="absolute -top-10 -right-50 z-20" alt="" /> */}
           <img
-            src="/img/ava/avahero.png"
+            src="/img/Ava/avahero.png"
             alt="Curved design overlay"
             className="w-2xl xl:w-4xl 2xl:w-7xl h-auto"
           />

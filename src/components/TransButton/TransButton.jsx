@@ -9,7 +9,7 @@ const TransButton = ({ link = "/", text = "Click Me" }) => {
     <Link
       href={link}
       className="group flex items-center justify-between sm:justify-center gap-4 sm:gap-6 
-        px-2 sm:px-4 md:px-4 lg:px-4 xl:px-3 2xl:pl-6
+        px-2 sm:px-4 md:px-4 lg:px-3 xl:px-3 pl-4 md:pl-6
         py-1 sm:py-3 md:py-3 lg:py-2 
         border border-white rounded-full text-white
         hover:bg-white/10 transition-all duration-500 ease-out cursor-pointer 

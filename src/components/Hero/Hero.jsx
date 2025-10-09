@@ -71,19 +71,19 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 mt-8 md:mt-15 lg:mt-18 xl:mt-24 lg:mb-24">
-        <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-5xl mx-auto">
-          <h1 className="font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-snug">
+        <div className="flex flex-col gap-4 xl:gap-8">
+          <h1 className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-5xl  mx-auto  font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white xl:leading-20 md:leading-12 leading-10">
             Building AI Agents That Solve{" "}
-            <span className="text-cyan-300">Real Business Problems</span>
+            <span className="text-[#06CBDE]">Real Business Problems</span>
           </h1>
 
-          <p className="text-[14px] sm:text-base md:text-sm lg:text-md xl:text-lg 2xl:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
+          <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-gray-200 xl:leading-10 leading-6 max-w-[320px] md:max-w-[500px] lg:max-w-[700px] xl:max-w-3xl 2xl:max-w-5xl  mx-auto xl:mb-0 mb-2" >
             Q9 Labs builds SaaS-based AI applications that replace inefficiency
             with automation, cutting costs, boosting productivity, and scaling
             operations.
           </p>
 
-          <div className="flex justify-center  gap-6 lg:gap-8 xl:gap-12 lg:flex-row flex-col">
+          <div className="flex justify-center  gap-6 lg:gap-8 xl:gap-12 lg:flex-row flex-col lg:w-auto md:w-fit w-fit mx-auto">
             <div className="w-full sm:w-auto">
               <BlueBgButton text="Explore Our Products" id="#products" />
             </div>
@@ -91,7 +91,7 @@ export default function Hero() {
             {/* <TransButton text='Book A Demo' link='#form' /> */}
             <Link
               href="#form"
-              className="group flex items-center justify-center md:gap-6 md:pl-8 md:pr-3 pt-2 pb-2 
+              className="group flex items-center justify-center gap-4 md:pl-8 md:pr-3 pt-2 pb-2 
                  border-1 border-white rounded-full text-white 2xl:text-lg
                  hover:bg-white/10 transition-all duration-500 ease-out cursor-pointer 
                  relative overflow-hidden bg-white/10"
@@ -103,16 +103,16 @@ export default function Hero() {
                    duration-700 ease-in-out"
               ></span>
 
-              <span className="text-xs sm:text-[16px] 2xl:text-[22px] relative z-10  ">
+              <span className="text-base 2xl:text-[22px] relative z-10  ">
                 Book A Demo
               </span>
 
               <span
-                className="lg:flex items-center justify-center w-7 h-7 sm:w-7 sm:h-7 xl:w-9 xl:h-9 rounded-full hidden md:bg-white 
+                className="flex items-center justify-center w-7 h-7 sm:w-7 sm:h-7 xl:w-9 xl:h-9 rounded-full  bg-white 
                    relative z-10 group-hover:scale-100 group-hover:rotate-45 
                    transition-transform duration-500 ease-out"
               >
-                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7 hidden lg:flex md:text-cyan-400" />
+                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7  lg:flex text-[#06CBDE]" />
               </span>
             </Link>
           </div>

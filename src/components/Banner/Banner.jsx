@@ -2,23 +2,28 @@ import Heading from "../Heading/Heading";
 import Button from "../TransButton/TransButton";
 import { ArrowUpRight } from "lucide-react";
 
-
 export default function Banner() {
   return (
     <section className="max-w-[1700px] px-6 lg:px-8 mx-auto">
       <div className="">
-        <div className=" rounded-lg h-auto  animated-border md:p-7 lg:p-0 overflow-hidden">
-          <div className="flex flex-col md:flex-row items-center justify-between px-8  gap-8 ">
+        <div className=" rounded-lg h-auto  animated-border p-6 lg:p-0 overflow-hidden">
+          <div className="flex flex-col md:flex-row items-center justify-between lg:px-8  gap-8 ">
             {/* Left Content */}
-            <div className=" text-center pt-5 sm:pt-0  md:text-left lg:ml-12 ">
-              <Heading heading="Have A" highlight="Problem?" />
-              <p className="text-gray-400 mb-4 lg:text-lg">
-                Let us build an AI Agent that works for your business.
+            <div className="flex flex-col md:gap-6 gap-4">
+              {/* <Heading heading="Got a Business " highlight="Challenge?" /> */}
+              <h2 className="text-3xl sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] 2xl:text-[52px] font-bold text-white md:text-start text-center">
+                Got a Business{" "}
+                <span className="text-[#06CBDE]">Challenge?</span>
+              </h2>
+              <p className="text-[#ffffffdc] text-base md:text-lg lg:text-xl mb-2 md:text-start text-center">
+                From lead generation to customer support our AI agents are built
+                to handle what humans can’t scale.
               </p>
 
               {/* Button */}
-              <div className="flex justify-center md:justify-start mb-6 md:mb-0">
-                <a href='#form'
+              <div className="flex justify-center md:justify-start">
+                <a
+                  href="#form"
                   className=" group flex items-center justify-between gap-6 2xl:gap-8 pl-8 pr-2 2xl:pr-3 pt-2 2xl:pt-2 pb-2 2xl:pb-2
              border-1 border-white rounded-full text-white
              hover:bg-white/10 transition-all duration-500 ease-out cursor-pointer 
@@ -31,7 +36,7 @@ export default function Banner() {
                duration-700 ease-in-out"
                   ></span>
 
-                  <span className=" text-xs sm:text-[16px] 2xl:text-[24px] relative z-10 ">
+                  <span className=" text-base xl:text-lg 2xl:text-[24px] relative z-10 ">
                     Let's Talk
                   </span>
 
@@ -47,11 +52,11 @@ export default function Banner() {
             </div>
 
             {/* Right Image */}
-            <div className="hidden  md:flex justify-right ">
+            <div className="hidden  lg:flex justify-right ">
               <img
-                src="/img/banner-cta.png" // Replace this with your image path
+                src="/img/home-cta-banner.png" // Replace this with your image path
                 alt="AI Illustration"
-                className="md:w-[200px] lg:w-[300px] xl:w-[350px] 2xl:w-[450px] md:ml-15 lg:ml-30 h-auto "
+                className="w-[600px] lg:w-[600px] h-auto "
               />
             </div>
           </div>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const Heading = ({ heading, highlight }) => {
   return (
     <motion.h2
-      className="text-2xl sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] 2xl:text-[50px] font-semibold text-white mb-6"
+      className="text-3xl sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] 2xl:text-[52px] lg:text-start text-center  font-semibold text-white xl:mb-6 mb-4"
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -14,7 +14,7 @@ const Heading = ({ heading, highlight }) => {
     >
       {heading}{" "}
       <motion.span
-        className="text-[#14cff0]"
+        className="text-[#06CBDE]"
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}

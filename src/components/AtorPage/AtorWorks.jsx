@@ -79,13 +79,13 @@ const AtorWorks = () => {
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className="min-w-full flex-shrink-0 snap-center flex flex-col items-center text-center group px-4"
+                  className="min-w-full flex-shrink-0 snap-center flex flex-col items-center text-center group "
                 >
                   <div className="relative w-24 h-24 rounded-full border border-cyan-400 flex items-center justify-center text-3xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
                     <span className="z-10">{step.number}</span>
                     <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
                   </div>
-                  <h3 className="text-cyan-400 font-semibold text-xl mt-6 mb-3 max-w-[300px]">
+                  <h3 className="text-[#06CBDE] font-semibold text-2xl mt-6 mb-3 max-w-[300px]">
                     {step.title}
                   </h3>
                   <p className="text-white text-sm max-w-xs">
@@ -124,14 +124,14 @@ const AtorWorks = () => {
                   <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
                 </div>
                 <h3
-                  className="relative text-cyan-400 font-semibold text-xl 2xl:text-3xl mt-6 mb-3 
+                  className="relative text-cyan-400 font-semibold text-xl lg:text-2xl 2xl:text-3xl mt-6 mb-3 
   after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 
   after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300
-  group-hover:after:w-1/2 max-w-[370px]"
+  group-hover:after:w-1/2 max-w-[370px] min-h-[64px]"
                 >
                   {step.title}
                 </h3>
-                <p className="text-white text-[14px] 2xl:text-[18px] max-w-xs">
+                <p className="text-[#ffffffdc] text-base md:text-base 2xl:text-lg max-w-xs">
                   {step.description}
                 </p>
               </div>

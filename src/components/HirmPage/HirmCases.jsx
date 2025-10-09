@@ -7,19 +7,19 @@ import BlueBgButton from "../BlueBgButton/BlueBgButton";
 const HirmCases = () => {
   const industries = [
     {
-      icon: "/img/caseicon1.png",
+      icon: "/img/hirm-case-1.png",
       title: "High-Volume Hiring",
       description:
         "A leading retail chain hired 2,000 seasonal staff in record time using automated JD creation, AI screening, and structured shortlists. The process cut hiring time by 65% and saved hundreds of recruiter hours.",
     },
     {
-      icon: "/img/caseicon2.png",
+      icon: "/img/hirm-case-2.png",
       title: "Recruitment Agencies",
       description:
         "A recruitment agency streamlined client hiring by using AI to pre-screen CVs, run interviews, and deliver ready-to-share shortlists. This boosted placements by 40% and reduced manual workload significantly.",
     },
     {
-      icon: "/img/caseicon3.png",
+      icon: "/img/hirm-case-3.png",
       title: "Enterprise HR Teams",
       description:
         "A global enterprise used AI-driven recruitment to standardize hiring across multiple regions. The system delivered unbiased shortlists with transcripts and summaries, ensuring consistent hiring quality worldwide.",
@@ -32,7 +32,7 @@ const HirmCases = () => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
   return (
-    <div className=" mb-18">
+    <div className=" mb-4">
       <section
         id="industries-section"
         className=" text-white bg-[#080808] z-0 "
@@ -41,9 +41,9 @@ const HirmCases = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="max-w-[1700px] mx-auto px-6 py-19 lg:px-8">
+        <div className="max-w-[1700px] mx-auto py-8 md:py-16 overflow-hidden px-6 lg:px-8">
           {/* Header */}
-          <div className="mb-12 text-center">
+          <div className="mb-10 text-center">
             <Heading heading="Real-World" highlight="Case Studies" />
           </div>
 
@@ -69,9 +69,9 @@ const HirmCases = () => {
                   >
                     <div className="relative group">
                       <div className="relative z-10 rounded-xl overflow-hidden">
-                        <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
-                        <div className="relative z-20 bg-black rounded-xl p-10 h-full flex flex-col items-center text-center border border-gray-800">
-                          <div className="mb-4">
+                        <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-[#06CBDE] rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
+                        <div className="relative z-20 bg-black rounded-xl p-6 h-full flex flex-col items-center text-center border border-gray-800">
+                          <div className="mb-4 bg-[#06CBDE13] rounded-full p-4 w-fit">
                             <img
                               src={
                                 industry.icon ||
@@ -81,10 +81,10 @@ const HirmCases = () => {
                               className="w-[50px] h-[50px] object-contain"
                             />
                           </div>
-                          <h3 className="relative text-lg font-semibold mb-4 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
+                          <h3 className="relative text-lg font-semibold mb-4 text-white after:block after:h-[2px] after:bg-[#06CBDE] after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
                             {industry.title}
                           </h3>
-                          <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+                          <p className="text-[#ffffffdc] text-base leading-relaxed mb-4 flex-grow">
                             {isExpanded ? industry.description : shortText}
                           </p>
 
@@ -111,39 +111,39 @@ const HirmCases = () => {
             {industries.map((industry, index) => (
               <div
                 key={index}
-                className="relative z-20 rounded-2xl p-18 h-full flex flex-col justify-between
+                className="relative z-20 rounded-2xl xl:p-8 p-6 h-full flex flex-col gap-6 justify-between
             bg-[#0C0C0C] animated-border min-h-[420px] overflow-hidden group
             transition-all duration-500 "
               >
                 {/* Hover shape from top-right */}
-                <div className="z-50 absolute top-0 right-0 w-[60%]  h-1/2 2xl:h-[60%] bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
+                <div className="z-50 absolute top-0 right-0 w-[60%]  h-1/2 2xl:h-[60%] bg-[#0ac2d3] rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
                 
                 <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-cyan-500/30 blur-[100px] rounded-full pointer-events-none"></div>
 
-                <div className="flex flex-col gap-4 xl:gap-10">
+                <div className="flex flex-col gap-4 xl:gap-6">
                   {/* Icon */}
-                  <div className="bg-[#06CBDE21] rounded-full p-4 w-fit">
+                  <div className="bg-[#06CBDE13] rounded-full p-4 w-fit">
                     <img
                       src={industry.icon}
                       alt={industry.title}
-                      className="xl:w-[48px] xl:h-[50px] object-contain"
+                      className="xl:w-16 w-14 object-contain"
                     />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-white text-xl xl:text-3xl ">
+                  <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug text-white">
                     {industry.title}
                   </h3>
 
                   {/* Description */}
-                  <p className=" text-sm xl:text-lg leading-relaxed">
+                  <p className="text-[#ffffff] text-base xl:text-lg leading-relaxed">
                     {industry.description}
                   </p>
                 </div>
 
                 {/* Button */}
                 <a href="#form"
-                  className="mt-8 flex items-center gap-2 text-white font-semibold underline underline-offset-2
+                  className="flex items-center gap-2 text-white font-semibold underline underline-offset-2
               hover:text-cyan-400 transition-colors duration-300 w-fit"
                 >
                   Let’s Connect
@@ -165,7 +165,7 @@ const HirmCases = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center pt-12 ">
+          <div className="flex justify-center pt-6 ">
             <BlueBgButton text="See It in Action" id='#form' />
           </div>
         </div>

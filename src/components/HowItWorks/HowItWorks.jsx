@@ -32,7 +32,7 @@ export default function HowWorks() {
       title: "Scale with Confidence",
 
       description:
-        "Scale faster with automation—while we handle infrastructure, updates, and compliance.",
+        "Scale faster with automation while we handle infrastructure, updates, and compliance.",
     },
   ];
 
@@ -79,21 +79,21 @@ export default function HowWorks() {
           <div className="md:hidden">
             <div
               ref={carouselRef}
-              className="flex overflow-x-auto snap-x snap-mandatory gap-4 hide-scrollbar"
+              className="flex overflow-x-auto snap-x snap-mandatory  hide-scrollbar"
             >
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className="min-w-full flex-shrink-0 snap-center flex flex-col items-center text-center group px-4"
+                  className="min-w-full flex-shrink-0 snap-center flex flex-col items-center justify-center text-center group"
                 >
-                  <div className="relative w-24 h-24 rounded-full border border-cyan-400 flex items-center justify-center text-3xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
+                  <div className="relative w-24 h-24 rounded-full border border-[#06CBDE] flex items-center justify-center text-3xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
                     <span className="z-10">{step.number}</span>
-                    <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
+                    <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-[#06CBDE] rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
                   </div>
-                  <h3 className="text-cyan-400 font-semibold text-xl mt-6 mb-3 ">
+                  <h3 className="text-[#06CBDE] font-semibold text-2xl mt-6 mb-3 ">
                     {step.title}
                   </h3>
-                  <p className="text-white text-sm max-w-xs">
+                  <p className="text-white text-base max-w-xs">
                     {step.description}
                   </p>
                 </div>
@@ -108,8 +108,8 @@ export default function HowWorks() {
                   onClick={() => setActiveIndex(idx)}
                   className={`w-2 h-2 rounded-full transition-all ${
                     activeIndex === idx
-                      ? "bg-cyan-400 scale-110"
-                      : "bg-gray-600 hover:bg-cyan-500"
+                      ? "bg-[#06CBDE] scale-110"
+                      : "bg-gray-600 hover:bg-[#06CBDE]"
                   }`}
                 />
               ))}
@@ -123,20 +123,20 @@ export default function HowWorks() {
                 key={index}
                 className="flex flex-col items-center text-center group relative z-10"
               >
-                <div className="relative w-25 h-25 xl:w-36 xl:h-36 2xl:w-42 2xl:h-42 rounded-full border border-cyan-400 flex items-center justify-center text-3xl 2xl:text-5xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
+                <div className="relative w-25 h-25 xl:w-36 xl:h-36 2xl:w-42 2xl:h-42 rounded-full border border-[#06CBDE] flex items-center justify-center text-3xl 2xl:text-5xl font-semibold bg-black overflow-hidden group-hover:shadow-lg transition duration-300">
                   <span className="z-10">{step.number}</span>
 
-                  <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
+                  <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-[#0ac2d3] rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
                 </div>
                 <h3
-                  className="relative text-cyan-400 font-semibold text-2xl 2xl:text-3xl mt-6 mb-3 
+                  className="relative text-[#06CBDE] font-semibold text-xl lg:text-2xl 2xl:text-3xl mt-6 mb-3 
   after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 
-  after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300
+  after:w-0 after:h-[2px] after:bg-[#06CBDE] after:transition-all after:duration-300
   group-hover:after:w-1/2"
                 >
                   {step.title}
                 </h3>
-                <p className="text-white text-[14px] 2xl:text-[18px] max-w-xs">
+                <p className="text-[#ffffffdc] text-base md:text-base 2xl:text-lg max-w-xs">
                   {step.description}
                 </p>
               </div>
@@ -144,8 +144,8 @@ export default function HowWorks() {
 
             {/* Dashed Line */}
             <div className="hidden md:block absolute top-[52px] xl:top-[75px] 2xl:top-[92px] left-[12%] xl:left-[8%] w-[75%] xl:w-[80%] h-[1px] z-0">
-              <div className="absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-cyan-400/80 to-transparent rounded-full blur-sm"></div>
-              <div className="w-full h-full border-t border-dashed border-cyan-500"></div>
+              <div className="absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-[#06CBDE]/80 to-transparent rounded-full blur-sm"></div>
+              <div className="w-full h-full border-t border-dashed border-[#06CBDE]"></div>
             </div>
           </div>
 

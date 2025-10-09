@@ -55,10 +55,10 @@ export default function AtorNewSlider() {
           backgroundPosition: "right",
           backgroundRepeat: 'no-repeat'
         }}>
-      <section className="relative text-white px-4 sm:px-6 lg:px-8 py-16 max-w-[1700px] mx-auto overflow-hidden">
+      <section className="relative text-white px-4 sm:px-6 lg:px-8 pt-16 max-w-[1700px] mx-auto overflow-hidden">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-xl lg:text-4xl 2xl:text-5xl font-bold leading-tight">
+          <h2 className="text-3xl sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] 2xl:text-[52px] font-bold leading-tight">
             The Future of Scalable <br />
             <span className="text-[#06CBDE]">Customer Conversations</span>
           </h2>
@@ -75,16 +75,16 @@ export default function AtorNewSlider() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: direction > 0 ? -80 : 80 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="relative bg-gradient-to-b from-[#0E0E0E] to-[#0A0A0A] animated-border rounded-sm  p-8 lg:p-0 lg:pt-6 lg:pl-6 xl:pt-16 2xl:pl-16 flex flex-col lg:flex-row justify-between items-center w-full lg:w-[65%] xl:w-[1300px] h-auto shadow-[0_0_40px_rgba(6,203,222,0.08)]"
+              className="relative bg-gradient-to-b from-[#0E0E0E] to-[#0A0A0A] animated-border rounded-sm  p-8 lg:p-0 lg:pt-6 lg:pl-6 xl:pt-16 2xl:pl-16 flex flex-col lg:flex-row lg:gap-4 justify-between items-center w-full lg:w-[65%] xl:w-[1300px] h-auto shadow-[0_0_40px_rgba(6,203,222,0.08)]"
             >
               <div className="flex flex-col justify-center space-y-4 xl:space-y-6 w-full lg:w-sm">
-                <span className="inline-block bg-white/10 text-[#06CBDE] text-xs md:text-sm px-5 py-2 rounded-full w-fit">
+                <span className="inline-block bg-[#16D1EF]/20 text-[#06CBDE] text-xs md:text-sm px-5 py-2 rounded-full w-fit">
                   {current.badge}
                 </span>
-                <h3 className="text-2xl md:text-3xl xl:text-4xl leading-snug">
+                <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug">
                   {current.title}
                 </h3>
-                <p className="text-[#ffffffb3] text-sm xl:text-base lg:w-[295px] xl:w-sm 2xl:w-lg leading-relaxed">
+                <p className="text-[#ffffffdc] text-base xl:text-lg lg:w-[295px] xl:w-sm 2xl:w-lg leading-relaxed">
                   {current.text}
                 </p>
               </div>
@@ -109,13 +109,13 @@ export default function AtorNewSlider() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="relative bg-gradient-to-b from-[#0E0E0E] to-[#0A0A0A] animated-border rounded-sm p-6 sm:p-10 flex flex-col justify-center w-full lg:w-[35%] xl:w-[600px] h-auto shadow-[0_0_40px_rgba(6,203,222,0.08)]"
           >
-            <span className="inline-block bg-white/10 text-[#06CBDE] text-xs md:text-sm font-medium px-6 py-2 rounded-full w-fit">
+            <span className="inline-block bg-[#16D1EF]/20 text-[#06CBDE] text-xs md:text-sm font-medium px-6 py-2 rounded-full w-fit">
               {next.badge}
             </span>
-            <h3 className="text-2xl md:text-3xl xl:text-4xl leading-snug mt-4 md:mt-6">
+            <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug mt-4 md:mt-6">
               {next.title}
             </h3>
-            <p className="text-[#ffffffb3] text-sm xl:text-base leading-relaxed mt-2 md:mt-4">
+            <p className="text-[#ffffffdc] text-base xl:text-lg leading-relaxed mt-2 md:mt-4">
               {next.text}
             </p>
           </motion.div>

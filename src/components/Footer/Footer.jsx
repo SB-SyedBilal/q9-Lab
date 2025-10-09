@@ -5,11 +5,11 @@ export default function Footer() {
   return (
     <footer className="max-w-[1700px] px-6 lg:px-8 mx-auto ">
       <div
-        className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 xl:gap-24
-  items-center sm:items-center md:items-start py-16"
+        className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-16 xl:gap-24
+  items-center sm:items-center md:items-start lg:py-16 py-8"
       >
         {/* Logo and Description */}
-        <div className="mb-8  lg:mb-0 flex flex-col justify-center text-center items-center md:text-left md:justify-start md:items-start">
+        <div className="mb-2 lg:mb-0 flex flex-col justify-center text-center items-center md:text-left md:justify-start md:items-start">
           <div className="mb-6 flex justify-center md:justify-start ">
             {/* Replace with your logo */}
             <Link href="/">
@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <p className="text-gray-400 mb-6 text-sm md:text-base 2xl:text-lg leading-relaxed max-w-[300px] md:max-w-md ">
+          <p className="text-[#ffffffdc] mb-6 text-base 2xl:text-lg leading-relaxed max-w-[400px] md:max-w-md ">
             Q9labs is a subsidiary of CollabEZ, proudly based in the UAE and
             committed to making artificial intelligence work for businesses
             worldwide.
@@ -48,11 +48,11 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <nav aria-label="Footer" className="mb-8 lg:mb-0 2xl:ml-28">
+        <nav aria-label="Footer" className="mb-2 lg:mb-0 2xl:ml-28">
           <h4 className="text-white text-2xl md:text-[28px] 2xl:text-[30px] font-semibold mb-4 md:mb-6">
             Quick Links
           </h4>
-          <ul className="space-y-3 md:space-y-4 text-gray-300 text-sm md:text-base 2xl:text-lg">
+          <ul className="space-y-3 md:space-y-4 text-[#ffffffdc] text-base 2xl:text-lg">
             <li>
               <Link href="#home" className="hover:text-white transition-colors">
                 Home
@@ -95,7 +95,7 @@ export default function Footer() {
           <h4 className="text-white text-2xl md:text-[28px] 2xl:text-[30px] font-semibold mb-4 md:mb-6">
             Contact Us
           </h4>
-          <ul className="space-y-4 text-gray-300 text-sm md:text-base 2xl:text-lg">
+          <ul className="space-y-4 text-[#ffffffdc] text-base 2xl:text-lg">
             <li className="flex items-center gap-3">
               <span className="bg-white/10 p-2 rounded-full inline-flex items-center justify-center">
                 <Image
@@ -148,8 +148,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t border-gray-500 mt-10 sm:mt-12 max-w-[1400px] 2xl:max-w-[1700px] mx-auto">
-        <div className=" mx-auto  py-5 flex justify-center items-center text-sm md:text-base 2xl:text-lg text-gray-300">
+      <div className="border-t border-gray-500 mt-0 lg:mt-12 max-w-[1400px] 2xl:max-w-[1700px] mx-auto">
+        <div className=" mx-auto  py-5 flex justify-center items-center text-base 2xl:text-lg text-[#ffffffdc]">
           <p>© 2025 Q9 Labs. All rights reserved.</p>
           {/* <p className="flex items-center gap-2">
             <span>Powered By</span>

@@ -19,7 +19,7 @@ const items = [
   {
     id: 1,
     // using the built-in placeholder generator for the second closed card
-    src: "/img/ai2.png",
+    src: "/img/product-2.png",
     alt: "Futuristic robot standing beside a laptop",
     bedge: "ATOR",
     title: "AI Tutor",
@@ -29,7 +29,7 @@ const items = [
   {
     id: 2,
     // using the built-in placeholder generator for the third closed card
-    src: "/img/hirmrobot.png",
+    src: "/img/product-3a.png",
     alt: "Business robot portrait in a suit",
     bedge: "HIRM",
     title: "AI Recruiter",
@@ -44,7 +44,7 @@ export default function Products() {
   return (
     <section id='products' className="w-full">
       
-      <div className="mx-auto max-w-[1700px] mb-18 px-6 lg:px-8 ">
+      <div className="mx-auto max-w-[1700px] md:mb-14 mb-8 px-6 lg:px-8 ">
         <div className="flex justify-center md:mb-10">
           <Heading heading="Our Revolutionary" highlight="Products" />
         </div>
@@ -113,21 +113,21 @@ export default function Products() {
                 >
                   {/* Glassy badge */}
                   <div>
-                    <div className="bg-white/10 text-white text-xs sm:text-sm md:text-base px-6 sm:px-9 py-2 rounded-full inline-block mb-4 sm:mb-6">
+                    <div className="bg-white/30 text-white text-sm md:text-base px-6 sm:px-9 py-2 rounded-full inline-block mb-4 sm:mb-6">
                       {item.bedge}
                     </div>
                   </div>
 
-                  <div className="max-w-sm">
-                    <h2 className="text-white text-xl font-semibold leading-tight text-primary md:text-2xl lg:text-3xl">
+                  <div className="max-w-sm flex flex-col gap-4">
+                    <h2 className="text-white font-semibold leading-tight text-primary text-2xl md:text-2xl lg:text-3xl xl:text-3xl">
                       {item.title}
                     </h2>
 
-                    <p className="mt-2  md:mt-4 max-w-[437px] text-sm leading-relaxed text-white md:text-[1.05rem]">
+                    <p className="max-w-[437px] leading-relaxed text-white text-base xl:text-lg">
                       {item.desc}
                     </p>
 
-                    <div className="md:mt-8 max-w-[220px]">
+                    <div className="max-w-[220px]">
                       <TransButton text="Learn More" link={item.link} />
                     </div>
                   </div>

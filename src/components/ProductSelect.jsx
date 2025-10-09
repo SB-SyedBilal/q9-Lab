@@ -16,7 +16,7 @@ const ProductSelect = ({ control, errors }) => {
     <div className="relative md:col-span-2 w-full">
       <label
         htmlFor="product_interest"
-        className="block mb-2 text-md font-medium text-white"
+        className="block mb-2 text-base font-medium text-white"
       >
         Which product are you interested in?
       </label>

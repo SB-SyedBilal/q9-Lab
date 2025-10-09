@@ -66,7 +66,7 @@ export default function Navbar() {
             }}
           >
             {/* Button */}
-            <button className="text-white hover:text-cyan-300 flex items-center  tracking-wide transition-all duration-300">
+            <button className="text-white hover:text-cyan-300 flex items-center  tracking-wide transition-all duration-300 cursor-pointer">
               Our Products
               <svg
                 className={`ml-2 w-5 h-5 transition-transform duration-300 ${
@@ -93,9 +93,10 @@ export default function Navbar() {
                  overflow-hidden animate-fadeIn z-50"
               >
                 {[
-                  { label: "AVA", href: "/ava" },
-                  { label: "ATOR", href: "/ator" },
-                  { label: "HIRM", href: "/hirm" },
+                  { label: "AI Voice Platform", href: "/ava" },
+                  { label: "AI Recruiter", href: "/hirm" },
+                  { label: "AI Tutor", href: "/ator" },
+                  { label: "AI Shopping Assistant", href: "/" },
                 ].map((item, i) => (
                   <Link
                     key={item.label}
@@ -247,9 +248,10 @@ export default function Navbar() {
             {isProductMenuOpen && (
               <div className="pl-3 mt-3 space-y-3 text-sm text-gray-300">
                 {[
-                  { label: "Ava", href: "/ava" },
-                  { label: "Ator", href: "/ator" },
-                  { label: "Hirm", href: "/hirm" },
+                  { label: "AI Voice Platform", href: "/ava" },
+                  { label: "AI Recruiter", href: "/hirm" },
+                  { label: "AI Tutor", href: "/ator" },
+                  { label: "AI Shopping Assistant", href: "/" },
                 ].map((item) => (
                   <Link
                     key={item.label}
