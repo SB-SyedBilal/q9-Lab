@@ -28,7 +28,7 @@ export default function Thanku() {
   return (
     <div
       id="home"
-      className=" relative min-h-[65vh]  sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[60vh] xl:min-h-[80vh] 2xl:min-h-[85vh]  overflow-hidden "
+      className=" relative min-h-[40vh] sm:min-h-[30vh] md:min-h-[33vh] lg:min-h-[60vh] xl:min-h-[80vh] 2xl:min-h-[75vh]  overflow-hidden xl:pt-20 pb-10"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -71,17 +71,17 @@ export default function Thanku() {
 
       {/* Main Content */}
       <div className="font-AmpleSoftPro relative z-10 flex flex-col items-center justify-center text-center ">
-        <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-5xl mx-auto flex flex-col gap-4 xl:gap-6 mt-16">
-          <h1 className="font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white  leading-snug">
+        <div className=" flex flex-col gap-4 xl:gap-6 xl:mt-16 mt-8">
+          <h1 className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-5xl mx-auto font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white  leading-snug">
             Thank
             <span className="text-[#06CBDE]"> You!</span>
           </h1>
 
-          <h3 className="text-[#FFFFFF] text-2xl xl:text-3xl">
+          <h3 className="text-[#FFFFFF] text-2xl xl:text-3xl md:max-w-[500px] max-w-[250px] mx-auto">
             Your Submission Has Been Received.
           </h3>
 
-          <p className="text-[15px] md:text-[20px] 2xl:text-[25px] text-[#bebdbd]  leading-relaxed">
+          <p className="max-w-[320px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-3xl 2xl:max-w-5xl mx-auto text-[15px] md:text-[20px] 2xl:text-[25px] text-[#ffffffdc]  leading-relaxed">
             We’re excited to learn more about your business and explore how AI
             can make a real impact.Our team will review your message and get
             back to you within 24 hours. In the meantime, feel free to browse

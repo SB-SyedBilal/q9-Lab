@@ -54,7 +54,7 @@ export default function IndustriesSection() {
     <div className="mb-12">
       <section
         id="industries-section"
-        className=" text-white py-8 md:py-16 mb-4 xl:mb-8 z-0 bg-[#080808] "
+        className=" text-white py-8 md:py-16 mb-4 xl:mb-12 z-0 bg-[#080808] "
         style={{
           backgroundImage: "url('/img/lines2.png')",
           backgroundRepeat: "no-repeat",

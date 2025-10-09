@@ -33,7 +33,7 @@ const items = [
     alt: "Business robot portrait in a suit",
     bedge: "HIRM",
     title: "AI Recruiter",
-    desc: "Your always-on recruiter. From CV screening to AI-driven interviews, Hirm cuts 60% of HR workload—freeing teams to focus on top talent.",
+    desc: "Your always-on recruiter. From CV screening to AI-driven interviews, Hirm cuts 60% of HR workload freeing teams to focus on top talent.",
     link: '/hirm'
   },
 ];

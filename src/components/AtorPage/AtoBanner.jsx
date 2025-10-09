@@ -16,7 +16,7 @@ export default function AtoBanner() {
           {/* Heading */}
           <h2 className="text-white text-3xl sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] 2xl:text-[52px] font-bold leading-snug ">
             Ready To Bring Personalized <br />
-            <span className="text-cyan-400">Learning To Every Student?</span>
+            <span className="text-[#06CBDE]">Learning To Every Student?</span>
           </h2>
 
           {/* Button */}

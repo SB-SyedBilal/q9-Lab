@@ -24,7 +24,7 @@ export default function ContactHero() {
   return (
     <div
       id="home"
-      className="relative min-h-[45vh] sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[30vh] xl:min-h-[65vh] 2xl:min-h-[80vh] overflow-hidden "
+      className="relative min-h-[40vh] sm:min-h-[40vh] md:min-h-[40vh] lg:min-h-[35vh] xl:min-h-[65vh] 2xl:min-h-[80vh] overflow-hidden xl:py-0 py-6"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -45,13 +45,13 @@ export default function ContactHero() {
       {/* Main Content Wrapper */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between mt-5 lg:mt-10 xl:mt-20 max-w-[1700px] mx-auto px-6 lg:px-8">
         {/* Left: Text Content */}
-        <div className="text-center max-w-[450px] lg:text-left lg:max-w-[400px] xl:max-w-[520px] 2xl:max-w-[620px] mb-10 lg:mb-0">
-          <h1 className="font-AmpleSoftPro text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-snug">
+        <div className="flex flex-col xl:gap-6 gap-4 lg:justify-start lg:items-start justify-center items-center mb-10 lg:mb-0">
+          <h1 className="font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl max-w-[450px] lg:max-w-[400px] text-center  lg:text-left  xl:max-w-[500px] font-bold text-white xl:leading-20 md:leading-12 leading-10">
             Let’s Build the Future
             <span className="text-[#06CBDE]"> Together</span>
           </h1>
 
-          <p className="text-sm sm:text-base lg:text-md xl:text-lg 2xl:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
+          <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-[#ffffffdc]  xl:leading-10 leading-6 text-center  lg:text-left xl:max-w-[500px] max-w-[450px] lg:max-w-[400px]">
              Whether you’re a business exploring AI, an investor looking to partner, or a professional seeking opportunities we’d love to hear from you.
           </p>
 

@@ -7,21 +7,21 @@ import BlueBgButton from "../BlueBgButton/BlueBgButton";
 const ChoosePath = () => {
   const paths = [
     {
-      icon: "/img/conticon1.png",
+      icon: "/img/contact-path-1.png",
       title: "For Enterprises",
       description:
         "Explore how AI can drive efficiency, reduce costs, and unlock new capabilities across your organization.",
       btntext: "Book A Demo",
     },
     {
-      icon: "/img/conticon2.png",
+      icon: "/img/contact-path-2.png",
       title: "For Investors",
       description:
         "Get our investor overview and discuss strategic partnership opportunities.",
       btntext: "Request Investor Deck",
     },
     {
-      icon: "/img/conticon3.png",
+      icon: "/img/contact-path-3.png",
       title: "For Careers",
       description:
         "Join a team building practical AI systems with measurable impact.",
@@ -35,9 +35,9 @@ const ChoosePath = () => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
   return (
-    <div className=" mb-8">
+    <div className="">
       <section id="industries-section" className=" text-white z-0 ">
-        <div className="max-w-[1700px] mx-auto px-6 xl:py-12 2xl:py-19 lg:px-8">
+        <div className="max-w-[1700px] mx-auto px-6 xl:py-12 py-8 2xl:py-19 lg:px-8">
           {/* Header */}
           <div className="xl:mb-12 text-center md:text-left">
             <Heading heading="Choose Your" highlight="Path" />
@@ -68,9 +68,9 @@ const ChoosePath = () => {
                         <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
 
                         {/* ✅ FIXED HEIGHT + FLEX COLUMN */}
-                        <div className="relative z-20 bg-black rounded-xl p-10 h-[320px] flex flex-col justify-between items-center text-center border border-gray-800">
-                          <div>
-                            <div className="mb-4">
+                        <div className="relative z-20 bg-black rounded-xl p-4 h-full flex flex-col justify-between items-center text-center border border-gray-800">
+                          <div className="flex flex-col items-center justify-center">
+                            <div className="mb-4 bg-[#06CBDE13] rounded-full p-4 w-fit">
                               <img
                                 src={
                                   industry.icon ||
@@ -83,13 +83,14 @@ const ChoosePath = () => {
                             <h3 className="relative text-lg font-semibold mb-3 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
                               {industry.title}
                             </h3>
-                            <p className="text-gray-400 text-sm leading-relaxed line-clamp-4">
+                            <p className="text-[#ffffffdc] text-base leading-relaxed mb-4 flex-grow min-h-[78px]">
                               {isExpanded ? industry.description : shortText}
                             </p>
+
                           </div>
 
                           {/* Button */}
-                          <a
+                          {/* <a
                             href="#"
                             className="mt-8 flex items-center gap-2 text-white font-semibold underline underline-offset-2
               hover:text-cyan-400 transition-colors duration-300 w-fit"
@@ -109,7 +110,7 @@ const ChoosePath = () => {
                                 d="M9 5l7 7-7 7"
                               />
                             </svg>
-                          </a>
+                          </a> */}
 
                           {/* Optional read more button (hidden for now) */}
                           {/* {industry.description.length > 100 && (
@@ -134,8 +135,8 @@ const ChoosePath = () => {
             {paths.map((industry, index) => (
               <div
                 key={index}
-                className="relative z-20 rounded-2xl p-18 h-full flex flex-col justify-between
-            bg-[#0C0C0C] animated-border min-h-[420px] overflow-hidden group
+                className="relative z-20 rounded-2xl xl:p-8 p-6 h-full flex flex-col justify-between
+            bg-[#0C0C0C] animated-border  overflow-hidden group
             transition-all duration-500 "
               >
                 {/* Hover shape from top-right */}
@@ -143,23 +144,23 @@ const ChoosePath = () => {
 
                 <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-cyan-500/30 blur-[100px] rounded-full pointer-events-none"></div>
 
-                <div className="flex flex-col gap-4 xl:gap-10">
+                <div className="flex flex-col gap-4 xl:gap-6">
                   {/* Icon */}
-                  <div className="bg-[#06CBDE21] rounded-full p-4 w-fit">
+                  <div className="bg-[#06CBDE13] rounded-full p-4 w-fit">
                     <img
                       src={industry.icon}
                       alt={industry.title}
-                      className="xl:w-[48px] xl:h-[50px] object-contain"
+                      className="xl:w-16 w-14 object-contain"
                     />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-white text-xl xl:text-3xl ">
+                  <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug text-white ">
                     {industry.title}
                   </h3>
 
                   {/* Description */}
-                  <p className=" text-sm xl:text-lg leading-relaxed">
+                  <p className="text-[#ffffff] text-base xl:text-lg leading-relaxed">
                     {industry.description}
                   </p>
                 </div>

@@ -43,10 +43,10 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center text-sm xl:text-lg 2xl:text-2xl space-x-6 xl:space-x-14 2xl:space-x-16">
+        <div className="hidden lg:flex items-center xl:text-lg 2xl:text-2xl space-x-6 xl:space-x-14 2xl:space-x-16">
           <Link
             href="/"
-            className="text-white hover:text-cyan-300 transition-colors"
+            className="text-white hover:text-[#06CBDE] transition-colors"
           >
             Home
           </Link>
@@ -66,11 +66,11 @@ export default function Navbar() {
             }}
           >
             {/* Button */}
-            <button className="text-white hover:text-cyan-300 flex items-center  tracking-wide transition-all duration-300 cursor-pointer">
+            <button className="text-white hover:text-[#06CBDE] flex items-center  tracking-wide transition-all duration-300 cursor-pointer">
               Our Products
               <svg
                 className={`ml-2 w-5 h-5 transition-transform duration-300 ${
-                  isDropdownOpen ? "rotate-180 text-cyan-300" : "rotate-0"
+                  isDropdownOpen ? "rotate-180 text-[#06CBDE]" : "rotate-0"
                 }`}
                 fill="none"
                 stroke="currentColor"
@@ -101,11 +101,11 @@ export default function Navbar() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="block px-5 py-3 text-sm text-white/90 hover:text-white 
+                    className="px-2 py-3 text-base text-white/90 hover:text-white 
                      hover:bg-cyan-500/20 transition-all duration-300 
                      border-b border-white/5 last:border-none flex items-center gap-2"
                   >
-                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
+                    <span className="w-1.5 h-1.5 bg-[#06CBDE] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
                     {item.label}
                   </Link>
                 ))}
@@ -115,19 +115,19 @@ export default function Navbar() {
 
           <Link
             href="/about-us"
-            className="text-white hover:text-cyan-300 transition-colors"
+            className="text-white hover:text-[#06CBDE] transition-colors"
           >
             About Us
           </Link>
           <Link
             href="/about-us"
-            className="text-white hover:text-cyan-300 transition-colors"
+            className="text-white hover:text-[#06CBDE] transition-colors"
           >
             Blogs
           </Link>
           <Link
             href="/contact-us"
-            className="text-white hover:text-cyan-300 transition-colors"
+            className="text-white hover:text-[#06CBDE] transition-colors"
           >
             Contact Us
           </Link>
@@ -216,7 +216,7 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={closeMobileMenu}
-            className="block hover:text-cyan-300 border-b border-white/30 pb-3"
+            className="block hover:text-[#06CBDE] border-b border-white/30 pb-3"
           >
             Home
           </Link>
@@ -225,7 +225,7 @@ export default function Navbar() {
           <div className="border-b border-white/30 pb-3">
             <button
               onClick={() => setIsProductMenuOpen((prev) => !prev)}
-              className="w-full text-left flex items-center justify-between hover:text-cyan-300 font-medium"
+              className="w-full text-left flex items-center justify-between hover:text-[#06CBDE] font-medium"
             >
               Our Products
               <svg
@@ -257,7 +257,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={closeMobileMenu}
-                    className="block hover:text-cyan-300"
+                    className="block hover:text-[#06CBDE]"
                   >
                     {item.label}
                   </Link>
@@ -269,7 +269,7 @@ export default function Navbar() {
           <Link
             href="/about-us"
             onClick={closeMobileMenu}
-            className="block hover:text-cyan-300 border-b border-white/30 pb-3"
+            className="block hover:text-[#06CBDE] border-b border-white/30 pb-3"
           >
             About Us
           </Link>
@@ -277,7 +277,7 @@ export default function Navbar() {
           <Link
             href="#how-it-works"
             onClick={closeMobileMenu}
-            className="block hover:text-cyan-300 border-b border-white/30 pb-3"
+            className="block hover:text-[#06CBDE] border-b border-white/30 pb-3"
           >
             Blogs
           </Link>
@@ -285,7 +285,7 @@ export default function Navbar() {
           <Link
             href="/contact-us"
             onClick={closeMobileMenu}
-            className="block hover:text-cyan-300 border-b border-white/30 pb-3"
+            className="block hover:text-[#06CBDE] border-b border-white/30 pb-3"
           >
             Contact Us
           </Link>
@@ -295,7 +295,7 @@ export default function Navbar() {
             <Link
               href="#form"
               onClick={closeMobileMenu}
-              className="block text-center bg-white text-black font-medium py-3 rounded-full hover:bg-cyan-400 transition"
+              className="block text-center bg-white text-black font-medium py-3 rounded-full hover:bg-[#06CBDE] transition"
             >
               Request A Demo
             </Link>

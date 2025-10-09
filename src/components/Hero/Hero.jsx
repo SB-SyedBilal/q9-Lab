@@ -77,7 +77,7 @@ export default function Hero() {
             <span className="text-[#06CBDE]">Real Business Problems</span>
           </h1>
 
-          <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-gray-200 xl:leading-10 leading-6 max-w-[320px] md:max-w-[500px] lg:max-w-[700px] xl:max-w-3xl 2xl:max-w-5xl  mx-auto xl:mb-0 mb-2" >
+          <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-gray-200 xl:leading-10 leading-6 max-w-[320px] md:max-w-[500px] lg:max-w-[700px] xl:max-w-3xl 2xl:max-w-5xl  mx-auto mb-2" >
             Q9 Labs builds SaaS-based AI applications that replace inefficiency
             with automation, cutting costs, boosting productivity, and scaling
             operations.

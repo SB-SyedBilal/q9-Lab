@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ProductSelect from "../ProductSelect";
+import { useRouter } from "next/navigation";
 
 const schema = z.object({
   full_name: z.string().min(4, "Name is required"),
@@ -26,7 +27,7 @@ const RequestForm = () => {
   const [isSent, setIsSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
-
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -47,6 +48,7 @@ const RequestForm = () => {
     }
 
     setLoading(true);
+    // router.push("/thankyou");
     try {
       await emailjs.sendForm(
         "service_pyjk30a",
@@ -60,6 +62,7 @@ const RequestForm = () => {
       setIsSent(true);
       reset();
       form.current.reset();
+      router.push("/thankyou");
     } catch (err) {
       console.error("Email error:", err);
     } finally {
@@ -67,12 +70,12 @@ const RequestForm = () => {
     }
   };
 
-  useEffect(() => {
-    if (isSent) {
-      const timer = setTimeout(() => setIsSent(false), 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [isSent]);
+  // useEffect(() => {
+  //   if (isSent) {
+  //     const timer = setTimeout(() => setIsSent(false), 2000);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [isSent]);
 
   return (
     <div
@@ -116,11 +119,12 @@ const RequestForm = () => {
           {/* Right side: Form */}
           <form
             ref={form}
-            onSubmit={handleSubmit((onSubmit) => {
-              // console.log("Validation errors:", formErrors);
-              // optionally show user-friendly message:
-              // alert("Fix the highlighted fields before submitting.");
-            })}
+            // onSubmit={handleSubmit((onSubmit) => {
+            //   // console.log("Validation errors:", formErrors);
+            //   // optionally show user-friendly message:
+            //   // alert("Fix the highlighted fields before submitting.");
+            // })}
+            onSubmit={handleSubmit(onSubmit)}
             noValidate
             className="w-full lg:w-1/2 xl:w-[55%] relative text-white flex flex-col gap-6"
           >
@@ -245,7 +249,7 @@ const RequestForm = () => {
                 {loading ? "Sending..." : "SUBMIT"}
               </button>
 
-              {isSent && (
+              {/* {isSent && (
                 <div
                   className="w-full animate-fade-in"
                   role="status"
@@ -255,7 +259,7 @@ const RequestForm = () => {
                     ✅ Your message has been sent successfully!
                   </p>
                 </div>
-              )}
+              )} */}
             </div>
           </form>
         </div>
