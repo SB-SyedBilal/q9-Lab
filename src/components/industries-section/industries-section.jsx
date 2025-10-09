@@ -117,7 +117,7 @@ export default function IndustriesSection() {
                           {industry.description.length > 100 && (
                             <button
                               onClick={() => toggleDescription(index)}
-                              className="text-cyan-400 text-sm font-medium hover:underline"
+                              className="text-[#06CBDE] text-sm font-medium hover:underline"
                             >
                               {isExpanded ? "Read Less" : "Read More"}
                             </button>
