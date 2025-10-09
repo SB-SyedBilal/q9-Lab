@@ -61,7 +61,7 @@ export default function RAProtocolSection() {
       >
         {/* Badge */}
         <div className="mb-4 text-center sm:text-left">
-          <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-xs sm:text-sm text-white">
+          <span className="inline-flex items-center rounded-full bg-white/10 px-5 py-2 text-sm sm:text-lg text-white">
             Our Differentiator
           </span>
         </div>
@@ -69,16 +69,16 @@ export default function RAProtocolSection() {
         {/* Heading */}
         <h2
           id="ra-protocol-heading"
-          className=" text-3xl xl:text-6xl font-bold leading-tight text-white text-center sm:text-left mb-6"
+          className=" text-3xl md:text-4xl xl:text-6xl font-bold leading-tight text-white text-center sm:text-left mb-6"
         >
           The RA Protocol{" "}
-          <span className="text-cyan-400">
+          <span className="text-[#14cff0]">
             (Research <br /> & Apply)
           </span>
         </h2>
 
         {/* Paragraph */}
-        <p className="mt-3 max-w-2xl text-xs sm:text-sm md:text-xl text-gray-300 text-center sm:text-left">
+        <p className="text-[15px] sm:text-[18px] lg:text-md xl:text-lg 2xl:text-2xl text-gray-300 text-center sm:text-left">
           Research new possibilities. Apply them instantly into SaaS products
           with ROI.
         </p>
@@ -97,8 +97,8 @@ export default function RAProtocolSection() {
             >
               {FEATURES.map((feature, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col items-center justify-center border animated-border rounded-lg p-6 text-center hover:border-cyan-400 transition-all duration-300">
-                    <span className="flex h-16 w-16 items-center justify-center rounded-lg bg-white/10 text-cyan-400 flex-shrink-0 mb-3">
+                  <div className="flex flex-col items-center justify-center border animated-border rounded-lg p-6 text-center hover:border-[#14cff0] transition-all duration-300">
+                    <span className="flex h-16 w-16 items-center justify-center rounded-lg bg-white/10 text-[#14cff0] flex-shrink-0 mb-3">
                       <img
                         src={feature.icon}
                         className="w-9 h-auto"
@@ -108,7 +108,7 @@ export default function RAProtocolSection() {
                     <h3 className="text-base mb-2 text-white">
                       {feature.title}
                     </h3>
-                    <p className="text-xs text-gray-400 leading-relaxed">
+                    <p className="text-sm text-gray-400 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -122,9 +122,9 @@ export default function RAProtocolSection() {
             {FEATURES.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-4 border animated-border rounded-lg p-4 sm:p-5 hover:border-cyan-400 transition-all duration-300"
+                className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-4 border animated-border rounded-lg p-4 sm:p-5 hover:border-[#14cff0] transition-all duration-300"
               >
-                <span className="flex h-16 w-16 lg:h-24 lg:w-24 items-center justify-center rounded-lg bg-white/10 text-cyan-400 flex-shrink-0">
+                <span className="flex h-16 w-16 lg:h-24 lg:w-24 items-center justify-center rounded-lg bg-white/10 text-[#14cff0] flex-shrink-0">
                   <img
                     src={feature.icon}
                     className="w-9 lg:w-12 h-auto"
@@ -135,7 +135,7 @@ export default function RAProtocolSection() {
                   <h3 className=" text-lg 2xl:text-2xl mb-1 sm:mb-2 text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-xs sm:text-sm xl:text-lg text-gray-400 leading-relaxed">
+                  <p className="text-[15px] sm:text-[15px] lg:text-md  2xl:text-lg text-gray-300 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
