@@ -80,11 +80,12 @@ const ChoosePath = () => {
                                 className="w-[50px] h-[50px] object-contain mx-auto"
                               />
                             </div>
-                            <h3 className="relative text-lg font-semibold mb-3 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
+                            <h3 className="relative text-xl font-semibold mb-3 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
                               {industry.title}
                             </h3>
                             <p className="text-[#ffffffdc] text-base leading-relaxed mb-4 flex-grow min-h-[78px]">
-                              {isExpanded ? industry.description : shortText}
+                              {/* {isExpanded ? industry.description : shortText} */}
+                              {industry.description}
                             </p>
 
                           </div>

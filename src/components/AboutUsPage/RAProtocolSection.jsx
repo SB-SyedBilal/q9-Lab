@@ -57,11 +57,11 @@ export default function RAProtocolSection() {
     <div>
       <section
         aria-labelledby="ra-protocol-heading"
-        className="relative mx-auto w-full max-w-[1700px] px-6 lg:px-8 py-12 sm:py-14 "
+        className="relative mx-auto w-full max-w-[1700px] px-6 lg:px-8 py-8 sm:py-14 "
       >
         {/* Badge */}
         <div className="mb-4 text-center sm:text-left">
-          <span className="inline-flex items-center rounded-full bg-white/10 px-5 py-2 text-sm sm:text-lg text-white">
+          <span className="inline-flex items-center rounded-full bg-white/10 px-5 py-2 text-base xl:text-lg text-white">
             Our Differentiator
           </span>
         </div>
@@ -69,7 +69,7 @@ export default function RAProtocolSection() {
         {/* Heading */}
         <h2
           id="ra-protocol-heading"
-          className=" text-3xl md:text-4xl xl:text-6xl font-bold leading-tight text-white text-center sm:text-left mb-6"
+          className=" text-[27px] sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] 2xl:text-[52px] font-bold leading-tight text-white text-center sm:text-left mb-6"
         >
           The RA Protocol{" "}
           <span className="text-[#14cff0]">
@@ -78,7 +78,7 @@ export default function RAProtocolSection() {
         </h2>
 
         {/* Paragraph */}
-        <p className="text-[15px] sm:text-[18px] lg:text-md xl:text-lg 2xl:text-2xl text-gray-300 text-center sm:text-left">
+        <p className="text-base sm:text-[18px] lg:text-md xl:text-lg 2xl:text-2xl text-gray-300 text-center sm:text-left">
           Research new possibilities. Apply them instantly into SaaS products
           with ROI.
         </p>
@@ -93,7 +93,7 @@ export default function RAProtocolSection() {
               pagination={{ clickable: true }}
               autoplay={{ delay: 2500, disableOnInteraction: false }}
               loop={true}
-              className="!pb-10"
+              className="!pb-12"
             >
               {FEATURES.map((feature, index) => (
                 <SwiperSlide key={index}>
@@ -105,10 +105,10 @@ export default function RAProtocolSection() {
                         alt={feature.title}
                       />
                     </span>
-                    <h3 className="text-base mb-2 text-white">
+                    <h3 className="text-lg mb-2 text-white">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-gray-400 leading-relaxed">
+                    <p className="text-base text-[#ffffffdc]  leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -135,7 +135,7 @@ export default function RAProtocolSection() {
                   <h3 className=" text-lg 2xl:text-2xl mb-1 sm:mb-2 text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-[15px] sm:text-[15px] lg:text-md  2xl:text-lg text-gray-300 leading-relaxed">
+                  <p className="text-base lg:text-md  2xl:text-lg text-[#ffffffdc] leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
 const BlueBgButton = (props) => {
@@ -16,8 +17,8 @@ const BlueBgButton = (props) => {
                relative z-10 transition-transform duration-500 ease-out
                group-hover:scale-100 group-hover:rotate-12 "
       >
-        <svg
-          className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-6 2xl:h-6 text-blue transition-transform duration-500 ease-out 
+        {/* <svg
+          className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7 text-blue transition-transform duration-500 ease-out 
                  group-hover:rotate-32"
           fill="none"
           stroke="currentColor"
@@ -29,7 +30,8 @@ const BlueBgButton = (props) => {
             strokeLinejoin="round"
             d="M5 19L19 5M10 5h9v9"
           />
-        </svg>
+        </svg> */}
+        <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7  lg:flex text-[#ffffff]" />
       </span>
 
       {/* Rotating gradient overlay */}

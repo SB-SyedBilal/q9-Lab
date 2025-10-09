@@ -60,6 +60,16 @@
   }
 }
 
+.swiper-pagination-bullet {
+  background: lab(35.6337% -1.58697 -10.8425) !important;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #06CBDE !important;
+  opacity: 1;
+}
+
 @font-face {
   font-family: "Jost";
   src: url("/fonts/Jost/Jost-Regular.ttf") format("truetype");

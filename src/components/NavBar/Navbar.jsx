@@ -246,7 +246,7 @@ export default function Navbar() {
             </button>
 
             {isProductMenuOpen && (
-              <div className="pl-3 mt-3 space-y-3 text-sm text-gray-300">
+              <div className="pl-3 mt-3 space-y-3 text-base text-gray-300">
                 {[
                   { label: "AI Voice Platform", href: "/ava" },
                   { label: "AI Recruiter", href: "/hirm" },

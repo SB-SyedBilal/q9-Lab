@@ -52,7 +52,7 @@ export default function Banner() {
             </div>
 
             {/* Right Image */}
-            <div className="hidden  lg:flex justify-right ">
+            <div className="hidden  lg:flex justify-right mr-12">
               <img
                 src="/img/home-cta-banner.png" // Replace this with your image path
                 alt="AI Illustration"

@@ -9,10 +9,10 @@ const Intelligence = () => {
           {/* LEFT SIDE */}
           <div className="flex-1 flex flex-col items-center  text-center space-y-4  xl:space-y-8">
             <div className=" w-fit">
-              <img src="/img/locationico.png" className="w-16" alt="location icon" />
+              <img src="/img/locationico.png" className="sm:w-16 w-12" alt="location icon" />
             </div>
             <h2 className="text-2xl xl:text-3xl font-bold">Dubai</h2>
-            <h3 className="xl:text-2xl text-xl max-w-md leading-relaxed">
+            <h3 className="xl:text-2xl sm:text-xl text-lg max-w-md leading-relaxed">
               Latifa Towers, Sheikh Zayed Road
             </h3>
           </div>
@@ -26,12 +26,12 @@ const Intelligence = () => {
           {/* RIGHT SIDE */}
           <div className="flex-1 flex flex-col items-center  text-center  space-y-4  xl:space-y-8">
             <div className=" w-fit">
-              <img src="/img/mailico.png" className="w-16" alt="mail icon" />
+              <img src="/img/mailico.png" className="sm:w-16 w-12" alt="mail icon" />
             </div>
             <h2 className="text-2xl xl:text-3xl font-bold">
               Email
             </h2>
-            <h3 className="xl:text-2xl text-xl max-w-md leading-relaxed">
+            <h3 className="xl:text-2xl sm:text-xl text-lg max-w-md leading-relaxed">
               hello@q9labs.ai
             </h3>
           </div>
