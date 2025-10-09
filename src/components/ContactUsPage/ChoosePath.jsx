@@ -4,25 +4,28 @@ import Heading from "@/components/Heading/Heading";
 import MobileAutoSlider from "@/components/mobile-auto-slider/mobile-auto-slider";
 import { useState } from "react";
 import BlueBgButton from "../BlueBgButton/BlueBgButton";
-const AtoCase = () => {
-  const industries = [
+const ChoosePath = () => {
+  const paths = [
     {
-      icon: "/img/atorcase1.png",
-      title: "Schools",
+      icon: "/img/conticon1.png",
+      title: "For Enterprises",
       description:
-        "Schools used AI-driven lessons to deliver personalized learning at scale. Teachers saved time while students received interactive, adaptive content that matched their individual pace.",
+        "Explore how AI can drive efficiency, reduce costs, and unlock new capabilities across your organization.",
+      btntext: "Book A Demo",
     },
     {
-      icon: "/img/atorcase2.png",
-      title: "EdTech Platforms",
+      icon: "/img/conticon2.png",
+      title: "For Investors",
       description:
-        "EdTech platforms integrated AI to create tailored courses and exercises. Learners experienced more engaging content, leading to higher completion rates and better outcomes.",
+        "Get our investor overview and discuss strategic partnership opportunities.",
+      btntext: "Request Investor Deck",
     },
     {
-      icon: "/img/atorcase3.png",
-      title: "Corporate Training",
+      icon: "/img/conticon3.png",
+      title: "For Careers",
       description:
-        "Companies adopted AI-based modules for workforce training. Teams across different regions gained customized learning paths, improving efficiency and reducing training costs.",
+        "Join a team building practical AI systems with measurable impact.",
+      btntext: "Explore Careers",
     },
   ];
 
@@ -32,19 +35,12 @@ const AtoCase = () => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
   return (
-    <div className=" mb-18">
-      <section
-        id="industries-section"
-        className=" text-white bg-[#080808] z-0 "
-        style={{
-          backgroundImage: "url('/img/grabii.png')",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="max-w-[1700px] mx-auto px-6 py-8 md:py-19 lg:px-8">
+    <div className=" mb-8">
+      <section id="industries-section" className=" text-white z-0 ">
+        <div className="max-w-[1700px] mx-auto px-6 xl:py-12 2xl:py-19 lg:px-8">
           {/* Header */}
-          <div className="mb-12 text-center">
-            <Heading heading="Real-World" highlight="Case Studies" />
+          <div className="xl:mb-12 text-center md:text-left">
+            <Heading heading="Choose Your" highlight="Path" />
           </div>
 
           {/* Mobile: horizontal slider with auto-advance */}
@@ -53,9 +49,9 @@ const AtoCase = () => {
               className="pl-6 pr-6"
               intervalMs={3000}
               ariaLabel="Industries horizontal auto slider"
-              pause={expandedIndex !== null} // ✅ stop when expanded
+              pause={expandedIndex !== null}
             >
-              {industries.map((industry, index) => {
+              {paths.map((industry, index) => {
                 const isExpanded = expandedIndex === index;
                 const shortText =
                   industry.description.length > 100
@@ -70,33 +66,60 @@ const AtoCase = () => {
                     <div className="relative group">
                       <div className="relative z-10 rounded-xl overflow-hidden">
                         <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
-                        <div className="relative z-20 bg-black rounded-xl p-10 h-full flex flex-col items-center text-center border border-gray-800">
-                          <div className="mb-4">
-                            <img
-                              src={
-                                industry.icon ||
-                                "/placeholder.svg?height=50&width=50&query=industry%20icon"
-                              }
-                              alt={industry.title}
-                              className="w-[50px] h-[50px] object-contain"
-                            />
-                          </div>
-                          <h3 className="relative text-lg font-semibold mb-4 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
-                            {industry.title}
-                          </h3>
-                          <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
-                            {isExpanded ? industry.description : shortText}
-                          </p>
 
-                          {/* ✅ Read More / Less Toggle */}
-                          {industry.description.length > 100 && (
-                            <button
-                              onClick={() => toggleDescription(index)}
-                              className="text-cyan-400 text-sm font-medium hover:underline"
+                        {/* ✅ FIXED HEIGHT + FLEX COLUMN */}
+                        <div className="relative z-20 bg-black rounded-xl p-10 h-[320px] flex flex-col justify-between items-center text-center border border-gray-800">
+                          <div>
+                            <div className="mb-4">
+                              <img
+                                src={
+                                  industry.icon ||
+                                  "/placeholder.svg?height=50&width=50&query=industry%20icon"
+                                }
+                                alt={industry.title}
+                                className="w-[50px] h-[50px] object-contain mx-auto"
+                              />
+                            </div>
+                            <h3 className="relative text-lg font-semibold mb-3 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
+                              {industry.title}
+                            </h3>
+                            <p className="text-gray-400 text-sm leading-relaxed line-clamp-4">
+                              {isExpanded ? industry.description : shortText}
+                            </p>
+                          </div>
+
+                          {/* Button */}
+                          <a
+                            href="#"
+                            className="mt-8 flex items-center gap-2 text-white font-semibold underline underline-offset-2
+              hover:text-cyan-400 transition-colors duration-300 w-fit"
+                          >
+                            {industry.btntext}
+                            <svg
+                              className="w-5 h-5 animate-pulse"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
                             >
-                              {isExpanded ? "Read Less" : "Read More"}
-                            </button>
-                          )}
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </a>
+
+                          {/* Optional read more button (hidden for now) */}
+                          {/* {industry.description.length > 100 && (
+                  <button
+                    onClick={() => toggleDescription(index)}
+                    className="text-cyan-400 text-sm font-medium hover:underline"
+                  >
+                    {isExpanded ? "Read Less" : "Read More"}
+                  </button>
+                )} */}
                         </div>
                       </div>
                     </div>
@@ -108,7 +131,7 @@ const AtoCase = () => {
 
           {/* Tablet/Desktop: original grid */}
           <div className="hidden md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 2xl:gap-18 ">
-            {industries.map((industry, index) => (
+            {paths.map((industry, index) => (
               <div
                 key={index}
                 className="relative z-20 rounded-2xl p-18 h-full flex flex-col justify-between
@@ -117,7 +140,7 @@ const AtoCase = () => {
               >
                 {/* Hover shape from top-right */}
                 <div className="z-50 absolute top-0 right-0 w-[60%]  h-1/2 2xl:h-[60%] bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
-                
+
                 <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-cyan-500/30 blur-[100px] rounded-full pointer-events-none"></div>
 
                 <div className="flex flex-col gap-4 xl:gap-10">
@@ -142,11 +165,12 @@ const AtoCase = () => {
                 </div>
 
                 {/* Button */}
-                <a href="#form"
+                <a
+                  href="#form"
                   className="mt-8 flex items-center gap-2 text-white font-semibold underline underline-offset-2
-              hover:text-cyan-400 transition-colors duration-300 w-fit"
+              hover:text-cyan-400 transition-colors duration-300 w-fit text-xl"
                 >
-                  Let’s Connect
+                  {industry.btntext}
                   <svg
                     className="w-5 h-5 animate-pulse"
                     fill="none"
@@ -165,13 +189,10 @@ const AtoCase = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center pt-12 ">
-            <BlueBgButton text="See It in Action" id='#form' />
-          </div>
         </div>
       </section>
     </div>
   );
 };
 
-export default AtoCase;
+export default ChoosePath;

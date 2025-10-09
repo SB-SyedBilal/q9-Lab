@@ -25,7 +25,7 @@ const WhyQ9 = () => {
           {/* CTA Button */}
           <div className="flex justify-center lg:justify-start">
             <a
-              href="#industries-section"
+              href="#form"
               className="group flex items-center justify-between gap-6 pl-8 pr-2 pt-2 pb-2 
     border-1 border-white rounded-full text-white
     hover:bg-white/10 transition-all duration-500 ease-out cursor-pointer 

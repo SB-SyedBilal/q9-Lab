@@ -56,7 +56,7 @@ export default function AtorHero() {
           </p>
 
           <div className="flex justify-center lg:justify-start">
-            <BlueBgButton text="Explore Ator" />
+            <BlueBgButton text="Explore Ator" id='#form' />
           </div>
         </div>
 

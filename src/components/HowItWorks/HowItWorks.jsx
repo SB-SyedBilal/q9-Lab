@@ -61,16 +61,16 @@ export default function HowWorks() {
   }, [activeIndex]);
 
   return (
-    <div>
-      <section
-        id="how-it-works"
-        className="text-white 2xl:py-8 relative overflow-hidden  max-w-[1700px] px-6 lg:px-8  mx-auto    mb-6"
-        style={{
+    <div style={{
           backgroundImage: "url('/img/lines.png')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right",
-          backgroundSize: "auto 100%",
-        }}
+          
+        }} className="py-6 ">
+      <section
+        id="how-it-works"
+        className="text-white 2xl:py-8 relative overflow-hidden max-w-[1700px] px-6 lg:px-8   mx-auto    mb-6"
+        
       >
         <div className=" text-center ">
           <Heading heading="How It" highlight="Works" />

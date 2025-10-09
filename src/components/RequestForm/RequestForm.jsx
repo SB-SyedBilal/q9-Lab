@@ -80,7 +80,7 @@ const RequestForm = () => {
       className="flex items-center justify-center  max-w-[1700px] px-6 lg:px-8 mx-auto mb-14 "
     >
       <div
-        className="relative w-full  rounded-xl shadow-lg px-12 py-12  animated-border overflow-hidden"
+        className="relative w-full  rounded-xl shadow-lg px-6 md:px-12 py-12  animated-border overflow-hidden"
         style={{
           backgroundImage: `url('/img/formbg.png')`,
           backgroundSize: "cover",

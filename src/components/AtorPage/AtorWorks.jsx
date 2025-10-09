@@ -64,7 +64,7 @@ const AtorWorks = () => {
     <div>
       <section
         id="how-it-works"
-        className="text-white 2xl:py-8 relative overflow-hidden  max-w-[1700px] px-6 lg:px-8 mx-auto mt-12 xl:mt-8 "
+        className="text-white 2xl:pb-4 relative overflow-hidden  max-w-[1700px] px-6 lg:px-8 mx-auto mt-12 xl:mt-8 "
         
       >
         <div className="text-center md:text-left ">
@@ -124,7 +124,7 @@ const AtorWorks = () => {
                   <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-tl-full scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-right"></div>
                 </div>
                 <h3
-                  className="relative text-cyan-400 font-semibold text-2xl 2xl:text-3xl mt-6 mb-3 
+                  className="relative text-cyan-400 font-semibold text-xl 2xl:text-3xl mt-6 mb-3 
   after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 
   after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300
   group-hover:after:w-1/2 max-w-[370px]"

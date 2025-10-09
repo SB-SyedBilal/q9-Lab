@@ -69,7 +69,7 @@ export default function RAProtocolSection() {
         {/* Heading */}
         <h2
           id="ra-protocol-heading"
-          className="text-balance text-4xl xl:text-6xl font-bold leading-tight text-white text-center sm:text-left mb-6"
+          className=" text-3xl xl:text-6xl font-bold leading-tight text-white text-center sm:text-left mb-6"
         >
           The RA Protocol{" "}
           <span className="text-cyan-400">
@@ -132,7 +132,7 @@ export default function RAProtocolSection() {
                   />
                 </span>
                 <div className="text-center sm:text-left max-w-md">
-                  <h3 className="text-base text-xl 2xl:text-2xl mb-1 sm:mb-2 text-white">
+                  <h3 className=" text-lg 2xl:text-2xl mb-1 sm:mb-2 text-white">
                     {feature.title}
                   </h3>
                   <p className="text-xs sm:text-sm xl:text-lg text-gray-400 leading-relaxed">
@@ -147,7 +147,7 @@ export default function RAProtocolSection() {
 
       {/* Button */}
       <div className="flex justify-center">
-        <TransButton text="Talk To Us" />
+        <TransButton text="Talk To Us" link='/contact-us' />
       </div>
     </div>
   );

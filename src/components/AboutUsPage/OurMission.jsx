@@ -7,7 +7,7 @@ const OurMission = () => {
       <div className="flex flex-col lg:flex-row  justify-between  max-w-[1700px] px-6 lg:px-8 py-12 mx-auto">
         {/* left Content */}
         <div className="w-full lg:w-1/2 flex flex-col mx-auto justify-center items-center lg:items-start text-center lg:text-left">
-          <h2 className="text-4xl xl:text-6xl font-bold mb-6 leading-snug text-white">
+          <h2 className="text-3xl md:text-4xl xl:text-6xl font-bold mb-6 leading-snug text-white">
             Our <span className="text-[#14cff0]">Mission</span>
           </h2>
 

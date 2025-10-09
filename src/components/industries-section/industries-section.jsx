@@ -51,13 +51,14 @@ export default function IndustriesSection() {
   };
 
   return (
-    <div className="pb-12">
+    <div className="mb-12">
       <section
         id="industries-section"
-        className=" text-white py-16 xl:mb-12 z-0 bg-[#080808]"
+        className=" text-white py-8 md:py-16 mb-8 xl:mb-12 z-0 bg-[#080808] "
         style={{
           backgroundImage: "url('/img/lines2.png')",
           backgroundRepeat: "no-repeat",
+          
         }}
       >
         <div className="max-w-[1700px] mx-auto px-6 lg:px-8">
@@ -144,9 +145,9 @@ export default function IndustriesSection() {
 
 
                   {/* Card content */}
-                  <div className="relative z-20 bg-black rounded-xl p-7 h-full flex flex-col items-center text-center animated-border  min-h-[460px] lg:min-h-[420px] xl:min-h-[450px] 2xl:min-h-[400px]">
+                  <div className="relative z-20 bg-black rounded-sm p-7 h-full flex flex-col items-center text-center animated-border  min-h-[460px] lg:min-h-[420px] xl:min-h-[450px] 2xl:min-h-[400px]">
                     {/* Icon */}
-                    <div className="mb-4 md:mb-7">
+                    <div className="mb-4 md:mb-7 ">
                       <img
                         src={industry.icon || "/placeholder.svg"}
                         alt={industry.title}
@@ -165,7 +166,7 @@ export default function IndustriesSection() {
                     </p>
 
                     {/* Learn More Button (desktop only) */}
-                    <button
+                    {/* <button
                       className="cursor-pointer text-white text-2sm 2xl:text-xl font-medium hover:text-cyan-300 transition-colors duration-200 flex items-center gap-2 border-b 2xl:mb-4"
                       aria-label={`Learn more about ${industry.title}`}
                     >
@@ -184,7 +185,7 @@ export default function IndustriesSection() {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

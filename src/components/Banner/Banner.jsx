@@ -7,7 +7,7 @@ export default function Banner() {
   return (
     <section className="max-w-[1700px] px-6 lg:px-8 mx-auto">
       <div className="">
-        <div className=" rounded-2xl h-auto  animated-border md:p-7 lg:p-0 overflow-hidden">
+        <div className=" rounded-lg h-auto  animated-border md:p-7 lg:p-0 overflow-hidden">
           <div className="flex flex-col md:flex-row items-center justify-between px-8  gap-8 ">
             {/* Left Content */}
             <div className=" text-center pt-5 sm:pt-0  md:text-left lg:ml-12 ">

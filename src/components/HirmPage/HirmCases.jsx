@@ -142,7 +142,7 @@ const HirmCases = () => {
                 </div>
 
                 {/* Button */}
-                <button
+                <a href="#form"
                   className="mt-8 flex items-center gap-2 text-white font-semibold underline underline-offset-2
               hover:text-cyan-400 transition-colors duration-300 w-fit"
                 >
@@ -161,12 +161,12 @@ const HirmCases = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
             ))}
           </div>
           <div className="flex justify-center pt-12 ">
-            <BlueBgButton text="See It in Action" />
+            <BlueBgButton text="See It in Action" id='#form' />
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@ const OurStory = () => {
 
         {/* Right: Content */}
         <div className="w-full lg:w-[40%] flex flex-col   text-center lg:text-start">
-          <h2 className="text-4xl xl:text-6xl font-bold mb-6 leading-snug text-white">
+          <h2 className="text-3xl md:text-4xl xl:text-6xl font-bold mb-6 leading-snug text-white">
             Our <span className="text-[#14cff0]">Story</span>
           </h2>
 

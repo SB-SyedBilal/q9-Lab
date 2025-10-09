@@ -33,7 +33,7 @@ export default function Hero() {
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Curved Overlay Image */}
-      <div className=" absolute top-63 overflow-hidden md:top-60 lg:top-65 xl:top-85 2xl:top-90 left-0 w-full h-full z-0 opacity-100">
+      <div className=" absolute top-16 overflow-hidden md:top-35 lg:top-45 xl:top-55 2xl:top-60 left-0 w-full h-full z-0 opacity-100">
         <img
           src="/img/heroimg3.png"
           alt="Curved design overlay"
@@ -70,28 +70,29 @@ export default function Hero() {
       {/* <Navbar /> */}
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 mt-8 md:mt-15 lg:mt-18 xl:mt-24 gap-[5.5rem] ">
-        <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-5xl mx-auto ">
+      <div className="relative z-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 mt-8 md:mt-15 lg:mt-18 xl:mt-24 gap-8 md:gap-16">
+        <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-3xl mx-auto ">
           <h1 className="font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-snug">
           The Future of Customer{"  "}
-            <span className="text-cyan-300">Engagement</span>
+            <span className="text-[#06CBDE]">Engagement</span>
           </h1>
 
-          <p className="text-[14px] sm:text-base md:text-sm lg:text-md xl:text-lg 2xl:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
+          <p className="text-[14px] sm:text-base md:text-sm lg:text-md xl:text-lg 2xl:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
             Ava replaces costly call centers with a scalable AI voice agent that delivers smarter, faster, and more affordable customer conversations.
           </p>
 
           <div className="flex justify-center gap-8 lg:flex-row flex-col">
             <div className="w-full sm:w-auto">
-              <BlueBgButton text="Try Now" />
+              <BlueBgButton text="Try AVA Now" id='#form' />
             </div>
           </div>
         </div>
-        <div className="hidden lg:block overflow-hidden">
+        <div className=" lg:block overflow-hidden">
+          {/* <img src="/img/hirmherocurve.png" className="absolute -top-10 -right-50 z-20" alt="" /> */}
           <img
             src="/img/ava/avahero.png"
             alt="Curved design overlay"
-            className="w-full h-full"
+            className="w-2xl xl:w-4xl 2xl:w-7xl h-auto"
           />
         </div>
       </div>

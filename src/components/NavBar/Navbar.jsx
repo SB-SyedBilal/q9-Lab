@@ -125,7 +125,7 @@ export default function Navbar() {
             Blogs
           </Link>
           <Link
-            href="#form"
+            href="/contact-us"
             className="text-white hover:text-cyan-300 transition-colors"
           >
             Contact Us
@@ -281,7 +281,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="#form"
+            href="/contact-us"
             onClick={closeMobileMenu}
             className="block hover:text-cyan-300 border-b border-white/30 pb-3"
           >
