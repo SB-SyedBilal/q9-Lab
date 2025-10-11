@@ -65,7 +65,7 @@ const ChoosePath = () => {
                   >
                     <div className="relative group">
                       <div className="relative z-10 rounded-xl overflow-hidden">
-                        <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
+                        <div className="z-50 absolute top-0 right-0 w-1/2 h-1/2 bg-[#06CBDE] rounded-bl-full scale-0 group-hover:scale-35 transition-transform duration-300 origin-top-right pointer-events-none"></div>
 
                         {/* ✅ FIXED HEIGHT + FLEX COLUMN */}
                         <div className="relative z-20 bg-black rounded-xl p-4 h-full flex flex-col justify-between items-center text-center border border-gray-800">
@@ -80,7 +80,7 @@ const ChoosePath = () => {
                                 className="w-[50px] h-[50px] object-contain mx-auto"
                               />
                             </div>
-                            <h3 className="relative text-xl font-semibold mb-3 text-white after:block after:h-[2px] after:bg-cyan-400 after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
+                            <h3 className="relative text-xl font-semibold mb-3 text-white after:block after:h-[2px] after:bg-[#06CBDE] after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300">
                               {industry.title}
                             </h3>
                             <p className="text-[#ffffffdc] text-base leading-relaxed mb-4 flex-grow min-h-[78px]">
@@ -141,9 +141,9 @@ const ChoosePath = () => {
             transition-all duration-500 "
               >
                 {/* Hover shape from top-right */}
-                <div className="z-50 absolute top-0 right-0 w-[60%]  h-1/2 2xl:h-[60%] bg-cyan-400 rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
+                <div className="z-50 absolute top-0 right-0 w-[50%]  h-1/2 2xl:h-[70%] bg-[#06CBDE] rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
 
-                <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-cyan-500/30 blur-[100px] rounded-full pointer-events-none"></div>
+                <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-[#06CBDE]/30 blur-[100px] rounded-full pointer-events-none"></div>
 
                 <div className="flex flex-col gap-4 xl:gap-6">
                   {/* Icon */}
@@ -170,7 +170,7 @@ const ChoosePath = () => {
                 <a
                   href="#form"
                   className="mt-8 flex items-center gap-2 text-white font-semibold underline underline-offset-2
-              hover:text-cyan-400 transition-colors duration-300 w-fit text-xl"
+              hover:text-[#06CBDE] transition-colors duration-300 w-fit text-xl"
                 >
                   {industry.btntext}
                   <svg

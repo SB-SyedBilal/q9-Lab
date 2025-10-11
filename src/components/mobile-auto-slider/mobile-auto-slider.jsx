@@ -18,6 +18,8 @@ export default function MobileAutoSlider({
   const [activeIndex, setActiveIndex] = useState(0);
   const indexRef = useRef(0);
   const interactingRef = useRef(false);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const childArray = useMemo(() => {
     const arr = [];
@@ -88,17 +90,59 @@ export default function MobileAutoSlider({
     setActiveIndex(index);
   };
 
+  // ✅ Touch / Swipe support
+  const handleTouchStart = (e) => {
+    interactingRef.current = true;
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    const threshold = 50; // minimum distance for a swipe
+
+    if (Math.abs(diff) > threshold) {
+      const el = containerRef.current;
+      if (!el) return;
+
+      let newIndex = indexRef.current;
+      if (diff > 0) {
+        // swipe left → next
+        newIndex = (indexRef.current + 1) % positions.length;
+      } else {
+        // swipe right → previous
+        newIndex =
+          (indexRef.current - 1 + positions.length) % positions.length;
+      }
+
+      indexRef.current = newIndex;
+      setActiveIndex(newIndex);
+      el.scrollTo({ left: positions[newIndex], behavior: "smooth" });
+    }
+
+    // small delay to re-enable auto-slide after swipe
+    setTimeout(() => {
+      interactingRef.current = false;
+    }, 400);
+  };
+
   return (
     <div className="space-y-4">
       {/* Slider */}
       <div
         ref={containerRef}
         className={cn(
-          "overflow-x-hidden flex gap-4 hide-scrollbar", // ⬅ snap-x, snap-mandatory hata diya
+          "overflow-x-hidden flex gap-4 hide-scrollbar touch-pan-x", // ✅ added touch-pan-x
           className
         )}
         role="region"
         aria-label={ariaLabel}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         {children}
       </div>
@@ -112,8 +156,8 @@ export default function MobileAutoSlider({
             className={cn(
               "w-2 h-2 rounded-full transition-all",
               activeIndex === idx
-                ? "bg-cyan-400 scale-110"
-                : "bg-gray-600 hover:bg-cyan-500"
+                ? "bg-[#06CBDE] scale-110"
+                : "bg-gray-600 hover:bg-[#06CBDE]"
             )}
             aria-label={`Go to slide ${idx + 1}`}
           />

@@ -8,7 +8,7 @@ export default function AvaCase() {
   return (
     <div className="bg-[#080808] mb-4"
       style={{
-        backgroundImage: "url('/img/grabii.png')",
+        backgroundImage: "url('/img/drop-dashed-lines.png')",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -62,7 +62,7 @@ export default function AvaCase() {
             {/* Right Image */}
             <div className="flex justify-center lg:justify-end w-full lg:w-1/2 mt-6 lg:mt-0">
               <Image
-                src="/img/Ava/mockup.png"
+                src="/img/Ava/ava-mockup-img.png"
                 alt="Real Estate Lead Qualification mockup"
                 width={400}
                 height={600}

@@ -11,21 +11,21 @@ const slides = [
     badge: "CHALLENGE",
     title: "Hiring Bottlenecks That Drain Time",
     text: "Recruitment teams waste hundreds of hours screening CVs and repeating first-round interviews, slowing down the hiring cycle.",
-    image: "/img/hirmslider1.png",
+    image: "/img/recruiter-slider-1.png",
   },
   {
     id: 2,
     badge: "SOLUTION",
     title: "Automation That Handles the Heavy Lifting",
     text: "Hirm automates JDs, screens CVs, runs interviews, and delivers structured shortlists.",
-    image: "/img/hirmslider2.png",
+    image: "/img/recruiter-slider-2.png",
   },
   {
     id: 3,
     badge: "KEY BENEFITS",
     title: "Smarter Hiring with Less Effort",
     text: "Cut ~60% of recruiter workload, reduce hiring costs, ensure unbiased shortlisting, and achieve faster time-to-hire.",
-    image: "/img/hirmslider3.png",
+    image: "/img/recruiter-slider-3.png",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function AtorNewSlider() {
   return (
     <div
       style={{
-        backgroundImage: `url('/img/sliderbg.png')`,
+        backgroundImage: `url('/img/main-slider-img.png')`,
         backgroundSize: "contain",
         backgroundPosition: "right",
         backgroundRepeat: "no-repeat",
@@ -117,7 +117,7 @@ export default function AtorNewSlider() {
             <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug mt-4 md:mt-6">
               {next.title}
             </h3>
-            <p className="text-[#ffffffdc] text-base xl:text-lg leading-relaxed mt-2 md:mt-4">
+            <p className="hidden lg:flex text-[#ffffffdc] text-base xl:text-lg leading-relaxed mt-2 md:mt-4">
               {next.text}
             </p>
           </motion.div>

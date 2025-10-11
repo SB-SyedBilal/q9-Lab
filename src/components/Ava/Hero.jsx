@@ -8,22 +8,22 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [isHovering, setIsHovering] = useState(false);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   };
 
-    if (isHovering) {
-      window.addEventListener("mousemove", handleMouseMove);
-    }
+  //   if (isHovering) {
+  //     window.addEventListener("mousemove", handleMouseMove);
+  //   }
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isHovering]);
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, [isHovering]);
 
   return (
     <div
@@ -35,7 +35,7 @@ export default function Hero() {
       {/* Curved Overlay Image */}
       <div className=" absolute top-16 overflow-hidden md:top-35 lg:top-45 xl:top-55 2xl:top-60 left-0 w-full h-full z-0 opacity-100">
         <img
-          src="/img/heroimg3.png"
+          src="/img/hero-overlay-bottom.png"
           alt="Curved design overlay"
           className="w-full h-full object-cover"
         />
@@ -50,7 +50,7 @@ export default function Hero() {
       </div> */}
 
       {/* Mouse-following gradient (only on desktop) */}
-      {/* {isHovering && (
+       {/* {isHovering && (
         <div
           className="fixed hidden md:block pointer-events-none z-0 transition-opacity duration-300"
           style={{
@@ -62,9 +62,9 @@ export default function Hero() {
               "radial-gradient(circle, rgba(62,130,246,0.3) 20%, rgba(62,130,246,0.15) 40%, transparent 60%)",
             borderRadius: "50%",
             filter: "blur(70px)",
-          }} */}
-        {/* />
-      )} */}
+          }} 
+       />
+      )}  */}
 
       {/* Navbar */}
       {/* <Navbar /> */}
@@ -73,24 +73,33 @@ export default function Hero() {
       <div className="relative z-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 mt-8 md:mt-15 lg:mt-18 xl:mt-24 gap-8 md:gap-16">
         <div className="flex flex-col gap-4 xl:gap-8">
           <h1 className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-3xl 2xl:max-w-5xl  mx-auto  font-AmpleSoftPro text-3xl  md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-bold text-white xl:leading-20 md:leading-12 leading-10">
-          The Future of Customer{"  "}
+            The Future of Customer{"  "}
             <span className="text-[#06CBDE]">Engagement</span>
           </h1>
 
           <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-[#ffffffdc] xl:leading-10 leading-6 max-w-[320px] md:max-w-[500px] lg:max-w-[700px] xl:max-w-3xl 2xl:max-w-5xl  mx-auto xl:mb-0 mb-2">
-            Ava replaces costly call centers with a scalable AI voice agent that delivers smarter, faster, and more affordable customer conversations.
+            Ava replaces costly call centers with a scalable AI voice agent that
+            delivers smarter, faster, and more affordable customer
+            conversations.
           </p>
 
           <div className="flex justify-center gap-8 lg:flex-row flex-col lg:w-auto md:w-fit w-fit mx-auto">
             <div className="w-full sm:w-auto">
-              <BlueBgButton text="Try AVA Now" id='#form' />
+              <BlueBgButton text="Try AVA Now" id="#form" />
             </div>
           </div>
         </div>
         <div className=" lg:block overflow-hidden">
-          {/* <img src="/img/hirmherocurve.png" className="absolute -top-10 -right-50 z-20" alt="" /> */}
+          {/* <img src="/img/hirmherocurve.png" className="absolute -top-30 -right-50 z-20" alt="" /> */}
+          <div className="absolute hidden md:flex top-50 md:top-58 md:-right-10 lg:top-56 lg:right-10 xl:top-85 xl:right-10 2xl:top-83 2xl:right-34 z-50 rotate-20 xl:rotate-18 2xl:rotate-15">
+            <img
+              src="/img/hirmherocurve.png" // ✅ You can replace with your uploaded image path
+              alt="AI Hiring Dashboard"
+              className=" md:w-[310px] lg:w-[330px] xl:w-[420px]  2xl:w-[510px]  h-auto object-contain "
+            />
+          </div>
           <img
-            src="/img/Ava/avahero.png"
+            src="/img/Ava/main-ava-hero.png"
             alt="Curved design overlay"
             className="w-2xl xl:w-4xl 2xl:w-7xl h-auto"
           />

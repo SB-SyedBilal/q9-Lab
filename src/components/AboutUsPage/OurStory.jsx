@@ -10,7 +10,7 @@ const OurStory = () => {
         {/* Left: Image */}
         <div className="w-full xl:w-1/2 flex justify-center  lg:justify-start">
           <img
-            src="/img/storyimg.png"
+            src="/img/our-story-img.png"
             alt="Rotating Globe"
             className="w-[280px] lg:w-xs xl:w-md 2xl:w-xl h-auto object-contain"
           />

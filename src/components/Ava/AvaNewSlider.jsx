@@ -13,21 +13,21 @@ const slides = [
     badge: "CHALLENGE",
     title: "The Hidden Cost of Call Centers",
     text: "Call centers drain budgets, struggle with quality, and buckle under pressure when demand spikes. Customers wait longer, businesses lose opportunities, and scaling becomes nearly impossible.",
-    image: "/img/Ava/img1.png",
+    image: "/img/Ava/ava-slider-1.png",
   },
   {
     id: 2,
     badge: "SOLUTION",
     title: "Seamless Conversations, Built for Business",
     text: "Ava enables natural, human-like conversations with sub-200ms latency, ensuring smooth customer interactions. Seamlessly integrated with CRMs and telephony systems, it fits directly into existing workflows without disruption.",
-    image: "/img/Ava/img2.png",
+    image: "/img/Ava/ava-slider-2.png",
   },
   {
     id: 3,
     badge: "KEY BENEFITS",
     title: "From Hot Leads to Real Results",
     text: "Ava cuts customer engagement costs by up to 80% while delivering sub-200ms response times for natural, seamless conversations. It intelligently escalates only qualified leads, with proven success in UAE real estate and travel and scalability across multiple industries.",
-    image: "/img/Ava/img3.png",
+    image: "/img/Ava/ava-slider-3.png",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function HirmNewSlider() {
 
   return (
     <div style={{
-          backgroundImage: `url('/img/sliderbg.png')`,
+          backgroundImage: `url('/img/main-slider-img.png')`,
           backgroundSize: "contain",
           backgroundPosition: "right",
           backgroundRepeat: 'no-repeat'
@@ -110,7 +110,7 @@ export default function HirmNewSlider() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative bg-gradient-to-b from-[#0E0E0E] to-[#0A0A0A] animated-border rounded-sm p-6 sm:p-10 flex flex-col justify-center w-full lg:w-[35%] xl:w-[600px] h-auto shadow-[0_0_40px_rgba(6,203,222,0.08)]"
+            className=" relative bg-gradient-to-b from-[#0E0E0E] to-[#0A0A0A] animated-border rounded-sm p-6 sm:p-10 md:flex flex-col justify-center w-full lg:w-[35%] xl:w-[600px] h-auto shadow-[0_0_40px_rgba(6,203,222,0.08)]"
           >
             <span className="inline-block bg-[#16D1EF]/20 text-[#06CBDE] text-xs md:text-sm font-medium px-6 py-2 rounded-full w-fit">
               {next.badge}
@@ -118,7 +118,7 @@ export default function HirmNewSlider() {
             <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug mt-4 md:mt-6">
               {next.title}
             </h3>
-            <p className="text-[#ffffffdc] text-base xl:text-lg leading-relaxed mt-2 md:mt-4">
+            <p className="hidden lg:flex text-[#ffffffdc] text-base xl:text-lg leading-relaxed mt-2 md:mt-4">
               {next.text}
             </p>
           </motion.div>

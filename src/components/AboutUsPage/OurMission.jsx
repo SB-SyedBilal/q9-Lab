@@ -22,7 +22,7 @@ const OurMission = () => {
         {/* right Image */}
         <div className="w-full flex lg:flex lg:justify-end items-center  justify-center">
           <img
-            src="/img/mission.png"
+            src="/img/our-mission.png"
             alt="Rotating Globe"
             className="w-[280px] lg:w-sm xl:w-xl 2xl:w-2xl h-auto object-contain"
           />

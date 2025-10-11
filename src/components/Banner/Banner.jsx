@@ -31,7 +31,7 @@ export default function Banner() {
                 >
                   {/* Ripple/shine effect background */}
                   <span
-                    className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-transparent to-cyan-400/20 
+                    className="absolute inset-0 bg-gradient-to-r from-[#06CBDE]/20 via-transparent to-[#06CBDE]/20 
                translate-x-[-100%] group-hover:translate-x-[100%] transition-transform 
                duration-700 ease-in-out"
                   ></span>
@@ -45,7 +45,7 @@ export default function Banner() {
                relative z-10 group-hover:scale-100 group-hover:rotate-45 
                transition-transform duration-500 ease-out"
                   >
-                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7 text-cyan-400" />
+                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7 text-[#06CBDE]" />
                   </span>
                 </a>
               </div>
@@ -54,7 +54,7 @@ export default function Banner() {
             {/* Right Image */}
             <div className="hidden  lg:flex justify-right mr-12">
               <img
-                src="/img/home-cta-banner.png" // Replace this with your image path
+                src="/img/cta-banner-main.png" // Replace this with your image path
                 alt="AI Illustration"
                 className="w-[600px] lg:w-[600px] h-auto "
               />

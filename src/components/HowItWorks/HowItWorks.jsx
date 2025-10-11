@@ -62,7 +62,7 @@ export default function HowWorks() {
 
   return (
     <div style={{
-          backgroundImage: "url('/img/lines.png')",
+          backgroundImage: "url('/img/bg-lines-1.png')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right",
           

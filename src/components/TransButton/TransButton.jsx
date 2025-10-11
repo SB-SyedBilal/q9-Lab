@@ -33,7 +33,7 @@ const TransButton = ({ link = "/", text = "Click Me" }) => {
           group-hover:scale-100 group-hover:rotate-45 
           transition-transform duration-500 ease-out"
       >
-        <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-6 2xl:h-6 text-cyan-400" />
+        <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-6 2xl:h-6 text-[#06CBDE]" />
       </span>
     </Link>
   );

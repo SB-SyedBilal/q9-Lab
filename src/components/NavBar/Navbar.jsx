@@ -89,13 +89,13 @@ export default function Navbar() {
             {isDropdownOpen && (
               <div
                 className="absolute left-0 mt-3 w-56 bg-gradient-to-br from-[#0a0a0a] to-[#0d1b1e] 
-                 border border-cyan-500/20 backdrop-blur-md rounded-xl shadow-[0_8px_30px_rgba(6,203,222,0.15)] 
+                 border border-gray-800 backdrop-blur-md rounded-lg shadow-[0_8px_30px_rgba(6,203,222,0.15)] 
                  overflow-hidden animate-fadeIn z-50"
               >
                 {[
-                  { label: "AI Voice Platform", href: "/ava" },
-                  { label: "AI Recruiter", href: "/hirm" },
-                  { label: "AI Tutor", href: "/ator" },
+                  { label: "AI Voice Platform", href: "/ai-voice-platform" },
+                  { label: "AI Recruiter", href: "/ai-recruiter" },
+                  { label: "AI Tutor", href: "/ai-tutor" },
                   { label: "AI Shopping Assistant", href: "/" },
                 ].map((item, i) => (
                   <Link
@@ -120,7 +120,7 @@ export default function Navbar() {
             About Us
           </Link>
           <Link
-            href="/about-us"
+            href="/"
             className="text-white hover:text-[#06CBDE] transition-colors"
           >
             Blogs
@@ -248,9 +248,9 @@ export default function Navbar() {
             {isProductMenuOpen && (
               <div className="pl-3 mt-3 space-y-3 text-base text-gray-300">
                 {[
-                  { label: "AI Voice Platform", href: "/ava" },
-                  { label: "AI Recruiter", href: "/hirm" },
-                  { label: "AI Tutor", href: "/ator" },
+                  { label: "AI Voice Platform", href: "/ai-voice-platform" },
+                  { label: "AI Recruiter", href: "/ai-recruiter" },
+                  { label: "AI Tutor", href: "/ai-tutor" },
                   { label: "AI Shopping Assistant", href: "/" },
                 ].map((item) => (
                   <Link
@@ -275,7 +275,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="#how-it-works"
+            href="/"
             onClick={closeMobileMenu}
             className="block hover:text-[#06CBDE] border-b border-white/30 pb-3"
           >

@@ -11,7 +11,7 @@ export default function ContactBanner() {
          transition-all duration-500 items-center flex flex-col "
       >
         {/* Background Glow in Bottom Right */}
-        <div className="absolute bottom-0 right-0 w-[240px] h-[240px] bg-cyan-500/30 blur-[120px] rounded-full pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-[240px] h-[240px] bg-[#06CBDE]/20 blur-[120px] rounded-full pointer-events-none"></div>
 
         {/* Heading */}
         <h2 className="text-white text-3xl sm:text-[27px] md:text-[30px] lg:text-[32px] xl:text-[40px] 2xl:text-[52px] font-bold leading-snug mb-6 max-w-lg xl:max-w-3xl">

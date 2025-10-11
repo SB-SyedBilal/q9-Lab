@@ -4,22 +4,22 @@ import { useState, useEffect } from "react";
 import BlueBgButton from "@/components/BlueBgButton/BlueBgButton";
 
 export default function AboutUsHero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [isHovering, setIsHovering] = useState(false);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   };
 
-    if (isHovering) {
-      window.addEventListener("mousemove", handleMouseMove);
-    }
+  //   if (isHovering) {
+  //     window.addEventListener("mousemove", handleMouseMove);
+  //   }
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isHovering]);
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, [isHovering]);
 
   return (
     <div
@@ -31,7 +31,7 @@ export default function AboutUsHero() {
       {/* Background Image */}
       <div className="absolute top-32 md:top-40  xl:top-70 2xl:top-90 left-0 w-full h-full z-0 opacity-100">
         <img
-          src="/img/heroimg3.png"
+          src="/img/hero-overlay-bottom.png"
           alt="Curved design overlay"
           className="w-full h-full object-cover"
         />
@@ -62,7 +62,7 @@ export default function AboutUsHero() {
         <div className="relative w-full max-w-[400px] md:max-w-[770px] lg:max-w-[450px] xl:max-w-[600px] 2xl:max-w-[1000px] lg:block hidden">
           
           <img
-            src="/img/aboutheroimg.png" // ✅ You can replace with your uploaded image path
+            src="/img/herohand.png" // ✅ You can replace with your uploaded image path
             alt="AI Hiring Dashboard"
             className="w-full h-auto  object-contain"
           />

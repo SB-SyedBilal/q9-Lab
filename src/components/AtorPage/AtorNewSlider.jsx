@@ -50,7 +50,7 @@ export default function AtorNewSlider() {
 
   return (
     <div style={{
-          backgroundImage: `url('/img/sliderbg.png')`,
+          backgroundImage: `url('/img/main-slider-img.png')`,
           backgroundSize: "contain",
           backgroundPosition: "right",
           backgroundRepeat: 'no-repeat'
@@ -84,7 +84,7 @@ export default function AtorNewSlider() {
                 <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug">
                   {current.title}
                 </h3>
-                <p className="text-[#ffffffdc] text-base xl:text-lg lg:w-[295px] xl:w-sm 2xl:w-lg leading-relaxed">
+                <p className=" text-[#ffffffdc] text-base xl:text-lg lg:w-[295px] xl:w-sm 2xl:w-lg leading-relaxed">
                   {current.text}
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function AtorNewSlider() {
             <h3 className="text-2xl xl:text-3xl 2xl:text-4xl leading-snug mt-4 md:mt-6">
               {next.title}
             </h3>
-            <p className="text-[#ffffffdc] text-base xl:text-lg leading-relaxed mt-2 md:mt-4">
+            <p className="hidden lg:flex text-[#ffffffdc] text-base xl:text-lg leading-relaxed mt-2 md:mt-4">
               {next.text}
             </p>
           </motion.div>

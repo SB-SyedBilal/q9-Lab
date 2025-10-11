@@ -37,7 +37,7 @@ const HirmCases = () => {
         id="industries-section"
         className=" text-white bg-[#080808] z-0 "
         style={{
-          backgroundImage: "url('/img/grabii.png')",
+          backgroundImage: "url('/img/drop-dashed-lines.png')",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -92,7 +92,7 @@ const HirmCases = () => {
                           {industry.description.length > 100 && (
                             <button
                               onClick={() => toggleDescription(index)}
-                              className="text-cyan-400 text-sm font-medium hover:underline"
+                              className="text-[#06CBDE] text-sm font-medium hover:underline"
                             >
                               {isExpanded ? "Read Less" : "Read More"}
                             </button>
@@ -118,7 +118,7 @@ const HirmCases = () => {
                 {/* Hover shape from top-right */}
                 <div className="z-50 absolute top-0 right-0 w-[60%]  h-1/2 2xl:h-[60%] bg-[#0ac2d3] rounded-bl-full scale-0 group-hover:scale-30 transition-transform duration-300 origin-top-right"></div>
                 
-                <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-cyan-500/30 blur-[100px] rounded-full pointer-events-none"></div>
+                <div className="absolute bottom-0 right-0 w-[120px] h-[100px] bg-[#06CBDE]/30 blur-[100px] rounded-full pointer-events-none"></div>
 
                 <div className="flex flex-col gap-4 xl:gap-6">
                   {/* Icon */}
@@ -144,7 +144,7 @@ const HirmCases = () => {
                 {/* Button */}
                 <a href="#form"
                   className="flex items-center gap-2 text-white font-semibold underline underline-offset-2
-              hover:text-cyan-400 transition-colors duration-300 w-fit"
+              hover:text-[#06CBDE] transition-colors duration-300 w-fit"
                 >
                   Let’s Connect
                   <svg

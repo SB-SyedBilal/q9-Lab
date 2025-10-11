@@ -35,7 +35,7 @@ const WhyQ9 = () => {
             >
               {/* Ripple/shine effect background */}
               <span
-                className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-transparent to-cyan-400/20 
+                className="absolute inset-0 bg-gradient-to-r from-[#06CBDE]/20 via-transparent to-cyan-400/20 
       translate-x-[-100%] group-hover:translate-x-[100%] transition-transform 
       duration-700 ease-in-out"
               ></span>
@@ -58,7 +58,7 @@ const WhyQ9 = () => {
         {/* Left: Image */}
         <div className="">
           <img
-            src="/img/whyq9.png"
+            src="/img/hero-why-q9.png"
             alt="Rotating Globe"
             className="w-[600px] h-auto "
           />

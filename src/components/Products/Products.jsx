@@ -9,32 +9,32 @@ import Heading from "../Heading/Heading";
 const items = [
   {
     id: 0,
-    src: "/img/ai1.png",
+    src: "/img/ai-voice.png",
     alt: "Robot singing into a studio microphone with teal lighting",
     bedge: "AVA",
     title: "AI Voice Agent",
     desc: "Your 24/7 sales & support caller. Ava handles lead qualification and customer support at just $1 per call, reducing call centre costs by up to 80%.",
-    link: '/ava'
+    link: '/ai-voice-platform'
   },
   {
     id: 1,
     // using the built-in placeholder generator for the second closed card
-    src: "/img/product-2.png",
+    src: "/img/home-product-2.png",
     alt: "Futuristic robot standing beside a laptop",
     bedge: "ATOR",
     title: "AI Tutor",
     desc: "Your personalized learning companion. Ator delivers interactive lessons that adapt to each student’s pace, making quality education scalable and affordable.",
-    link: '/ator'
+    link: '/ai-tutor'
   },
   {
     id: 2,
     // using the built-in placeholder generator for the third closed card
-    src: "/img/product-3a.png",
+    src: "/img/home-product-3.png",
     alt: "Business robot portrait in a suit",
     bedge: "HIRM",
     title: "AI Recruiter",
     desc: "Your always-on recruiter. From CV screening to AI-driven interviews, Hirm cuts 60% of HR workload freeing teams to focus on top talent.",
-    link: '/hirm'
+    link: '/ai-recruiter'
   },
 ];
 

@@ -48,7 +48,7 @@ const RequestForm = () => {
     }
 
     setLoading(true);
-    // router.push("/thankyou");
+    
     try {
       await emailjs.sendForm(
         "service_pyjk30a",
@@ -62,7 +62,7 @@ const RequestForm = () => {
       setIsSent(true);
       reset();
       form.current.reset();
-      router.push("/thankyou");
+      router.push("/thank-you");
     } catch (err) {
       console.error("Email error:", err);
     } finally {
@@ -85,7 +85,7 @@ const RequestForm = () => {
       <div
         className="relative w-full  rounded-xl shadow-lg px-4 md:px-6 xl:px-12 xl:py-12 py-6  animated-border overflow-hidden"
         style={{
-          backgroundImage: `url('/img/formbg.png')`,
+          backgroundImage: `url('/img/main-form-bgimg.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -106,15 +106,15 @@ const RequestForm = () => {
         </div>
 
         {/* Wrapper: image + form */}
-        <div className="flex items-center flex-col lg:flex-row lg:justify-between gap-6 xl:gap-12 z-10 relative ">
+        <div className="flex items-center  lg:justify-between gap-6 xl:gap-12 z-10 relative ">
           {/* Left side image (hidden on small screens) */}
-          <div className="hidden lg:flex w-full lg:w-1/2 xl:w-[38%] ">
+          {/* <div className="hidden lg:flex w-full lg:w-1/2 xl:w-[45%] 2xl:w-[34%] ">
             <img
-              src="/img/contact-img.png"
+              src="/img/ai-form-img.png"
               alt="Request a Quote"
-              className="object-cover w-full h-auto "
+              className="object-cover w-full h-auto rounded-2xl  "
             />
-          </div>
+          </div> */}
 
           {/* Right side: Form */}
           <form
@@ -126,7 +126,7 @@ const RequestForm = () => {
             // })}
             onSubmit={handleSubmit(onSubmit)}
             noValidate
-            className="w-full lg:w-1/2 xl:w-[55%] relative text-white flex flex-col gap-6"
+            className="w-full relative text-white flex flex-col gap-6"
           >
             <div className="flex lg:flex-row flex-col xl:gap-6 gap-4">
               {/* Full Name */}
@@ -142,7 +142,7 @@ const RequestForm = () => {
                   type="text"
                   placeholder="John Smith"
                   autoComplete="full_name"
-                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                   {...register("full_name")}
                   aria-invalid={!!errors.full_name}
                 />
@@ -166,7 +166,7 @@ const RequestForm = () => {
                   type="email"
                   placeholder="john@company.com"
                   autoComplete="email"
-                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                   {...register("business_email")}
                   aria-invalid={!!errors.business_email}
                 />
@@ -192,7 +192,7 @@ const RequestForm = () => {
                   type="text"
                   placeholder="+971 50 123 4567"
                   autoComplete="tel"
-                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                   {...register("phone_whatsapp")}
                   aria-invalid={!!errors.phone_whatsapp}
                 />
@@ -215,7 +215,7 @@ const RequestForm = () => {
                   id="city"
                   type="text"
                   placeholder="City"
-                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                  className="w-full rounded-md bg-[#222] px-4 xl:px-8 py-4 xl:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                   {...register("city")}
                 />
                 {errors.city && (
@@ -244,7 +244,7 @@ const RequestForm = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-cyan-400 text-black font-semibold py-3 sm:py-4 rounded-md text-base sm:text-lg hover:bg-cyan-500 transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full bg-[#06CBDE] text-black font-semibold py-3 sm:py-4 rounded-md text-base sm:text-lg hover:bg-cyan-500 transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
               >
                 {loading ? "Sending..." : "SUBMIT"}
               </button>

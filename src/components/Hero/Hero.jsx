@@ -8,22 +8,22 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [isHovering, setIsHovering] = useState(false);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   };
 
-    if (isHovering) {
-      window.addEventListener("mousemove", handleMouseMove);
-    }
+  //   if (isHovering) {
+  //     window.addEventListener("mousemove", handleMouseMove);
+  //   }
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isHovering]);
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, [isHovering]);
 
   return (
     <div
@@ -35,7 +35,7 @@ export default function Hero() {
       {/* Curved Overlay Image */}
       <div className=" absolute top-63   md:top-60 lg:top-35 xl:top-85 2xl:top-90 left-0 w-full h-full z-0 opacity-100">
         <img
-          src="/img/heroimg3.png"
+          src="/img/hero-overlay-bottom.png"
           alt="Curved design overlay"
           className="w-full h-full object-cover"
         />
@@ -50,9 +50,9 @@ export default function Hero() {
       </div> */}
 
       {/* Mouse-following gradient (only on desktop) */}
-      {isHovering && (
+      {/* {isHovering && (
         <div
-          className="fixed hidden md:block pointer-events-none z-0 transition-opacity duration-300"
+          // className="fixed hidden md:block pointer-events-none z-0 transition-opacity duration-300"
           // style={{
           //   left: mousePosition.x - 500,
           //   top: mousePosition.y - 500,
@@ -64,7 +64,7 @@ export default function Hero() {
           //   filter: "blur(70px)",
           // }}
         />
-      )}
+      )} */}
 
       {/* Navbar */}
       {/* <Navbar /> */}
@@ -91,26 +91,26 @@ export default function Hero() {
             {/* <TransButton text='Book A Demo' link='#form' /> */}
             <Link
               href="#form"
-              className="group flex items-center justify-center gap-4 md:pl-8 md:pr-3 pt-2 pb-2 
-                 border-1 border-white rounded-full text-white 2xl:text-lg
+              className="group flex items-center justify-center gap-2 px-5 pt-2 pb-2 2xl:pt-3 2xl:pb-3 
+                 border-1 border-white rounded-full text-white 
                  hover:bg-white/10 transition-all duration-500 ease-out cursor-pointer 
                  relative overflow-hidden bg-white/10"
             >
               {/* Ripple / Shine effect */}
               <span
-                className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-transparent to-cyan-400/20 
+                className="absolute inset-0 bg-gradient-to-r from-[#06CBDE]/20 via-transparent to-[#06CBDE]/20 
                    -translate-x-full group-hover:translate-x-full transition-transform 
                    duration-700 ease-in-out"
               ></span>
 
-              <span className="text-base 2xl:text-[22px] relative z-10  ">
+              <span className="text-base lg:text-lg 2xl:text-[22px] relative z-10  ">
                 Book A Demo
               </span>
 
               <span
-                className="flex items-center justify-center w-7 h-7 sm:w-7 sm:h-7 xl:w-9 xl:h-9 rounded-full  bg-white 
-                   relative z-10 group-hover:scale-100 group-hover:rotate-45 
-                   transition-transform duration-500 ease-out"
+                className="ml-2 w-7 h-7 sm:w-7 sm:h-7 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center 
+               relative z-10 transition-transform duration-500 ease-out
+               group-hover:scale-100 group-hover:rotate-45"
               >
                 <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7  lg:flex text-[#06CBDE]" />
               </span>

@@ -31,7 +31,7 @@ export default function ContactHero() {
       {/* Background Image */}
       <div className="absolute top-26 md:top-40 lg:top-60  xl:top-70 2xl:top-100 left-0 w-full h-full z-0 opacity-100">
         <img
-          src="/img/heroimg3.png"
+          src="/img/hero-overlay-bottom.png"
           alt="Curved design overlay"
           className="w-full h-full object-cover"
         />

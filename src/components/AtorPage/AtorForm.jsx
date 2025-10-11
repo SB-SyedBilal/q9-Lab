@@ -74,9 +74,9 @@ const AtorForm = () => {
       className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-10 sm:py-14 lg:py-16 max-w-[1600px] 2xl:max-w-[1700px] mx-auto"
     >
       <div
-        className="relative w-full max-w-[95%] sm:max-w-[95%] md:max-w-[90%] lg:max-w-[1200px] xl:max-w-[1350px] 2xl:max-w-[1670px] rounded-2xl shadow-lg pt-6 sm:pt-8 lg:pt-10 px-4 pb-10 sm:pb-14 lg:pb-16 pr-4 sm:pr-6 lg:pr-10 sm:px-8 border border-cyan-500/30 overflow-hidden"
+        className="relative w-full max-w-[95%] sm:max-w-[95%] md:max-w-[90%] lg:max-w-[1200px] xl:max-w-[1350px] 2xl:max-w-[1670px] rounded-2xl shadow-lg pt-6 sm:pt-8 lg:pt-10 px-4 pb-10 sm:pb-14 lg:pb-16 pr-4 sm:pr-6 lg:pr-10 sm:px-8 border border-[#06CBDE]/30 overflow-hidden"
         style={{
-          backgroundImage: `url('/img/formbg.png')`,
+          backgroundImage: `url('/img/main-form-bgimg.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -127,7 +127,7 @@ const AtorForm = () => {
                 type="text"
                 placeholder="John Smith"
                 autoComplete="full_name"
-                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                 {...register("full_name")}
                 aria-invalid={!!errors.full_name}
               />
@@ -151,7 +151,7 @@ const AtorForm = () => {
                 type="email"
                 placeholder="john@company.com"
                 autoComplete="email"
-                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                 {...register("business_email")}
                 aria-invalid={!!errors.business_email}
               />
@@ -175,7 +175,7 @@ const AtorForm = () => {
                 type="text"
                 placeholder="+971 50 123 4567"
                 autoComplete="tel"
-                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                 {...register("phone_whatsapp")}
                 aria-invalid={!!errors.phone_whatsapp}
               />
@@ -198,7 +198,7 @@ const AtorForm = () => {
                 id="city"
                 type="text"
                 placeholder="City"
-                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                 {...register("city")}
               />
               {errors.city && (
@@ -224,7 +224,7 @@ const AtorForm = () => {
               <textarea
                 id="challenge"
                 placeholder="We want to automate our sales calls..."
-                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-cyan-200 placeholder-[#AAAAAA]"
+                className="w-full rounded-md bg-[#222] px-5 sm:px-6 lg:px-8 py-4 sm:py-5 focus:outline-none focus:ring-1 focus:ring-[#06CBDE] placeholder-[#AAAAAA]"
                 rows={5}
                 {...register("challenge")}
                 aria-invalid={!!errors.challenge}
@@ -249,7 +249,7 @@ const AtorForm = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-cyan-400 text-black font-semibold py-3 sm:py-4 rounded-md text-base sm:text-lg hover:bg-cyan-500 transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full bg-[#06CBDE] text-black font-semibold py-3 sm:py-4 rounded-md text-base sm:text-lg hover:bg-[#06CBDE] transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
               >
                 {loading ? "Sending..." : "SUBMIT"}
               </button>

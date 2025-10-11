@@ -28,14 +28,14 @@ export default function Thanku() {
   return (
     <div
       id="home"
-      className=" relative min-h-[40vh] sm:min-h-[30vh] md:min-h-[33vh] lg:min-h-[60vh] xl:min-h-[80vh] 2xl:min-h-[75vh]  overflow-hidden xl:pt-20 pb-10"
+      className=" relative min-h-[40vh] sm:min-h-[30vh] md:min-h-[33vh] lg:min-h-[60vh] xl:min-h-[80vh] 2xl:min-h-[95vh]  overflow-hidden xl:pt-20 pb-10"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Curved Overlay Image */}
       <div className=" absolute top-43   md:top-60 lg:top-55 xl:top-85 2xl:top-70 left-0 w-full h-full z-0 opacity-100">
         <img
-          src="/img/heroimg3.png"
+          src="/img/hero-overlay-bottom.png"
           alt="Curved design overlay"
           className="w-full h-full object-cover"
         />

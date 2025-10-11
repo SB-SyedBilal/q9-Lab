@@ -31,7 +31,7 @@ export default function AtorHero() {
       {/* Background Image */}
       <div className="absolute top-26 md:top-40  xl:top-70 2xl:top-90 left-0 w-full h-full z-0 opacity-100">
         <img
-          src="/img/heroimg3.png"
+          src="/img/hero-overlay-bottom.png"
           alt="Curved design overlay"
           className="w-full h-full object-cover"
         />
@@ -70,7 +70,7 @@ export default function AtorHero() {
             />
           </div>
           <img
-            src="/img/atorheroimg.png" // ✅ You can replace with your uploaded image path
+            src="/img/hero-ator.png" // ✅ You can replace with your uploaded image path
             alt="AI Hiring Dashboard"
             className="w-full h-auto  object-contain"
           />

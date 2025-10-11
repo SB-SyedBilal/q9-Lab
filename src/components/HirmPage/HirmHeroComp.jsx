@@ -4,22 +4,22 @@ import { useState, useEffect } from "react";
 import BlueBgButton from "@/components/BlueBgButton/BlueBgButton";
 
 export default function HirmHeroComp() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [isHovering, setIsHovering] = useState(false);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   };
 
-    if (isHovering) {
-      window.addEventListener("mousemove", handleMouseMove);
-    }
+  //   if (isHovering) {
+  //     window.addEventListener("mousemove", handleMouseMove);
+  //   }
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isHovering]);
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, [isHovering]);
 
   return (
     <div
@@ -31,16 +31,16 @@ export default function HirmHeroComp() {
       {/* Background Image */}
       <div className="absolute top-26 md:top-40  xl:top-70 2xl:top-90 left-0 w-full h-full z-0 opacity-100">
         <img
-          src="/img/heroimg3.png"
+          src="/img/hero-overlay-bottom.png"
           alt="Curved design overlay"
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Mouse-following gradient (desktop only) */}
-      {isHovering && (
+      {/* {isHovering && (
         <div className="fixed hidden md:block pointer-events-none z-0 transition-opacity duration-300" />
-      )}
+      )} */}
 
       {/* Main Content Wrapper */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between mt-5 lg:mt-10 xl:mt-20 max-w-[1700px] mx-auto px-6 lg:px-8">

@@ -11,7 +11,7 @@ export default function AvaBanner() {
     transition-all duration-500 items-center flex flex-col"
       >
         {/* Background Glow in Bottom Right */}
-        <div className="absolute bottom-0 right-0 w-[180px] sm:w-[240px] h-[180px] sm:h-[240px] bg-cyan-500/30 blur-[100px] sm:blur-[120px] rounded-full pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-[180px] sm:w-[240px] h-[180px] sm:h-[240px] bg-[#06CBDE]/30 blur-[100px] sm:blur-[120px] rounded-full pointer-events-none"></div>
 
         <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 xl:gap-10">
           {/* Heading */}

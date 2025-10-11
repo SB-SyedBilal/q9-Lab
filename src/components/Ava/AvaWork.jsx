@@ -107,7 +107,7 @@ const AvaWork = () => {
                   className={`w-2 h-2 rounded-full transition-all ${
                     activeIndex === idx
                       ? "bg-cyan-400 scale-110"
-                      : "bg-gray-600 hover:bg-cyan-500"
+                      : "bg-gray-600 hover:bg-[#06CBDE]"
                   }`}
                 />
               ))}

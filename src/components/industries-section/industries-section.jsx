@@ -56,7 +56,7 @@ export default function IndustriesSection() {
         id="industries-section"
         className=" text-white py-8 md:py-16 mb-4 lg:mb-12 z-0 bg-[#080808] "
         style={{
-          backgroundImage: "url('/img/lines2.png')",
+          backgroundImage: "url('/img/thick-bg-lines.png')",
           backgroundRepeat: "no-repeat",
           
         }}

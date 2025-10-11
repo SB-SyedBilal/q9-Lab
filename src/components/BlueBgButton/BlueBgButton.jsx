@@ -15,7 +15,7 @@ const BlueBgButton = (props) => {
       <span
         className="ml-2 w-7 h-7 sm:w-7 sm:h-7 xl:w-9 xl:h-9 rounded-full bg-black flex items-center justify-center 
                relative z-10 transition-transform duration-500 ease-out
-               group-hover:scale-100 group-hover:rotate-12 "
+               group-hover:scale-100 group-hover:rotate-45 "
       >
         {/* <svg
           className="w-4 h-4 sm:w-5 sm:h-5 2xl:w-7 2xl:h-7 text-blue transition-transform duration-500 ease-out 
